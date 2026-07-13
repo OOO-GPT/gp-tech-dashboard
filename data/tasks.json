@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-13T21:15:48.350Z",
+  "generated_at": "2026-07-13T21:16:41.685Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 17,
-    "review": 8,
-    "branch": 2,
+    "review": 9,
+    "branch": 1,
     "ready": 0,
     "blocked": 122
   },
@@ -492,8 +492,8 @@
       "title": "Версионирование схем",
       "description": "Версии API, БД, cache payload, search result, archive index, feature flags.",
       "group_id": "B",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "A07"
       ],
