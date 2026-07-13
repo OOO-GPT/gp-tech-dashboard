@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-13T19:10:44.795Z",
+  "generated_at": "2026-07-13T19:11:23.629Z",
   "main": {
     "ref": "main"
   },
@@ -10,11 +10,11 @@
   },
   "counts": {
     "total": 149,
-    "done": 14,
-    "review": 10,
+    "done": 15,
+    "review": 9,
     "branch": 0,
-    "ready": 0,
-    "blocked": 125
+    "ready": 3,
+    "blocked": 122
   },
   "groups": [
     {
@@ -251,8 +251,8 @@
       "title": "Единый словарь домена",
       "description": "Tender, Lot, Item, Requirement, Candidate, Evidence, Run, Wallet, Subscription, Org, User.",
       "group_id": "A",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [],
       "children": [
         "B01",
@@ -267,20 +267,22 @@
       "branch": {
         "name": "codex/a07"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 10,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/10",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-13T19:11:04Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/a07",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/a07",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/10",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/919c2012325f8406f22169836043a04bbe0d7d42",
         "marker": null
       }
     },
@@ -352,8 +354,8 @@
       "title": "Bounded contexts",
       "description": "Разделить продукт на auth/org, ledger/billing, tender/EIS, search, extension-runtime, UI, ops.",
       "group_id": "B",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A02",
         "A03",
@@ -368,9 +370,7 @@
         "C07",
         "C08"
       ],
-      "missing_parents": [
-        "A07"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -483,8 +483,8 @@
       "title": "Версионирование схем",
       "description": "Версии API, БД, cache payload, search result, archive index, feature flags.",
       "group_id": "B",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A07"
       ],
@@ -494,9 +494,7 @@
         "C13",
         "H06"
       ],
-      "missing_parents": [
-        "A07"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -513,8 +511,8 @@
       "title": "Каталог state machines",
       "description": "Search job, item run, payment, subscription, wallet reservation, trust stage, PD build.",
       "group_id": "B",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A07"
       ],
@@ -525,9 +523,7 @@
         "E04",
         "E03"
       ],
-      "missing_parents": [
-        "A07"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -818,7 +814,6 @@
         "C14"
       ],
       "missing_parents": [
-        "A07",
         "B01",
         "C01"
       ],
@@ -851,7 +846,6 @@
         "H04"
       ],
       "missing_parents": [
-        "A07",
         "B01",
         "C01"
       ],
@@ -883,7 +877,6 @@
         "I15"
       ],
       "missing_parents": [
-        "A07",
         "C01"
       ],
       "branch": null,
@@ -915,7 +908,6 @@
         "I17"
       ],
       "missing_parents": [
-        "A07",
         "C01"
       ],
       "branch": null,
