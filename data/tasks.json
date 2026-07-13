@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-13T19:19:49.836Z",
+  "generated_at": "2026-07-13T19:20:30.707Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 16,
-    "review": 8,
+    "done": 17,
+    "review": 7,
     "branch": 0,
     "ready": 3,
     "blocked": 122
@@ -1869,8 +1869,7 @@
       ],
       "missing_parents": [
         "C04",
-        "F04",
-        "K02"
+        "F04"
       ],
       "branch": null,
       "done_commit": null,
@@ -2205,8 +2204,7 @@
         "G05",
         "G06",
         "G08",
-        "G09",
-        "K02"
+        "G09"
       ],
       "branch": null,
       "done_commit": null,
@@ -3967,8 +3965,8 @@
       "title": "Golden fixture corpus",
       "description": "Canonical AI-authored expected results, not legacy response dumps.",
       "group_id": "K",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A01",
         "B11"
@@ -3983,20 +3981,22 @@
       "branch": {
         "name": "codex/k02"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 4,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/4",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-13T19:20:12Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/k02",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/k02",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/4",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/5f547cea89f832b96020755e1244b04dab10169d",
         "marker": null
       }
     },
@@ -4258,8 +4258,7 @@
       ],
       "missing_parents": [
         "G15",
-        "G16",
-        "K02"
+        "G16"
       ],
       "branch": null,
       "done_commit": null,
@@ -4336,8 +4335,7 @@
         "I17",
         "I18",
         "I19",
-        "J08",
-        "K02"
+        "J08"
       ],
       "branch": null,
       "done_commit": null,
