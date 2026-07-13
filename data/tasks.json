@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-13T19:13:55.877Z",
+  "generated_at": "2026-07-13T19:14:43.821Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 15,
-    "review": 9,
+    "done": 16,
+    "review": 8,
     "branch": 0,
     "ready": 3,
     "blocked": 122
@@ -1870,7 +1870,6 @@
       "missing_parents": [
         "C04",
         "F04",
-        "F06",
         "K02"
       ],
       "branch": null,
@@ -1889,8 +1888,8 @@
       "title": "Dictionaries/legal regimes",
       "description": "Tool evidence по ОКЕИ/ОКПД/нацрежиму; не post-final verdict engine.",
       "group_id": "F",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "K01"
       ],
@@ -1903,20 +1902,22 @@
       "branch": {
         "name": "codex/f06"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 1,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/1",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-13T19:14:25Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f06",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f06",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/1",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/50035ea8644770c3a5a25e3150745b3639d47a2a",
         "marker": null
       }
     },
@@ -1941,8 +1942,7 @@
       "missing_parents": [
         "C03",
         "F02",
-        "F05",
-        "F06"
+        "F05"
       ],
       "branch": null,
       "done_commit": null,
@@ -2201,7 +2201,6 @@
       "missing_parents": [
         "C04",
         "F05",
-        "F06",
         "G03",
         "G05",
         "G06",
