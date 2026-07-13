@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-13T20:56:16.498Z",
+  "generated_at": "2026-07-13T21:15:48.350Z",
   "main": {
     "ref": "main"
   },
@@ -508,11 +508,18 @@
         "name": "codex/b05"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 13,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/13",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b05",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b05",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/13",
         "commit": null,
         "marker": null
       }
