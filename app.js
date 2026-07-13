@@ -135,7 +135,7 @@ function visibleTasks() {
 
 function taskReason(task) {
   if (task.status === 'done') {
-    return task.historical_done ? 'Исторически выполнена в main' : 'Marker done находится в main';
+    return task.done_commit?.historical ? 'Исторически выполнена в main' : 'Marker done находится в main';
   }
   if (task.status === 'review') {
     if (task.pull_request?.number) return `PR #${task.pull_request.number} · ждёт ревью`;
@@ -143,7 +143,8 @@ function taskReason(task) {
     return files ? `${files} ${pluralize(files, 'файл', 'файла', 'файлов')} · ждёт ревью` : 'Ветка ждёт ревью';
   }
   if (task.status === 'branch') {
-    const ahead = task.branch?.ahead_count ?? 0;
+    const ahead = task.branch?.ahead_count;
+    if (ahead === undefined) return 'Ветка создана, marker ревью ещё не появился';
     return `${ahead} ${pluralize(ahead, 'коммит', 'коммита', 'коммитов')} впереди main`;
   }
   if (task.status === 'ready') return 'Все зависимости готовы';
