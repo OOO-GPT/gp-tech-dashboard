@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-13T19:54:33.752Z",
+  "generated_at": "2026-07-13T20:45:43.730Z",
   "main": {
     "ref": "main"
   },
@@ -11,9 +11,9 @@
   "counts": {
     "total": 149,
     "done": 17,
-    "review": 7,
-    "branch": 0,
-    "ready": 3,
+    "review": 8,
+    "branch": 2,
+    "ready": 0,
     "blocked": 122
   },
   "groups": [
@@ -354,8 +354,8 @@
       "title": "Bounded contexts",
       "description": "Разделить продукт на auth/org, ledger/billing, tender/EIS, search, extension-runtime, UI, ops.",
       "group_id": "B",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "A02",
         "A03",
@@ -371,13 +371,22 @@
         "C08"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/b01"
+      },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 12,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/12",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b01",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b01",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/12",
         "commit": null,
         "marker": null
       }
@@ -483,8 +492,8 @@
       "title": "Версионирование схем",
       "description": "Версии API, БД, cache payload, search result, archive index, feature flags.",
       "group_id": "B",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "A07"
       ],
@@ -495,12 +504,14 @@
         "H06"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/b05"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b05",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b05",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -511,8 +522,8 @@
       "title": "Каталог state machines",
       "description": "Search job, item run, payment, subscription, wallet reservation, trust stage, PD build.",
       "group_id": "B",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "A07"
       ],
@@ -524,12 +535,14 @@
         "E03"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/b06"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b06",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b06",
         "pull_request": null,
         "commit": null,
         "marker": null
