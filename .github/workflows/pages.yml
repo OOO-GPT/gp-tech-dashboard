@@ -1,0 +1,95 @@
+name: Публикация dashboard
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Проверка и сборка
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+    steps:
+      - name: Получить репозиторий
+        uses: actions/checkout@v6
+
+      - name: Настроить Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Проверить интерфейс
+        run: |
+          test ! -e README.md
+          npm test
+
+      - name: Проверить публичный снимок
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+
+          const snapshot = JSON.parse(await readFile('data/tasks.json', 'utf8'));
+          const statuses = new Set(['done', 'review', 'branch', 'ready', 'blocked']);
+
+          if (!Array.isArray(snapshot.groups) || !Array.isArray(snapshot.tasks)) {
+            throw new Error('Снимок должен содержать массивы groups и tasks');
+          }
+
+          const ids = new Set();
+          for (const task of snapshot.tasks) {
+            if (!task || typeof task.id !== 'string' || typeof task.title !== 'string') {
+              throw new Error('У каждой задачи должны быть строковые id и title');
+            }
+            if (ids.has(task.id)) throw new Error(`Повторяющийся ID задачи: ${task.id}`);
+            if (!statuses.has(task.status)) throw new Error(`Неизвестный статус ${task.status} у ${task.id}`);
+            if (!Array.isArray(task.parents) || !Array.isArray(task.children)) {
+              throw new Error(`Некорректные зависимости у ${task.id}`);
+            }
+            ids.add(task.id);
+          }
+
+          if (snapshot.tasks.length === 0) throw new Error('Снимок не содержит задач');
+          NODE
+
+      - name: Настроить GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Собрать статический artifact
+        shell: bash
+        run: |
+          mkdir -p dist/data
+          cp index.html styles.css app.js .nojekyll dist/
+          cp data/tasks.json dist/data/tasks.json
+          test -z "$(find dist -type l -print -quit)"
+
+      - name: Загрузить artifact GitHub Pages
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    name: Публикация
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Опубликовать GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

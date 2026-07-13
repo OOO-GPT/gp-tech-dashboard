@@ -1,0 +1,5047 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-13T15:34:52.275Z",
+  "main": {
+    "ref": "main"
+  },
+  "repository": {
+    "name": "OOO-GPT/gp-tech",
+    "url": "https://github.com/OOO-GPT/gp-tech"
+  },
+  "counts": {
+    "total": 149,
+    "done": 14,
+    "review": 10,
+    "branch": 0,
+    "ready": 0,
+    "blocked": 125
+  },
+  "groups": [
+    {
+      "id": "A",
+      "title": "Исходные решения и инвентаризация"
+    },
+    {
+      "id": "B",
+      "title": "Архитектурный каркас"
+    },
+    {
+      "id": "C",
+      "title": "Каноническая модель данных"
+    },
+    {
+      "id": "D",
+      "title": "Пользователи, организации, права"
+    },
+    {
+      "id": "E",
+      "title": "Ledger, деньги, подписки"
+    },
+    {
+      "id": "F",
+      "title": "ЕИС, тендеры, документы"
+    },
+    {
+      "id": "G",
+      "title": "ИИ-поиск, агент, рантайм"
+    },
+    {
+      "id": "H",
+      "title": "Backend API и интеграции"
+    },
+    {
+      "id": "I",
+      "title": "Расширение: runtime и UI"
+    },
+    {
+      "id": "J",
+      "title": "Экономика продукта и поставщика"
+    },
+    {
+      "id": "K",
+      "title": "Наследие и миграция"
+    },
+    {
+      "id": "L",
+      "title": "Проверка, безопасность, эксплуатация"
+    },
+    {
+      "id": "M",
+      "title": "Релизная готовность"
+    },
+    {
+      "id": "Z",
+      "title": "Завершение"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "A01",
+      "title": "Цель продукта v1",
+      "description": "Зафиксировать v1 brief и semantic-core закон: ИИ владеет смыслом результата.",
+      "group_id": "A",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [],
+      "children": [
+        "A09",
+        "B11",
+        "K01",
+        "K02",
+        "K04",
+        "K05"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": false
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/0ea20e8507565e146b089269b67f2b811aa359d7",
+        "marker": null
+      }
+    },
+    {
+      "id": "A02",
+      "title": "Карта пользовательских сценариев",
+      "description": "Поставщик: открыть закупку, извлечь позицию, найти товар, оценить маржу, принять решение.",
+      "group_id": "A",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [],
+      "children": [
+        "B01",
+        "B09",
+        "J01",
+        "I14",
+        "G02"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": true
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/tree/main",
+        "marker": null
+      }
+    },
+    {
+      "id": "A03",
+      "title": "Определение релиза v1",
+      "description": "Чётко отделить обязательный релизный объём от будущих экспериментов.",
+      "group_id": "A",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [],
+      "children": [
+        "B01",
+        "M10",
+        "M06"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": true
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/tree/main",
+        "marker": null
+      }
+    },
+    {
+      "id": "A04",
+      "title": "Правила минимальной сложности",
+      "description": "Файл/модуль имеет одну ответственность; бизнес-логика не живёт в UI; явные зависимости.",
+      "group_id": "A",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [],
+      "children": [
+        "B02",
+        "B04",
+        "L11",
+        "B07"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": true
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/tree/main",
+        "marker": null
+      }
+    },
+    {
+      "id": "A05",
+      "title": "Правовые и риск-границы",
+      "description": "Персональные данные, платежи, закупочные ограничения, доказательность источников, отказ от ложных гарантий.",
+      "group_id": "A",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [],
+      "children": [
+        "B10",
+        "D06",
+        "E08",
+        "J09",
+        "L08"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": true
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/tree/main",
+        "marker": null
+      }
+    },
+    {
+      "id": "A06",
+      "title": "Выбор технического контура",
+      "description": "Репозитории, язык, фреймворки, БД, очередь, сборка расширения, окружения разработки.",
+      "group_id": "A",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [],
+      "children": [
+        "B02",
+        "C01",
+        "L11",
+        "B08"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": true
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/tree/main",
+        "marker": null
+      }
+    },
+    {
+      "id": "A07",
+      "title": "Единый словарь домена",
+      "description": "Tender, Lot, Item, Requirement, Candidate, Evidence, Run, Wallet, Subscription, Org, User.",
+      "group_id": "A",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [],
+      "children": [
+        "B01",
+        "B05",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "B06"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/a07"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 10,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/10",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/a07",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/a07",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/10",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "A08",
+      "title": "Definition of Done",
+      "description": "Для каждой вершины: контракт, тест, документация, наблюдаемость, обратимость при риске.",
+      "group_id": "A",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [],
+      "children": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10",
+        "L12",
+        "B12"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": true
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/tree/main",
+        "marker": null
+      }
+    },
+    {
+      "id": "A09",
+      "title": "Архив: карта API/контрактов",
+      "description": "Снять текущие endpoint-ы, payload-и и client-side ожидания перед новой схемой.",
+      "group_id": "A",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [
+        "A01"
+      ],
+      "children": [
+        "B09"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": true
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/tree/main",
+        "marker": null
+      }
+    },
+    {
+      "id": "B01",
+      "title": "Bounded contexts",
+      "description": "Разделить продукт на auth/org, ledger/billing, tender/EIS, search, extension-runtime, UI, ops.",
+      "group_id": "B",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A02",
+        "A03",
+        "A07"
+      ],
+      "children": [
+        "B02",
+        "B03",
+        "C02",
+        "C03",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "missing_parents": [
+        "A07"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B02",
+      "title": "Структура пакетов и модулей",
+      "description": "Новая папочная структура без плоского backend и без popup/background монолитов.",
+      "group_id": "B",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A04",
+        "A06",
+        "B01"
+      ],
+      "children": [
+        "D01",
+        "E01",
+        "F01",
+        "G01",
+        "H01",
+        "I01"
+      ],
+      "missing_parents": [
+        "B01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B03",
+      "title": "Границы владения данными",
+      "description": "Кто создаёт и изменяет каждую сущность; запрет второго источника истины.",
+      "group_id": "B",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B01"
+      ],
+      "children": [
+        "B04",
+        "C14",
+        "C12"
+      ],
+      "missing_parents": [
+        "B01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B04",
+      "title": "Правила зависимостей",
+      "description": "Domain не зависит от HTTP/UI; adapters зависят внутрь; shared только для контрактов.",
+      "group_id": "B",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A04",
+        "B03"
+      ],
+      "children": [
+        "D01",
+        "E01",
+        "F01",
+        "G01",
+        "H01",
+        "I01"
+      ],
+      "missing_parents": [
+        "B03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B05",
+      "title": "Версионирование схем",
+      "description": "Версии API, БД, cache payload, search result, archive index, feature flags.",
+      "group_id": "B",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A07"
+      ],
+      "children": [
+        "C01",
+        "C06",
+        "C13",
+        "H06"
+      ],
+      "missing_parents": [
+        "A07"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B06",
+      "title": "Каталог state machines",
+      "description": "Search job, item run, payment, subscription, wallet reservation, trust stage, PD build.",
+      "group_id": "B",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A07"
+      ],
+      "children": [
+        "C06",
+        "D06",
+        "G11",
+        "E04",
+        "E03"
+      ],
+      "missing_parents": [
+        "A07"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B07",
+      "title": "Таксономия ошибок",
+      "description": "Единые public error codes, retryability, user copy, operator diagnostics.",
+      "group_id": "B",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [
+        "A04"
+      ],
+      "children": [
+        "H07",
+        "I20",
+        "L02"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/b07"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 3,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/3",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b07",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b07",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/3",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B08",
+      "title": "Config/secrets/flags contract",
+      "description": "Все env/секреты/флаги описаны, валидируются на старте и не расползаются по коду.",
+      "group_id": "B",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [
+        "A06"
+      ],
+      "children": [
+        "D01",
+        "E05",
+        "F01",
+        "G03",
+        "H03",
+        "M01"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/b08"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 8,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/8",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b08",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b08",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/8",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B09",
+      "title": "API-first contract",
+      "description": "OpenAPI/JSON Schema + разделение AI-authored semantics/tool evidence/metadata.",
+      "group_id": "B",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [
+        "A02",
+        "A09",
+        "K07"
+      ],
+      "children": [
+        "H01",
+        "H06",
+        "L02"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/b09"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 6,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/6",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b09",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b09",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/6",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B10",
+      "title": "Security/observability baseline",
+      "description": "Authz, audit, metrics, trace ids, structured logs, rate limits, секреты, SSRF/XSS границы.",
+      "group_id": "B",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [
+        "A05"
+      ],
+      "children": [
+        "D05",
+        "D07",
+        "H08",
+        "L08",
+        "L13"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/b10"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 7,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/7",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b10",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b10",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/7",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "B11",
+      "title": "Стратегия strangler rewrite",
+      "description": "Не переносить хаос: выделять золотые фикстуры, писать новое ядро, старое использовать как evidence.",
+      "group_id": "B",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [
+        "A01"
+      ],
+      "children": [
+        "K01",
+        "K02",
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": false
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/53918c13cd0bdd6ae007cbc6802b37662e54d5e3",
+        "marker": null
+      }
+    },
+    {
+      "id": "B12",
+      "title": "ADR и module README",
+      "description": "У каждого bounded context: назначение, входы, выходы, инварианты, тесты, владельцы.",
+      "group_id": "B",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [
+        "A08"
+      ],
+      "children": [
+        "L12",
+        "M10"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/b12"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 5,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/5",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b12",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b12",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/5",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C01",
+      "title": "БД и миграции",
+      "description": "Postgres schema, migration runner, transactional boundaries, seed/dev reset.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A06",
+        "B05"
+      ],
+      "children": [
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "L03"
+      ],
+      "missing_parents": [
+        "B05"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C02",
+      "title": "User/Auth model",
+      "description": "Users, sessions, refresh families, credentials, email/phone verification, API keys.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A07",
+        "B01",
+        "C01"
+      ],
+      "children": [
+        "D01",
+        "D02",
+        "D03",
+        "C14"
+      ],
+      "missing_parents": [
+        "A07",
+        "B01",
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C03",
+      "title": "Tender/Lot model",
+      "description": "Закупка, лот, заказчик, НМЦК/цена поставки, сроки, источник, registry ids.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A07",
+        "B01",
+        "C01"
+      ],
+      "children": [
+        "F02",
+        "F07",
+        "H04"
+      ],
+      "missing_parents": [
+        "A07",
+        "B01",
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C04",
+      "title": "Requirement model",
+      "description": "Требования и evidence; финальные verdicts остаются AI-authored.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A07",
+        "C01"
+      ],
+      "children": [
+        "F05",
+        "G07",
+        "I15"
+      ],
+      "missing_parents": [
+        "A07",
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C05",
+      "title": "Product candidate model",
+      "description": "Товар, продавец, цена, доставка, наличие, источник, доказательства, риск-флаги.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A07",
+        "C01"
+      ],
+      "children": [
+        "G05",
+        "G06",
+        "G13",
+        "I17"
+      ],
+      "missing_parents": [
+        "A07",
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C06",
+      "title": "Search run ledger model",
+      "description": "SearchJob, ItemRun, Attempt, Step, Event, Snapshot, idempotency key, generation.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B01",
+        "B05",
+        "B06",
+        "C01"
+      ],
+      "children": [
+        "G01",
+        "G10",
+        "G12",
+        "H02",
+        "I09"
+      ],
+      "missing_parents": [
+        "B01",
+        "B05",
+        "B06",
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C07",
+      "title": "Money ledger model",
+      "description": "Account, wallet, lot, transaction, reservation, settlement, reversal, immutable audit trail.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B01",
+        "C01"
+      ],
+      "children": [
+        "E01",
+        "E03",
+        "G14",
+        "L09"
+      ],
+      "missing_parents": [
+        "B01",
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C08",
+      "title": "Subscription/entitlement model",
+      "description": "Тарифы пользователя и организации, seat entitlements, quotas, renewals, grace states.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B01",
+        "C01"
+      ],
+      "children": [
+        "E04",
+        "J07",
+        "D05"
+      ],
+      "missing_parents": [
+        "B01",
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C09",
+      "title": "Payment/Billing party model",
+      "description": "Плательщик, реквизиты, заказ, provider event, invoice/receipt metadata, KYC branch.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C01"
+      ],
+      "children": [
+        "E05",
+        "E06",
+        "E08"
+      ],
+      "missing_parents": [
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C10",
+      "title": "Personal DB/document model",
+      "description": "Папки поставщика, документы, build, vector store, attachment scope.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C01"
+      ],
+      "children": [
+        "G09",
+        "H04"
+      ],
+      "missing_parents": [
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C11",
+      "title": "Extension installation model",
+      "description": "Installation id, runtime policy, trust signals, browser capability, version metadata.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C01"
+      ],
+      "children": [
+        "D06",
+        "H03",
+        "I08"
+      ],
+      "missing_parents": [
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C12",
+      "title": "Audit/outbox/events model",
+      "description": "Domain events, audit records, outbox delivery, support timeline, operator actions.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B03",
+        "C01"
+      ],
+      "children": [
+        "D07",
+        "L13",
+        "H05"
+      ],
+      "missing_parents": [
+        "B03",
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C13",
+      "title": "Cache/archive model",
+      "description": "Cache finalized results without semantic rewrite; archive/tool evidence versioning.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B05",
+        "C01",
+        "K07"
+      ],
+      "children": [
+        "F08",
+        "G08",
+        "G15"
+      ],
+      "missing_parents": [
+        "B05",
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C14",
+      "title": "Tenancy/ownership constraints",
+      "description": "Org/user/project ownership, BOLA protection, no silent personal fallback for org billing.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B03",
+        "C01",
+        "C02"
+      ],
+      "children": [
+        "D05",
+        "E03",
+        "H08",
+        "L08"
+      ],
+      "missing_parents": [
+        "B03",
+        "C01",
+        "C02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "C15",
+      "title": "Data migration blueprint",
+      "description": "Какие таблицы создаются заново, какие данные импортируются, что остаётся legacy-readonly.",
+      "group_id": "C",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C01"
+      ],
+      "children": [
+        "K06",
+        "L15"
+      ],
+      "missing_parents": [
+        "C01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "D01",
+      "title": "Auth module scaffold",
+      "description": "Слои domain/service/repository/routes, без зависимости от search или UI.",
+      "group_id": "D",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B02",
+        "B04",
+        "B08",
+        "C02",
+        "K05"
+      ],
+      "children": [
+        "D02"
+      ],
+      "missing_parents": [
+        "B02",
+        "B04",
+        "B08",
+        "C02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "D02",
+      "title": "Signup/login/session flow",
+      "description": "Регистрация, вход, refresh, logout, step-up, verification, rate limits.",
+      "group_id": "D",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C02",
+        "D01"
+      ],
+      "children": [
+        "D03",
+        "L03"
+      ],
+      "missing_parents": [
+        "C02",
+        "D01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "D03",
+      "title": "Organization lifecycle",
+      "description": "Создание организации, membership, Owner/Admin/Member, invite/join/remove.",
+      "group_id": "D",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C02",
+        "D02"
+      ],
+      "children": [
+        "D04",
+        "D05",
+        "I19"
+      ],
+      "missing_parents": [
+        "C02",
+        "D02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "D04",
+      "title": "Projects/default project",
+      "description": "Проекты как governance scopes; explicit project wins; one stored default, no fallback chain.",
+      "group_id": "D",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "D03"
+      ],
+      "children": [
+        "J06",
+        "I19"
+      ],
+      "missing_parents": [
+        "D03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "D05",
+      "title": "RBAC/authz engine",
+      "description": "Единая проверка действий над user/org/project/wallet/search resources.",
+      "group_id": "D",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B10",
+        "C08",
+        "C14",
+        "D03",
+        "K01"
+      ],
+      "children": [
+        "H01",
+        "H02",
+        "H03",
+        "H05",
+        "G01",
+        "E03",
+        "L01",
+        "L08"
+      ],
+      "missing_parents": [
+        "B10",
+        "C08",
+        "C14",
+        "D03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "D06",
+      "title": "Account trust policy",
+      "description": "Installation binding, anti-sharing stages, user-scoped recovery, operator pardon.",
+      "group_id": "D",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A05",
+        "B06",
+        "C11",
+        "J07"
+      ],
+      "children": [
+        "H03",
+        "I08",
+        "I20",
+        "D07"
+      ],
+      "missing_parents": [
+        "B06",
+        "C11",
+        "J07"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "D07",
+      "title": "Support/operator domain",
+      "description": "Cases, moderator actions, technical works, manual recovery, audit-safe operations.",
+      "group_id": "D",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B10",
+        "C12",
+        "D06"
+      ],
+      "children": [
+        "H05",
+        "L14"
+      ],
+      "missing_parents": [
+        "B10",
+        "C12",
+        "D06"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "E01",
+      "title": "Append-only ledger service",
+      "description": "Транзакции, идемпотентность, reversal вместо правки, invariant checks.",
+      "group_id": "E",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B02",
+        "B04",
+        "C07",
+        "K01",
+        "K05"
+      ],
+      "children": [
+        "E02",
+        "E03",
+        "E07",
+        "E08",
+        "J05",
+        "L01",
+        "L09"
+      ],
+      "missing_parents": [
+        "B02",
+        "B04",
+        "C07"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "E02",
+      "title": "AI cost/pricing service",
+      "description": "Токены, web/file search calls, picodollars/credits, per-run budget limits.",
+      "group_id": "E",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "E01",
+        "J03"
+      ],
+      "children": [
+        "G14"
+      ],
+      "missing_parents": [
+        "E01",
+        "J03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "E03",
+      "title": "Org budget reserve/settle",
+      "description": "Reserve → settle/release for search and extensions; ambiguity fails closed.",
+      "group_id": "E",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B06",
+        "C07",
+        "C14",
+        "D05",
+        "E01"
+      ],
+      "children": [
+        "G14",
+        "J06",
+        "E07",
+        "I19",
+        "L09"
+      ],
+      "missing_parents": [
+        "B06",
+        "C07",
+        "C14",
+        "D05",
+        "E01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "E04",
+      "title": "Subscription service",
+      "description": "Тарифы, user/org subscriptions, seats, renewal, grace, cancellation.",
+      "group_id": "E",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B06",
+        "C08",
+        "E06"
+      ],
+      "children": [
+        "E05",
+        "J07",
+        "I19"
+      ],
+      "missing_parents": [
+        "B06",
+        "C08",
+        "E06"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "E05",
+      "title": "Payment provider adapters",
+      "description": "Провайдеры acquiring/recurring, webhooks, provider-neutral service interface.",
+      "group_id": "E",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B08",
+        "C09",
+        "E04"
+      ],
+      "children": [
+        "M05",
+        "J05",
+        "L03"
+      ],
+      "missing_parents": [
+        "B08",
+        "C09",
+        "E04"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "E06",
+      "title": "Billing party/KYC service",
+      "description": "ИНН/КПП, плательщик, hold/remediation, provider requirements.",
+      "group_id": "E",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C09"
+      ],
+      "children": [
+        "M05",
+        "E04"
+      ],
+      "missing_parents": [
+        "C09"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "E07",
+      "title": "Statements/reporting/export",
+      "description": "Выписки, расходы по тендерам/проектам, CSV/XLSX, reconcile views.",
+      "group_id": "E",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "E01",
+        "E03",
+        "G14"
+      ],
+      "children": [
+        "I19",
+        "L09"
+      ],
+      "missing_parents": [
+        "E01",
+        "E03",
+        "G14"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "E08",
+      "title": "Refund/reversal/dispute flow",
+      "description": "Ошибочные списания, charge reversal, operator path, audit and notifications.",
+      "group_id": "E",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A05",
+        "C09",
+        "E01"
+      ],
+      "children": [
+        "H05",
+        "L09"
+      ],
+      "missing_parents": [
+        "C09",
+        "E01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "F01",
+      "title": "EIS client adapter",
+      "description": "Официальные API/страницы/прокси, retry, timeout, source attribution.",
+      "group_id": "F",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B02",
+        "B04",
+        "B08",
+        "K05"
+      ],
+      "children": [
+        "F02",
+        "L03"
+      ],
+      "missing_parents": [
+        "B02",
+        "B04",
+        "B08"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "F02",
+      "title": "Tender resolver",
+      "description": "По registry number/URL найти закупку, лот, заказчика и карточку ЕИС.",
+      "group_id": "F",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C03",
+        "F01"
+      ],
+      "children": [
+        "F03",
+        "F04",
+        "F07",
+        "I14"
+      ],
+      "missing_parents": [
+        "C03",
+        "F01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "F03",
+      "title": "Contract resolver",
+      "description": "Контракты и исторические поставки как источник archive-first evidence.",
+      "group_id": "F",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "F02"
+      ],
+      "children": [
+        "G08"
+      ],
+      "missing_parents": [
+        "F02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "F04",
+      "title": "Document fetch/extract",
+      "description": "Скачать ТЗ/PDF/DOCX, извлечь текст постранично, сохранить source metadata.",
+      "group_id": "F",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "F02"
+      ],
+      "children": [
+        "F05",
+        "G06"
+      ],
+      "missing_parents": [
+        "F02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "F05",
+      "title": "Requirement extraction",
+      "description": "Извлечь requirements/evidence для AI-core, не финальные user verdicts.",
+      "group_id": "F",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C04",
+        "F04",
+        "F06",
+        "K01",
+        "K02"
+      ],
+      "children": [
+        "F07",
+        "G07",
+        "I15",
+        "L01"
+      ],
+      "missing_parents": [
+        "C04",
+        "F04",
+        "F06",
+        "K02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "F06",
+      "title": "Dictionaries/legal regimes",
+      "description": "Tool evidence по ОКЕИ/ОКПД/нацрежиму; не post-final verdict engine.",
+      "group_id": "F",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [
+        "K01"
+      ],
+      "children": [
+        "F05",
+        "F07",
+        "G07"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/f06"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 1,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/1",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f06",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f06",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/1",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "F07",
+      "title": "Item splitter/object SID",
+      "description": "Стабильные позиции закупки, object_sid, item text, характеристики, количество.",
+      "group_id": "F",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C03",
+        "F02",
+        "F05",
+        "F06"
+      ],
+      "children": [
+        "G01",
+        "H04",
+        "I15"
+      ],
+      "missing_parents": [
+        "C03",
+        "F02",
+        "F05",
+        "F06"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "F08",
+      "title": "Tender/EIS cache policy",
+      "description": "TTL, revalidation, provenance, cache busting, stale-safe responses.",
+      "group_id": "F",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C13"
+      ],
+      "children": [
+        "G15",
+        "H04"
+      ],
+      "missing_parents": [
+        "C13"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G01",
+      "title": "Search orchestrator",
+      "description": "Создаёт item runs и ведёт до AI finalizer; не выбирает result после него.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B02",
+        "B04",
+        "C06",
+        "D05",
+        "F07",
+        "K05"
+      ],
+      "children": [
+        "G02",
+        "G10",
+        "G14",
+        "H02"
+      ],
+      "missing_parents": [
+        "B02",
+        "B04",
+        "C06",
+        "D05",
+        "F07"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G02",
+      "title": "Agent contract/prompts/tools",
+      "description": "Cognitive core contract: AI-authored final result, tools as evidence.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A02",
+        "G01"
+      ],
+      "children": [
+        "G03",
+        "G04",
+        "G06"
+      ],
+      "missing_parents": [
+        "G01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G03",
+      "title": "AI provider adapter",
+      "description": "Модели, retries, cancellation, usage telemetry, response validation.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B08",
+        "G02"
+      ],
+      "children": [
+        "G07",
+        "G16"
+      ],
+      "missing_parents": [
+        "B08",
+        "G02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G04",
+      "title": "Internet search adapters",
+      "description": "Поисковые провайдеры, marketplace/site discovery, query generation, dedup.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "G02"
+      ],
+      "children": [
+        "G05",
+        "G08"
+      ],
+      "missing_parents": [
+        "G02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G05",
+      "title": "Product page extraction",
+      "description": "Цена, наличие, доставка, характеристики, продавец, URL, snapshot metadata.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C05",
+        "G04"
+      ],
+      "children": [
+        "G06",
+        "G07"
+      ],
+      "missing_parents": [
+        "C05",
+        "G04"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G06",
+      "title": "Evidence normalizer",
+      "description": "Цитаты/URL/source evidence до finalizer; не verdict downgrader после него.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C05",
+        "F04",
+        "G02",
+        "G05"
+      ],
+      "children": [
+        "G07",
+        "G13"
+      ],
+      "missing_parents": [
+        "C05",
+        "F04",
+        "G02",
+        "G05"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G07",
+      "title": "Match/verdict engine",
+      "description": "AI-owned verdict/finalizer; deterministic logic только как tool evidence.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C04",
+        "F05",
+        "F06",
+        "G03",
+        "G05",
+        "G06",
+        "G08",
+        "G09",
+        "K01",
+        "K02"
+      ],
+      "children": [
+        "G13",
+        "J04",
+        "L01"
+      ],
+      "missing_parents": [
+        "C04",
+        "F05",
+        "F06",
+        "G03",
+        "G05",
+        "G06",
+        "G08",
+        "G09",
+        "K02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G08",
+      "title": "Archive-first engine",
+      "description": "Исторические закупки/контракты/search memory перед дорогим web-first поиском.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C13",
+        "F03",
+        "G04"
+      ],
+      "children": [
+        "G07",
+        "G15"
+      ],
+      "missing_parents": [
+        "C13",
+        "F03",
+        "G04"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G09",
+      "title": "Personal DB search integration",
+      "description": "Опционально подключать документы поставщика к item run как ранний file_search контекст.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C10"
+      ],
+      "children": [
+        "G07",
+        "G13"
+      ],
+      "missing_parents": [
+        "C10"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G10",
+      "title": "Worker/threading model",
+      "description": "Очередь, parallel item runs, leases, backpressure, per-user/org concurrency.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C06",
+        "G01",
+        "H08"
+      ],
+      "children": [
+        "G11",
+        "G12",
+        "L03",
+        "L07"
+      ],
+      "missing_parents": [
+        "C06",
+        "G01",
+        "H08"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G11",
+      "title": "Cancel/retry/timeout semantics",
+      "description": "Отмена job/item, retry approval, transient errors, deterministic terminal states.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B06",
+        "G10"
+      ],
+      "children": [
+        "G12",
+        "G13"
+      ],
+      "missing_parents": [
+        "B06",
+        "G10"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G12",
+      "title": "Progress/event stream",
+      "description": "События прогресса, snapshots, polling/SSE contract, browser resume after reload.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C06",
+        "G10",
+        "G11"
+      ],
+      "children": [
+        "G13",
+        "H02",
+        "I16",
+        "G16"
+      ],
+      "missing_parents": [
+        "C06",
+        "G10",
+        "G11"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G13",
+      "title": "Result projection API",
+      "description": "Frozen SearcherResponse: projection without backend/UI semantic mutation.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C05",
+        "G06",
+        "G07",
+        "G09",
+        "G11",
+        "G12",
+        "G14",
+        "G15"
+      ],
+      "children": [
+        "H02",
+        "I17",
+        "G16"
+      ],
+      "missing_parents": [
+        "C05",
+        "G06",
+        "G07",
+        "G09",
+        "G11",
+        "G12",
+        "G14",
+        "G15"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G14",
+      "title": "Cost reservation settlement",
+      "description": "Резерв до запуска, списание по факту, release on cancel/failure, no double charge.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C07",
+        "E02",
+        "E03",
+        "G01",
+        "J03"
+      ],
+      "children": [
+        "G13",
+        "E07"
+      ],
+      "missing_parents": [
+        "C07",
+        "E02",
+        "E03",
+        "G01",
+        "J03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G15",
+      "title": "Search cache/dedup policy",
+      "description": "Reuse finalized results without semantic normalization; versioned payloads.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C13",
+        "F08",
+        "G08"
+      ],
+      "children": [
+        "G13",
+        "L04"
+      ],
+      "missing_parents": [
+        "C13",
+        "F08",
+        "G08"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "G16",
+      "title": "Search replay diagnostics",
+      "description": "Trace по item run: inputs, tools, candidates, verdicts, costs, errors, replay id.",
+      "group_id": "G",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "G03",
+        "G12",
+        "G13"
+      ],
+      "children": [
+        "L04",
+        "L13"
+      ],
+      "missing_parents": [
+        "G03",
+        "G12",
+        "G13"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "H01",
+      "title": "Backend route composition",
+      "description": "Маленькие routers per context; app только wiring, middleware, lifespan.",
+      "group_id": "H",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B02",
+        "B04",
+        "B09",
+        "D05",
+        "K05"
+      ],
+      "children": [
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H07",
+        "H08",
+        "H09"
+      ],
+      "missing_parents": [
+        "B02",
+        "B04",
+        "B09",
+        "D05"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "H02",
+      "title": "Async search API",
+      "description": "preflight/start/progress/continue/extend/cancel/usage-history endpoints.",
+      "group_id": "H",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C06",
+        "D05",
+        "G01",
+        "G12",
+        "G13",
+        "H01"
+      ],
+      "children": [
+        "H06",
+        "I09",
+        "L02",
+        "L07"
+      ],
+      "missing_parents": [
+        "C06",
+        "D05",
+        "G01",
+        "G12",
+        "G13",
+        "H01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "H03",
+      "title": "Extension runtime policy API",
+      "description": "Версия расширения, capabilities, maintenance gates, feature flags, trust enforcement.",
+      "group_id": "H",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B08",
+        "C11",
+        "D05",
+        "D06",
+        "H01"
+      ],
+      "children": [
+        "H06",
+        "I08",
+        "M01"
+      ],
+      "missing_parents": [
+        "B08",
+        "C11",
+        "D05",
+        "D06",
+        "H01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "H04",
+      "title": "Tender import API",
+      "description": "Импорт из URL/registry/doc upload; возвращает нормализованную закупку и позиции.",
+      "group_id": "H",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C03",
+        "C10",
+        "F07",
+        "F08",
+        "H01",
+        "I05"
+      ],
+      "children": [
+        "H06",
+        "I09",
+        "I14",
+        "L02"
+      ],
+      "missing_parents": [
+        "C03",
+        "C10",
+        "F07",
+        "F08",
+        "H01",
+        "I05"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "H05",
+      "title": "Admin/support API",
+      "description": "Operator-safe endpoints for wallets, trust, payments, technical works, diagnostics.",
+      "group_id": "H",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C12",
+        "D05",
+        "D07",
+        "E08",
+        "H01"
+      ],
+      "children": [
+        "H06",
+        "L14",
+        "I19"
+      ],
+      "missing_parents": [
+        "C12",
+        "D05",
+        "D07",
+        "E08",
+        "H01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "H06",
+      "title": "Generated client SDK",
+      "description": "Typed extension API client from OpenAPI, no hand-written drift.",
+      "group_id": "H",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B05",
+        "B09",
+        "H02",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "children": [
+        "I07",
+        "L02"
+      ],
+      "missing_parents": [
+        "B05",
+        "B09",
+        "H02",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "H07",
+      "title": "HTTP error middleware",
+      "description": "Public error payloads, request ids, localized error mapping, safe debug only.",
+      "group_id": "H",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B07",
+        "H01"
+      ],
+      "children": [
+        "I20",
+        "L02"
+      ],
+      "missing_parents": [
+        "B07",
+        "H01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "H08",
+      "title": "Rate limits/quotas",
+      "description": "User/org/api-key quotas, search concurrency limits, abuse and cost guards.",
+      "group_id": "H",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B10",
+        "C14",
+        "H01"
+      ],
+      "children": [
+        "G10",
+        "I08",
+        "L08"
+      ],
+      "missing_parents": [
+        "B10",
+        "C14",
+        "H01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "H09",
+      "title": "CORS/extension origins",
+      "description": "Allowed extension IDs/origins/host permissions, distribution-specific policy.",
+      "group_id": "H",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "H01"
+      ],
+      "children": [
+        "I02",
+        "I07"
+      ],
+      "missing_parents": [
+        "H01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I01",
+      "title": "Extension source layout",
+      "description": "runtime/, content/, api/, domain/, ui/, components/, storage/, locales/, tests/.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B02",
+        "B04",
+        "K04"
+      ],
+      "children": [
+        "I02",
+        "I03",
+        "I11",
+        "I21"
+      ],
+      "missing_parents": [
+        "B02",
+        "B04"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I02",
+      "title": "Manifest/permissions",
+      "description": "MV3 manifest, minimal host permissions, content script matches, optional permissions.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "H09",
+        "I01"
+      ],
+      "children": [
+        "I03",
+        "I04",
+        "I10",
+        "M07"
+      ],
+      "missing_parents": [
+        "H09",
+        "I01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I03",
+      "title": "Background event bus",
+      "description": "Service worker owns long-lived runtime coordination, alarms, notifications, resume.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I01",
+        "I02"
+      ],
+      "children": [
+        "I06",
+        "I09",
+        "I10",
+        "I20"
+      ],
+      "missing_parents": [
+        "I01",
+        "I02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I04",
+      "title": "Content page adapters",
+      "description": "ЕИС/zakupki DOM extraction, browser-tab context, safe scraping boundaries.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I02"
+      ],
+      "children": [
+        "I05"
+      ],
+      "missing_parents": [
+        "I02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I05",
+      "title": "Browser data capture contract",
+      "description": "Captured tender URL/registry/doc/page data → typed DTO; no UI parsing.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I04"
+      ],
+      "children": [
+        "I09",
+        "I14",
+        "H04"
+      ],
+      "missing_parents": [
+        "I04"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I06",
+      "title": "Local storage/cache",
+      "description": "Session, draft, progress resume, feature policy cache, schema migrations.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I03"
+      ],
+      "children": [
+        "I09",
+        "I13"
+      ],
+      "missing_parents": [
+        "I03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I07",
+      "title": "Extension API client",
+      "description": "Generated client + auth refresh + org headers + idempotency + retry policy.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "H06",
+        "H09"
+      ],
+      "children": [
+        "I09",
+        "I19",
+        "I20"
+      ],
+      "missing_parents": [
+        "H06",
+        "H09"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I08",
+      "title": "Runtime gating client",
+      "description": "Версия, maintenance, account trust, entitlement gates before expensive actions.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C11",
+        "D06",
+        "H03",
+        "H08"
+      ],
+      "children": [
+        "I09",
+        "I20"
+      ],
+      "missing_parents": [
+        "C11",
+        "D06",
+        "H03",
+        "H08"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I09",
+      "title": "Search controller",
+      "description": "UI-independent orchestration: import tender, start run, poll/stream, cancel, continue.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C06",
+        "H02",
+        "H04",
+        "I03",
+        "I05",
+        "I06",
+        "I07",
+        "I08",
+        "I15"
+      ],
+      "children": [
+        "I16",
+        "I17"
+      ],
+      "missing_parents": [
+        "C06",
+        "H02",
+        "H04",
+        "I03",
+        "I05",
+        "I06",
+        "I07",
+        "I08",
+        "I15"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I10",
+      "title": "Notifications/offscreen",
+      "description": "Progress and completion notifications, sounds, browser permission flow.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I02",
+        "I03"
+      ],
+      "children": [
+        "I16",
+        "L05"
+      ],
+      "missing_parents": [
+        "I02",
+        "I03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I11",
+      "title": "Popup/side panel shell",
+      "description": "Shell only composes routes/layout; no business rules in markup handlers.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I01",
+        "K04"
+      ],
+      "children": [
+        "I12",
+        "I13",
+        "L07"
+      ],
+      "missing_parents": [
+        "I01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I12",
+      "title": "UI component system",
+      "description": "Buttons, cards, tables, dialogs, tokens, accessibility, empty/error states.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I11"
+      ],
+      "children": [
+        "I14",
+        "I15",
+        "I16",
+        "I17",
+        "I18",
+        "I19",
+        "I20",
+        "L10"
+      ],
+      "missing_parents": [
+        "I11"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I13",
+      "title": "Frontend state store",
+      "description": "Renderer-only selectors; no UI-derived verdicts/warnings.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I06",
+        "I11",
+        "K04",
+        "K07"
+      ],
+      "children": [
+        "I14",
+        "I15",
+        "I16",
+        "I17",
+        "I18",
+        "I19",
+        "I20"
+      ],
+      "missing_parents": [
+        "I06",
+        "I11"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I14",
+      "title": "Tender overview screen",
+      "description": "Закупка, заказчик, позиции, цена поставки, source/provenance.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A02",
+        "F02",
+        "H04",
+        "I05",
+        "I12",
+        "I13",
+        "I21"
+      ],
+      "children": [
+        "I15",
+        "L06"
+      ],
+      "missing_parents": [
+        "F02",
+        "H04",
+        "I05",
+        "I12",
+        "I13",
+        "I21"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I15",
+      "title": "Requirement/item screen",
+      "description": "Позиция ТЗ, характеристики, documents, national regime, editable clarifications.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C04",
+        "F05",
+        "F07",
+        "I12",
+        "I13",
+        "I14",
+        "I21"
+      ],
+      "children": [
+        "I09",
+        "L06"
+      ],
+      "missing_parents": [
+        "C04",
+        "F05",
+        "F07",
+        "I12",
+        "I13",
+        "I14",
+        "I21"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I16",
+      "title": "Search progress screen",
+      "description": "Per-item runs, retry/cancel, live progress, resumable after tab/popup reload.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "G12",
+        "I09",
+        "I10",
+        "I12",
+        "I13",
+        "I21"
+      ],
+      "children": [
+        "L05",
+        "L06"
+      ],
+      "missing_parents": [
+        "G12",
+        "I09",
+        "I10",
+        "I12",
+        "I13",
+        "I21"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I17",
+      "title": "Results/evidence screen",
+      "description": "Render AI-authored result/evidence; no hidden evaluator or fallback copy.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C05",
+        "G13",
+        "I09",
+        "I12",
+        "I13",
+        "I21"
+      ],
+      "children": [
+        "I18",
+        "J04",
+        "J08",
+        "L06"
+      ],
+      "missing_parents": [
+        "C05",
+        "G13",
+        "I09",
+        "I12",
+        "I13",
+        "I21"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I18",
+      "title": "Economics/margin screen",
+      "description": "Цена закупки, доставка, комиссии, налоги/резерв, маржа, risk-adjusted decision.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I12",
+        "I13",
+        "I17",
+        "I21",
+        "J02",
+        "J04"
+      ],
+      "children": [
+        "J08",
+        "L06"
+      ],
+      "missing_parents": [
+        "I12",
+        "I13",
+        "I17",
+        "I21",
+        "J02",
+        "J04"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I19",
+      "title": "Account/org/billing screens",
+      "description": "Login, org switch, budget, subscriptions, top-up, usage history, settings.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "D03",
+        "D04",
+        "E03",
+        "E04",
+        "E07",
+        "H05",
+        "I07",
+        "I12",
+        "I13",
+        "I21",
+        "J05",
+        "J06",
+        "J07"
+      ],
+      "children": [
+        "L06",
+        "L05"
+      ],
+      "missing_parents": [
+        "D03",
+        "D04",
+        "E03",
+        "E04",
+        "E07",
+        "H05",
+        "I07",
+        "I12",
+        "I13",
+        "I21",
+        "J05",
+        "J06",
+        "J07"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I20",
+      "title": "Onboarding/errors/recovery UI",
+      "description": "Понятные ошибки, trust recovery, maintenance overlay, payment-required states.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B07",
+        "D06",
+        "H07",
+        "I03",
+        "I07",
+        "I08",
+        "I12",
+        "I13",
+        "I21",
+        "J09"
+      ],
+      "children": [
+        "L05",
+        "L10",
+        "L08"
+      ],
+      "missing_parents": [
+        "B07",
+        "D06",
+        "H07",
+        "I03",
+        "I07",
+        "I08",
+        "I12",
+        "I13",
+        "I21",
+        "J09"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I21",
+      "title": "Localization/content",
+      "description": "RU/EN messages, legal copy, no drift between feature labels and contracts.",
+      "group_id": "I",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I01"
+      ],
+      "children": [
+        "I14",
+        "I15",
+        "I16",
+        "I17",
+        "I18",
+        "I19",
+        "I20",
+        "L10"
+      ],
+      "missing_parents": [
+        "I01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "I22",
+      "title": "Browser fixture harness",
+      "description": "Mock backend, fixture tenders, content script hosts, Playwright flows.",
+      "group_id": "I",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [
+        "K04",
+        "K07"
+      ],
+      "children": [
+        "L05",
+        "L06"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": true
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/tree/main",
+        "marker": null
+      }
+    },
+    {
+      "id": "J01",
+      "title": "Pricing assumptions",
+      "description": "Как продукт зарабатывает: стоимость поиска, маржа поставщика, тарифы, бесплатные лимиты.",
+      "group_id": "J",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [
+        "A02"
+      ],
+      "children": [
+        "J02",
+        "J03",
+        "J07"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/j01"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 2,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/2",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j01",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j01",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/2",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "J02",
+      "title": "Margin formula",
+      "description": "НМЦК/цена поставки − закупка − доставка − комиссии − налоги − риск/резерв.",
+      "group_id": "J",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "J01"
+      ],
+      "children": [
+        "J04",
+        "I18",
+        "L01"
+      ],
+      "missing_parents": [
+        "J01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "J03",
+      "title": "AI budget per search",
+      "description": "Ограничения затрат на item/job, cheap archive-first, expensive web/AI only when нужно.",
+      "group_id": "J",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "J01"
+      ],
+      "children": [
+        "E02",
+        "G14"
+      ],
+      "missing_parents": [
+        "J01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "J04",
+      "title": "Opportunity ranking",
+      "description": "Сортировка товаров/позиций по марже, уверенности, риску поставки, доказательности.",
+      "group_id": "J",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "G07",
+        "I17",
+        "J02"
+      ],
+      "children": [
+        "I18",
+        "J08"
+      ],
+      "missing_parents": [
+        "G07",
+        "I17",
+        "J02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "J05",
+      "title": "Credit/top-up flow",
+      "description": "Баланс, пополнение, списание, уведомления о недостатке средств.",
+      "group_id": "J",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "E01",
+        "E05"
+      ],
+      "children": [
+        "I19"
+      ],
+      "missing_parents": [
+        "E01",
+        "E05"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "J06",
+      "title": "Org allocation policy",
+      "description": "Кто платит за поиск, проектный бюджет, лимиты участника, owner/admin controls.",
+      "group_id": "J",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "D04",
+        "E03"
+      ],
+      "children": [
+        "I19"
+      ],
+      "missing_parents": [
+        "D04",
+        "E03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "J07",
+      "title": "Entitlement packaging",
+      "description": "Что даёт тариф: searches, seats, org budget, personal DB, support, limits.",
+      "group_id": "J",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C08",
+        "E04",
+        "J01"
+      ],
+      "children": [
+        "I19",
+        "D06"
+      ],
+      "missing_parents": [
+        "C08",
+        "E04",
+        "J01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "J08",
+      "title": "Decision/export artifacts",
+      "description": "Сохранить подборку, выгрузка, justification pack, evidence snapshot для поставщика.",
+      "group_id": "J",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I17",
+        "I18",
+        "J04"
+      ],
+      "children": [
+        "L06",
+        "M04"
+      ],
+      "missing_parents": [
+        "I17",
+        "I18",
+        "J04"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "J09",
+      "title": "Legal/compliance copy",
+      "description": "Дисклеймеры: подбор не гарантирует победу/соответствие; пользователь проверяет поставку.",
+      "group_id": "J",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [
+        "A05"
+      ],
+      "children": [
+        "I20",
+        "M06"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/j09"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 9,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/9",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j09",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j09",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/9",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "J10",
+      "title": "Quality feedback loop",
+      "description": "Оценки совпадения, жалобы на источник, false positive/negative, обучение правил.",
+      "group_id": "J",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "M04"
+      ],
+      "children": [
+        "M08"
+      ],
+      "missing_parents": [
+        "M04"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "K01",
+      "title": "Extract legacy useful logic",
+      "description": "Забрать only tool evidence/invariants; no legacy result postprocessors.",
+      "group_id": "K",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [
+        "A01",
+        "B11"
+      ],
+      "children": [
+        "F05",
+        "F06",
+        "G07",
+        "E01",
+        "D05"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": false
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/937007238d61ec99e5f9335ca840b7d5f9fd4261",
+        "marker": null
+      }
+    },
+    {
+      "id": "K02",
+      "title": "Golden fixture corpus",
+      "description": "Canonical AI-authored expected results, not legacy response dumps.",
+      "group_id": "K",
+      "status": "review",
+      "status_label": "На ревью",
+      "parents": [
+        "A01",
+        "B11"
+      ],
+      "children": [
+        "L04",
+        "L06",
+        "F05",
+        "G07"
+      ],
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/k02"
+      },
+      "done_commit": null,
+      "pull_request": {
+        "number": 4,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/4",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
+      "urls": {
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/k02",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/k02",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/4",
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "K04",
+      "title": "popup.js strangler plan",
+      "description": "Разрезать UI на routes/components/controllers/stores; каждое извлечение закрывается тестом.",
+      "group_id": "K",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [
+        "A01",
+        "B11",
+        "K07"
+      ],
+      "children": [
+        "I01",
+        "I11",
+        "I13",
+        "I22"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": false
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/818d2dfb65a72af9946c9a045ef9d2a70ef2046a",
+        "marker": null
+      }
+    },
+    {
+      "id": "K05",
+      "title": "app.py strangler plan",
+      "description": "Разнести routes/services/repositories/domain; app.py остаётся composition root.",
+      "group_id": "K",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [
+        "A01",
+        "B11",
+        "K07"
+      ],
+      "children": [
+        "H01",
+        "D01",
+        "E01",
+        "F01",
+        "G01"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": false
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/63bd3d5c736f7fb817faf4d4f1b22ee075868059",
+        "marker": null
+      }
+    },
+    {
+      "id": "K06",
+      "title": "Data migration scripts",
+      "description": "Перенос нужных пользователей/балансов/подписок/истории без мутаций ledger truth.",
+      "group_id": "K",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B11",
+        "C15",
+        "K07"
+      ],
+      "children": [
+        "M02",
+        "M09"
+      ],
+      "missing_parents": [
+        "C15"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "K07",
+      "title": "Legacy sunset gates",
+      "description": "Обязательный upstream для всех legacy sunset handoff decisions; rollback before delete.",
+      "group_id": "K",
+      "status": "done",
+      "status_label": "Готова",
+      "parents": [
+        "B11"
+      ],
+      "children": [
+        "B09",
+        "C13",
+        "K04",
+        "K05",
+        "K06",
+        "I13",
+        "I22",
+        "M01",
+        "M10"
+      ],
+      "missing_parents": [],
+      "branch": null,
+      "done_commit": {
+        "historical": true
+      },
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/tree/main",
+        "marker": null
+      }
+    },
+    {
+      "id": "L01",
+      "title": "Domain unit tests",
+      "description": "Чистые тесты моделей, state machines, scoring, ledger, authz, economics.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "D05",
+        "E01",
+        "F05",
+        "G07",
+        "J02"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "D05",
+        "E01",
+        "F05",
+        "G07",
+        "J02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L02",
+      "title": "API contract tests",
+      "description": "OpenAPI schema, generated client contracts, error payloads.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "B07",
+        "B09",
+        "H02",
+        "H04",
+        "H06",
+        "H07"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "B07",
+        "B09",
+        "H02",
+        "H04",
+        "H06",
+        "H07"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L03",
+      "title": "Integration tests",
+      "description": "DB transactions, fake EIS, fake payments, fake queues, repository adapters.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "C01",
+        "D02",
+        "E05",
+        "F01",
+        "G10"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "C01",
+        "D02",
+        "E05",
+        "F01",
+        "G10"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L04",
+      "title": "AI/search deterministic tests",
+      "description": "Mock tools/model and assert semantic freeze/no hidden postprocessors.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "G15",
+        "G16",
+        "K02"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "G15",
+        "G16",
+        "K02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L05",
+      "title": "Extension runtime tests",
+      "description": "Background, storage migrations, API client, content capture, gating, notifications.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "I10",
+        "I16",
+        "I19",
+        "I20",
+        "I22"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "I10",
+        "I16",
+        "I19",
+        "I20"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L06",
+      "title": "End-to-end supplier journeys",
+      "description": "Открыть закупку → AI-authored result → renderer/cache/billing proof.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "I14",
+        "I15",
+        "I16",
+        "I17",
+        "I18",
+        "I19",
+        "I22",
+        "J08",
+        "K02"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "I14",
+        "I15",
+        "I16",
+        "I17",
+        "I18",
+        "I19",
+        "J08",
+        "K02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L07",
+      "title": "Performance/load tests",
+      "description": "Параллельные item runs, queue backpressure, API latency, extension responsiveness.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "G10",
+        "H02",
+        "I11"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "G10",
+        "H02",
+        "I11"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L08",
+      "title": "Security regression tests",
+      "description": "BOLA, authz, SSRF in fetchers, XSS in UI, secret leakage, payment webhook validation.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A05",
+        "A08",
+        "B10",
+        "C14",
+        "H08",
+        "D05",
+        "I20"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "B10",
+        "C14",
+        "H08",
+        "D05",
+        "I20"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L09",
+      "title": "Ledger invariant tests",
+      "description": "No negative impossible states, idempotency, reserve/settle/release, reversal, reconcile.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "C07",
+        "E07",
+        "E08",
+        "E01",
+        "E03"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "C07",
+        "E07",
+        "E08",
+        "E01",
+        "E03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L10",
+      "title": "A11y/i18n tests",
+      "description": "Keyboard, focus, contrast, localized validation, legal text and naming consistency.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "I12",
+        "I20",
+        "I21"
+      ],
+      "children": [
+        "L11"
+      ],
+      "missing_parents": [
+        "I12",
+        "I20",
+        "I21"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L11",
+      "title": "CI quality gates",
+      "description": "Lint, type/schema checks, unit/integration/e2e partitions, artifact provenance.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A04",
+        "A06",
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10"
+      ],
+      "children": [
+        "L12",
+        "M02",
+        "M10"
+      ],
+      "missing_parents": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L12",
+      "title": "Release evidence ledger",
+      "description": "Что проверено, какими тестами, какие риски закрыты, какие флаги включены.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A08",
+        "B12",
+        "L11"
+      ],
+      "children": [
+        "M10"
+      ],
+      "missing_parents": [
+        "B12",
+        "L11"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L13",
+      "title": "Observability dashboards",
+      "description": "Search cost/latency, errors, wallet health, payment events, EIS failures, browser versions.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B10",
+        "C12",
+        "G16"
+      ],
+      "children": [
+        "M08",
+        "M09"
+      ],
+      "missing_parents": [
+        "B10",
+        "C12",
+        "G16"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L14",
+      "title": "Runbooks/support playbooks",
+      "description": "Проблемы оплаты, зависший поиск, неверный товар, блокировка trust, rollback.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "D07",
+        "H05"
+      ],
+      "children": [
+        "M08",
+        "M09"
+      ],
+      "missing_parents": [
+        "D07",
+        "H05"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "L15",
+      "title": "Backup/restore/DR",
+      "description": "Бэкапы БД, restore rehearsal, ledger safety, archive/index rebuild, secret rotation.",
+      "group_id": "L",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "C15"
+      ],
+      "children": [
+        "M09",
+        "M08"
+      ],
+      "missing_parents": [
+        "C15"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M01",
+      "title": "Feature flags/kill switches",
+      "description": "Search, archive-first, payments, org billing, trust, personal DB, rollout slices.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "B08",
+        "H03",
+        "K07"
+      ],
+      "children": [
+        "M04",
+        "M09",
+        "M10"
+      ],
+      "missing_parents": [
+        "B08",
+        "H03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M02",
+      "title": "Dev compose/seeds",
+      "description": "Локальный запуск backend+DB+extension mock data одной командой.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "K06",
+        "L11"
+      ],
+      "children": [
+        "M03",
+        "M04"
+      ],
+      "missing_parents": [
+        "K06",
+        "L11"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M03",
+      "title": "Controlled pre-release env",
+      "description": "Production-like проверка без ручных патчей и без смешения dev/prod секретов.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "M02"
+      ],
+      "children": [
+        "M04",
+        "M08"
+      ],
+      "missing_parents": [
+        "M02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M04",
+      "title": "Pilot/beta cohort",
+      "description": "Ограниченная группа поставщиков, реальные сценарии, лимиты затрат, быстрый откат.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "J08",
+        "M01",
+        "M02",
+        "M03"
+      ],
+      "children": [
+        "J10",
+        "M08"
+      ],
+      "missing_parents": [
+        "J08",
+        "M01",
+        "M02",
+        "M03"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M05",
+      "title": "Payment validation",
+      "description": "Провайдеры, webhooks, receipts, recurring, KYC holds, refunds, ledger reconcile.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "E05",
+        "E06"
+      ],
+      "children": [
+        "M08"
+      ],
+      "missing_parents": [
+        "E05",
+        "E06"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M06",
+      "title": "Legal package",
+      "description": "Оферта, политика, согласия, payment terms, support contacts, risk disclaimers.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A03",
+        "J09"
+      ],
+      "children": [
+        "M10"
+      ],
+      "missing_parents": [
+        "J09"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M07",
+      "title": "Extension packaging",
+      "description": "ZIP/Store package, manifest versioning, provenance, update metadata, download site.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "I02"
+      ],
+      "children": [
+        "M10"
+      ],
+      "missing_parents": [
+        "I02"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M08",
+      "title": "Go/no-go review",
+      "description": "Метрики, ошибки, стоимость поиска, security, support readiness, unresolved blockers.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "J10",
+        "L13",
+        "L14",
+        "L15",
+        "M03",
+        "M04",
+        "M05"
+      ],
+      "children": [
+        "M10"
+      ],
+      "missing_parents": [
+        "J10",
+        "L13",
+        "L14",
+        "L15",
+        "M03",
+        "M04",
+        "M05"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M09",
+      "title": "Rollback plan",
+      "description": "Флаги, откат расширения/backend, payment safety, data recovery, incident owner.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "K06",
+        "L13",
+        "L14",
+        "L15",
+        "M01"
+      ],
+      "children": [
+        "M10"
+      ],
+      "missing_parents": [
+        "K06",
+        "L13",
+        "L14",
+        "L15",
+        "M01"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M10",
+      "title": "Release candidate freeze",
+      "description": "Новые функции закрыты; только blocker fixes; docs, contracts, tests frozen.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "A03",
+        "B12",
+        "K07",
+        "L11",
+        "L12",
+        "M01",
+        "M06",
+        "M07",
+        "M08",
+        "M09"
+      ],
+      "children": [
+        "M11"
+      ],
+      "missing_parents": [
+        "B12",
+        "L11",
+        "L12",
+        "M01",
+        "M06",
+        "M07",
+        "M08",
+        "M09"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "M11",
+      "title": "Final acceptance run",
+      "description": "Полный regression/e2e/security/payment/search пакет на release candidate.",
+      "group_id": "M",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "M10"
+      ],
+      "children": [
+        "Z99"
+      ],
+      "missing_parents": [
+        "M10"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    },
+    {
+      "id": "Z99",
+      "title": "Релизная версия расширения",
+      "description": "Готовый устойчивый продукт: модульный backend, расширение, поиск, billing, ledger, orgs, release ops.",
+      "group_id": "Z",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "parents": [
+        "M11"
+      ],
+      "children": [],
+      "missing_parents": [
+        "M11"
+      ],
+      "branch": null,
+      "done_commit": null,
+      "pull_request": null,
+      "urls": {
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
+        "commit": null,
+        "marker": null
+      }
+    }
+  ],
+  "violations_count": 0
+}

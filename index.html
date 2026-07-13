@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <meta
+      name="description"
+      content="Состояние задач GP Tech по release-графу, веткам и commit-маркерам GitHub."
+    />
+    <title>План работ · GP Tech</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#task-groups">К списку задач</a>
+
+    <header class="page-header">
+      <div class="page-header__copy">
+        <p class="eyebrow">GP TECH · RELEASE GRAPH</p>
+        <h1>План работ</h1>
+        <p class="page-header__description">
+          Актуальное состояние графа из <code>main</code> и веток <code>codex/*</code>.
+        </p>
+      </div>
+      <div class="page-header__meta">
+        <p id="snapshot-meta" class="snapshot-meta" aria-live="polite">Загружаем состояние…</p>
+        <a
+          id="repository-link"
+          class="text-link"
+          href="https://github.com/OOO-GPT/gp-tech"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Открыть GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="control-deck">
+      <section class="status-summary" aria-label="Фильтр по статусу">
+        <div id="status-filters" class="status-filters" role="group" aria-label="Статусы задач">
+          <button class="status-filter status-filter--loading" type="button" disabled>
+            Загружаем статусы…
+          </button>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Поиск и фильтры">
+        <label class="search-field">
+          <span class="sr-only">Найти задачу</span>
+          <span class="search-field__mark" aria-hidden="true"></span>
+          <input
+            id="task-search"
+            type="search"
+            placeholder="Найти по ID, названию или описанию"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </label>
+
+        <label class="group-field">
+          <span class="sr-only">Этап графа</span>
+          <select id="group-filter" aria-label="Этап графа">
+            <option value="all">Все этапы</option>
+          </select>
+        </label>
+
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+      </section>
+    </div>
+
+    <main id="task-groups" class="task-groups" tabindex="-1">
+      <section id="page-state" class="page-state" aria-live="polite">
+        <span class="loading-dot" aria-hidden="true"></span>
+        <p>Собираем карту работ…</p>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>Статусы вычисляются автоматически. Изменения вносятся только через Git.</p>
+      <a
+        class="text-link"
+        href="https://github.com/OOO-GPT/gp-tech/blob/main/docs/gp-graph/gospobeda_release_plan_graph.mmd"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Исходный MMD-граф <span aria-hidden="true">↗</span>
+      </a>
+    </footer>
+
+    <dialog id="task-dialog" class="task-dialog" aria-labelledby="dialog-title">
+      <div class="task-dialog__frame">
+        <header class="task-dialog__header">
+          <div>
+            <div class="dialog-kicker">
+              <span id="dialog-id" class="task-id"></span>
+              <span id="dialog-status" class="status-badge"></span>
+            </div>
+            <h2 id="dialog-title" tabindex="-1"></h2>
+          </div>
+          <button id="dialog-close" class="icon-button" type="button" aria-label="Закрыть">
+            <span aria-hidden="true">×</span>
+          </button>
+        </header>
+
+        <p id="dialog-description" class="dialog-description"></p>
+        <p id="dialog-reason" class="dialog-reason"></p>
+
+        <div class="task-dialog__sections">
+          <section class="detail-section">
+            <h3>Зависимости</h3>
+            <div id="dialog-parents" class="dependency-list"></div>
+          </section>
+
+          <section class="detail-section">
+            <h3>Разблокирует</h3>
+            <div id="dialog-children" class="dependency-list"></div>
+          </section>
+
+          <section class="detail-section detail-section--wide">
+            <h3>Состояние в Git</h3>
+            <dl id="dialog-git" class="git-facts"></dl>
+          </section>
+        </div>
+
+        <footer class="task-dialog__footer">
+          <button id="copy-branch" class="secondary-button" type="button" hidden>
+            Скопировать имя ветки
+          </button>
+          <a
+            id="dialog-action"
+            class="primary-button"
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            hidden
+          ></a>
+        </footer>
+      </div>
+    </dialog>
+  </body>
+</html>
