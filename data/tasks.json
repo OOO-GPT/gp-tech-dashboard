@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-13T21:36:26.009Z",
+  "generated_at": "2026-07-13T21:37:27.588Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 17,
-    "review": 9,
-    "branch": 1,
+    "review": 10,
+    "branch": 0,
     "ready": 0,
     "blocked": 122
   },
@@ -529,8 +529,8 @@
       "title": "Каталог state machines",
       "description": "Search job, item run, payment, subscription, wallet reservation, trust stage, PD build.",
       "group_id": "B",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "A07"
       ],
