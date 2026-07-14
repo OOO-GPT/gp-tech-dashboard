@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-14T11:05:30.574Z",
+  "generated_at": "2026-07-14T11:08:31.151Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 17,
-    "review": 10,
+    "done": 18,
+    "review": 9,
     "branch": 0,
     "ready": 0,
     "blocked": 122
@@ -567,8 +567,8 @@
       "title": "Таксономия ошибок",
       "description": "Единые public error codes, retryability, user copy, operator diagnostics.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A04"
       ],
@@ -581,20 +581,22 @@
       "branch": {
         "name": "codex/b07"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 3,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/3",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-14T11:08:14Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b07",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b07",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/3",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/8061353b08e37c2edb61825f18db49381daf2ca4",
         "marker": null
       }
     },
@@ -2793,7 +2795,6 @@
         "L02"
       ],
       "missing_parents": [
-        "B07",
         "H01"
       ],
       "branch": null,
@@ -3561,7 +3562,6 @@
         "L08"
       ],
       "missing_parents": [
-        "B07",
         "D06",
         "H07",
         "I03",
@@ -4213,7 +4213,6 @@
         "L11"
       ],
       "missing_parents": [
-        "B07",
         "B09",
         "H02",
         "H04",
