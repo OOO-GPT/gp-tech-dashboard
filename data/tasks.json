@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-14T11:43:24.843Z",
+  "generated_at": "2026-07-14T11:45:23.204Z",
   "main": {
     "ref": "main"
   },
@@ -10,11 +10,11 @@
   },
   "counts": {
     "total": 149,
-    "done": 19,
-    "review": 8,
+    "done": 20,
+    "review": 7,
     "branch": 0,
-    "ready": 0,
-    "blocked": 122
+    "ready": 2,
+    "blocked": 120
   },
   "groups": [
     {
@@ -55,7 +55,7 @@
     },
     {
       "id": "J",
-      "title": "Экономика продукта и поставщика"
+      "title": "Стоимость продукта и токены"
     },
     {
       "id": "K",
@@ -108,7 +108,7 @@
     {
       "id": "A02",
       "title": "Карта пользовательских сценариев",
-      "description": "Поставщик: открыть закупку, извлечь позицию, найти товар, оценить маржу, принять решение.",
+      "description": "Поставщик: открыть закупку, извлечь позицию, найти товар, проверить evidence и выбрать следующее действие.",
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
@@ -1023,8 +1023,8 @@
     },
     {
       "id": "C08",
-      "title": "Subscription/entitlement model",
-      "description": "Тарифы пользователя и организации, seat entitlements, quotas, renewals, grace states.",
+      "title": "Subscription/token-lot model",
+      "description": "Личные подписки и проекты организаций создают token lots с provenance, expiry и access policy.",
       "group_id": "C",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1534,8 +1534,8 @@
     },
     {
       "id": "E02",
-      "title": "AI cost/pricing service",
-      "description": "Токены, web/file search calls, picodollars/credits, per-run budget limits.",
+      "title": "Internal cost meter",
+      "description": "Resource telemetry, versioned rates, integer micro-USD и cost completeness.",
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2221,7 +2221,6 @@
       ],
       "children": [
         "G13",
-        "J04",
         "L01"
       ],
       "missing_parents": [
@@ -2448,7 +2447,7 @@
     {
       "id": "G14",
       "title": "Cost reservation settlement",
-      "description": "Резерв до запуска, списание по факту, release on cancel/failure, no double charge.",
+      "description": "Reserve до затрат; settle measured cost при success/cancel/failure; release только остатка.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2457,7 +2456,8 @@
         "E02",
         "E03",
         "G01",
-        "J03"
+        "J03",
+        "J04"
       ],
       "children": [
         "G13",
@@ -2468,7 +2468,8 @@
         "E02",
         "E03",
         "G01",
-        "J03"
+        "J03",
+        "J04"
       ],
       "branch": null,
       "done_commit": null,
@@ -2807,8 +2808,8 @@
     },
     {
       "id": "H08",
-      "title": "Rate limits/quotas",
-      "description": "User/org/api-key quotas, search concurrency limits, abuse and cost guards.",
+      "title": "Technical rate/concurrency guards",
+      "description": "User/org/api-key rate limits, search concurrency и abuse guards; не финансовая quota.",
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3421,7 +3422,6 @@
       ],
       "children": [
         "I18",
-        "J04",
         "J08",
         "L06"
       ],
@@ -3446,8 +3446,8 @@
     },
     {
       "id": "I18",
-      "title": "Economics/margin screen",
-      "description": "Цена закупки, доставка, комиссии, налоги/резерв, маржа, risk-adjusted decision.",
+      "title": "Token usage screen",
+      "description": "Estimate, reservation, measured cost, token settlement/release и rate provenance.",
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3460,7 +3460,6 @@
         "J04"
       ],
       "children": [
-        "J08",
         "L06"
       ],
       "missing_parents": [
@@ -3484,8 +3483,8 @@
     },
     {
       "id": "I19",
-      "title": "Account/org/billing screens",
-      "description": "Login, org switch, budget, subscriptions, top-up, usage history, settings.",
+      "title": "Wallet/subscription screens",
+      "description": "Один wallet, token lots, expiry, personal/project sources, source settings и history.",
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3645,11 +3644,11 @@
     },
     {
       "id": "J01",
-      "title": "Pricing assumptions",
-      "description": "Как продукт зарабатывает: стоимость поиска, маржа поставщика, тарифы, бесплатные лимиты.",
+      "title": "Token pricing assumptions",
+      "description": "Internal cost × 20, один wallet/token lots, reserve-before-work, no free quota.",
       "group_id": "J",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A02"
       ],
@@ -3662,30 +3661,32 @@
       "branch": {
         "name": "codex/j01"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 2,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/2",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-14T11:45:05Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j01",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j01",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/2",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/04a54b42aee7b4e440e07884df4dd8377bb1550a",
         "marker": null
       }
     },
     {
       "id": "J02",
-      "title": "Margin formula",
-      "description": "НМЦК/цена поставки − закупка − доставка − комиссии − налоги − риск/резерв.",
+      "title": "Cost-to-token formula",
+      "description": "Integer micro-USD, multiplier 20, token rate, ceil rounding и provenance.",
       "group_id": "J",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "J01"
       ],
@@ -3694,9 +3695,7 @@
         "I18",
         "L01"
       ],
-      "missing_parents": [
-        "J01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -3710,11 +3709,11 @@
     },
     {
       "id": "J03",
-      "title": "AI budget per search",
-      "description": "Ограничения затрат на item/job, cheap archive-first, expensive web/AI only when нужно.",
+      "title": "Internal cost budget",
+      "description": "Полный metering AI/web/tools/compute/storage и верхний предел reservation.",
       "group_id": "J",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "J01"
       ],
@@ -3722,9 +3721,7 @@
         "E02",
         "G14"
       ],
-      "missing_parents": [
-        "J01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -3738,24 +3735,24 @@
     },
     {
       "id": "J04",
-      "title": "Opportunity ranking",
-      "description": "Сортировка товаров/позиций по марже, уверенности, риску поставки, доказательности.",
+      "title": "Funding source routing",
+      "description": "Pinned source или earliest-expiring authorized source, способный покрыть reserve.",
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
       "parents": [
-        "G07",
-        "I17",
-        "J02"
+        "J02",
+        "J06",
+        "J07"
       ],
       "children": [
-        "I18",
-        "J08"
+        "G14",
+        "I18"
       ],
       "missing_parents": [
-        "G07",
-        "I17",
-        "J02"
+        "J02",
+        "J06",
+        "J07"
       ],
       "branch": null,
       "done_commit": null,
@@ -3770,8 +3767,8 @@
     },
     {
       "id": "J05",
-      "title": "Credit/top-up flow",
-      "description": "Баланс, пополнение, списание, уведомления о недостатке средств.",
+      "title": "Token purchase/top-up flow",
+      "description": "Покупка token lots, пополнение, expiry, уведомления о недостатке средств.",
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3799,8 +3796,8 @@
     },
     {
       "id": "J06",
-      "title": "Org allocation policy",
-      "description": "Кто платит за поиск, проектный бюджет, лимиты участника, owner/admin controls.",
+      "title": "Project funding policy",
+      "description": "Personal subscriptions и organization projects, member access и source controls.",
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3809,7 +3806,8 @@
         "E03"
       ],
       "children": [
-        "I19"
+        "I19",
+        "J04"
       ],
       "missing_parents": [
         "D04",
@@ -3828,8 +3826,8 @@
     },
     {
       "id": "J07",
-      "title": "Entitlement packaging",
-      "description": "Что даёт тариф: searches, seats, org budget, personal DB, support, limits.",
+      "title": "Subscription token packaging",
+      "description": "Paid token lots, lifecycle/expiry и settings; без grants, included runs и financial quota.",
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3840,12 +3838,12 @@
       ],
       "children": [
         "I19",
-        "D06"
+        "D06",
+        "J04"
       ],
       "missing_parents": [
         "C08",
-        "E04",
-        "J01"
+        "E04"
       ],
       "branch": null,
       "done_commit": null,
@@ -3866,18 +3864,14 @@
       "status": "blocked",
       "status_label": "Заблокирована",
       "parents": [
-        "I17",
-        "I18",
-        "J04"
+        "I17"
       ],
       "children": [
         "L06",
         "M04"
       ],
       "missing_parents": [
-        "I17",
-        "I18",
-        "J04"
+        "I17"
       ],
       "branch": null,
       "done_commit": null,
