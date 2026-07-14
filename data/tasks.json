@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-14T13:16:14.539Z",
+  "generated_at": "2026-07-14T13:29:02.996Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 20,
-    "review": 7,
-    "branch": 1,
+    "review": 8,
+    "branch": 0,
     "ready": 1,
     "blocked": 120
   },
@@ -3712,8 +3712,8 @@
       "title": "Internal cost budget",
       "description": "Полный metering AI/web/tools/compute/storage и верхний предел reservation.",
       "group_id": "J",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "J01"
       ],
