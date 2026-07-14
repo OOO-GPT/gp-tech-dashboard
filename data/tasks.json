@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-14T20:41:37.134Z",
+  "generated_at": "2026-07-14T21:14:20.682Z",
   "main": {
     "ref": "main"
   },
@@ -10,11 +10,11 @@
   },
   "counts": {
     "total": 149,
-    "done": 20,
-    "review": 8,
+    "done": 21,
+    "review": 7,
     "branch": 0,
-    "ready": 1,
-    "blocked": 120
+    "ready": 2,
+    "blocked": 119
   },
   "groups": [
     {
@@ -862,7 +862,7 @@
     {
       "id": "C03",
       "title": "Tender/Lot model",
-      "description": "Закупка, лот, заказчик, НМЦК/цена поставки, сроки, источник, registry ids.",
+      "description": "Закупка, лот, заказчик, НМЦК/цена источника, procurement framework, source и registry ids.",
       "group_id": "C",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -924,7 +924,7 @@
     {
       "id": "C05",
       "title": "Product candidate model",
-      "description": "Товар, продавец, цена, доставка, наличие, источник, доказательства, риск-флаги.",
+      "description": "Товар, продавец, цена, наличие, происхождение, источник, доказательства, риск-флаги.",
       "group_id": "C",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1759,7 +1759,7 @@
     {
       "id": "F01",
       "title": "EIS client adapter",
-      "description": "Официальные API/страницы/прокси, retry, timeout, source attribution.",
+      "description": "ЕИС через российский proxy/egress; TLS, retry, timeout и source attribution.",
       "group_id": "F",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1791,7 +1791,7 @@
     {
       "id": "F02",
       "title": "Tender resolver",
-      "description": "По registry number/URL найти закупку, лот, заказчика и карточку ЕИС.",
+      "description": "По registry number/URL найти закупку и определить procurement_framework для extraction strategy.",
       "group_id": "F",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1850,7 +1850,7 @@
     {
       "id": "F04",
       "title": "Document fetch/extract",
-      "description": "Скачать ТЗ/PDF/DOCX, извлечь текст постранично, сохранить source metadata.",
+      "description": "Применить 44/223 extraction strategy, извлечь ТЗ/PDF/DOCX и сохранить source metadata.",
       "group_id": "F",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1912,8 +1912,8 @@
     },
     {
       "id": "F06",
-      "title": "Dictionaries/legal regimes",
-      "description": "Tool evidence по ОКЕИ/ОКПД/нацрежиму; не post-final verdict engine.",
+      "title": "Dictionaries/search scope",
+      "description": "ОКЕИ/ОКПД и source-derived russian_goods_only; не legal verdict engine.",
       "group_id": "F",
       "status": "done",
       "status_label": "Готова",
@@ -2139,7 +2139,7 @@
     {
       "id": "G05",
       "title": "Product page extraction",
-      "description": "Цена, наличие, доставка, характеристики, продавец, URL, snapshot metadata.",
+      "description": "Цена, наличие, характеристики, продавец, происхождение, URL и snapshot metadata.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3291,7 +3291,7 @@
     {
       "id": "I14",
       "title": "Tender overview screen",
-      "description": "Закупка, заказчик, позиции, цена поставки, source/provenance.",
+      "description": "Закупка, заказчик, позиции, НМЦК/цена источника, framework и provenance.",
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3330,7 +3330,7 @@
     {
       "id": "I15",
       "title": "Requirement/item screen",
-      "description": "Позиция ТЗ, характеристики, documents, national regime, editable clarifications.",
+      "description": "Позиция ТЗ, характеристики, documents и read-only extracted search scope.",
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3565,8 +3565,7 @@
         "I08",
         "I12",
         "I13",
-        "I21",
-        "J09"
+        "I21"
       ],
       "branch": null,
       "done_commit": null,
@@ -3895,11 +3894,11 @@
     },
     {
       "id": "J09",
-      "title": "Legal/compliance copy",
-      "description": "Дисклеймеры: подбор не гарантирует победу/соответствие; пользователь проверяет поставку.",
+      "title": "Product-boundary copy",
+      "description": "Два static records: no-guarantee поиска и source currentness; без delivery/legal research.",
       "group_id": "J",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A05"
       ],
@@ -3911,20 +3910,22 @@
       "branch": {
         "name": "codex/j09"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 9,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/9",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-14T21:14:07Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j09",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j09",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/9",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/45ffab96028293726cdf0293b8375e6526e54258",
         "marker": null
       }
     },
@@ -4837,8 +4838,8 @@
       "title": "Legal package",
       "description": "Оферта, политика, согласия, payment terms, support contacts, risk disclaimers.",
       "group_id": "M",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A03",
         "J09"
@@ -4846,9 +4847,7 @@
       "children": [
         "M10"
       ],
-      "missing_parents": [
-        "J09"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
