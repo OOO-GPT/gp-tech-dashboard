@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-14T11:08:47.683Z",
+  "generated_at": "2026-07-14T11:18:54.243Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 18,
-    "review": 9,
+    "done": 19,
+    "review": 8,
     "branch": 0,
     "ready": 0,
     "blocked": 122
@@ -605,8 +605,8 @@
       "title": "Config/secrets/flags contract",
       "description": "Все env/секреты/флаги описаны, валидируются на старте и не расползаются по коду.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A06"
       ],
@@ -622,20 +622,22 @@
       "branch": {
         "name": "codex/b08"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 8,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/8",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-14T11:18:33Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b08",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b08",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/8",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/83d509ccc9292b271c3aafe50b29e1c3388b519f",
         "marker": null
       }
     },
@@ -1281,7 +1283,6 @@
       "missing_parents": [
         "B02",
         "B04",
-        "B08",
         "C02"
       ],
       "branch": null,
@@ -1650,7 +1651,6 @@
         "L03"
       ],
       "missing_parents": [
-        "B08",
         "C09",
         "E04"
       ],
@@ -1775,8 +1775,7 @@
       ],
       "missing_parents": [
         "B02",
-        "B04",
-        "B08"
+        "B04"
       ],
       "branch": null,
       "done_commit": null,
@@ -2096,7 +2095,6 @@
         "G16"
       ],
       "missing_parents": [
-        "B08",
         "G02"
       ],
       "branch": null,
@@ -2647,7 +2645,6 @@
         "M01"
       ],
       "missing_parents": [
-        "B08",
         "C11",
         "D05",
         "D06",
@@ -4698,7 +4695,6 @@
         "M10"
       ],
       "missing_parents": [
-        "B08",
         "H03"
       ],
       "branch": null,
