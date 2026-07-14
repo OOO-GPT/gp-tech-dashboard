@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-14T12:13:00.851Z",
+  "generated_at": "2026-07-14T13:16:14.539Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 149,
     "done": 20,
     "review": 7,
-    "branch": 0,
-    "ready": 2,
+    "branch": 1,
+    "ready": 1,
     "blocked": 120
   },
   "groups": [
@@ -3712,8 +3712,8 @@
       "title": "Internal cost budget",
       "description": "Полный metering AI/web/tools/compute/storage и верхний предел reservation.",
       "group_id": "J",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "J01"
       ],
@@ -3722,13 +3722,22 @@
         "G14"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/j03"
+      },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 16,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/16",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j03",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j03",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/16",
         "commit": null,
         "marker": null
       }
