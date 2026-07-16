@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T16:05:20.568Z",
+  "generated_at": "2026-07-16T16:14:31.143Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 26,
-    "review": 2,
-    "branch": 5,
+    "review": 3,
+    "branch": 4,
     "ready": 0,
     "blocked": 116
   },
@@ -440,8 +440,8 @@
       "title": "Границы владения данными",
       "description": "Кто создаёт и изменяет каждую сущность; запрет второго источника истины.",
       "group_id": "B",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "B01"
       ],
