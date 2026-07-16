@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T06:09:18.631Z",
+  "generated_at": "2026-07-16T06:15:58.876Z",
   "main": {
     "ref": "main"
   },
@@ -10,11 +10,11 @@
   },
   "counts": {
     "total": 149,
-    "done": 21,
-    "review": 7,
+    "done": 22,
+    "review": 6,
     "branch": 2,
-    "ready": 0,
-    "blocked": 119
+    "ready": 1,
+    "blocked": 118
   },
   "groups": [
     {
@@ -492,8 +492,8 @@
       "title": "Версионирование схем",
       "description": "Версии API, БД, cache payload, search result, archive index, feature flags.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A07"
       ],
@@ -507,20 +507,22 @@
       "branch": {
         "name": "codex/b05"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 13,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/13",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-16T06:15:44Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b05",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b05",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/13",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/31c5af8bcf64a168a35f37225ce996b42784de51",
         "marker": null
       }
     },
@@ -789,8 +791,8 @@
       "title": "БД и миграции",
       "description": "Postgres schema, migration runner, transactional boundaries, seed/dev reset.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A06",
         "B05"
@@ -812,9 +814,7 @@
         "C15",
         "L03"
       ],
-      "missing_parents": [
-        "B05"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -974,7 +974,6 @@
       ],
       "missing_parents": [
         "B01",
-        "B05",
         "B06",
         "C01"
       ],
@@ -1187,7 +1186,6 @@
         "G15"
       ],
       "missing_parents": [
-        "B05",
         "C01"
       ],
       "branch": null,
@@ -2759,7 +2757,6 @@
         "L02"
       ],
       "missing_parents": [
-        "B05",
         "B09",
         "H02",
         "H03",
