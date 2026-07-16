@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T16:37:32.898Z",
+  "generated_at": "2026-07-16T16:39:36.541Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 26,
-    "review": 3,
+    "done": 27,
+    "review": 2,
     "branch": 4,
     "ready": 0,
     "blocked": 116
@@ -709,8 +709,8 @@
       "title": "Security/observability baseline",
       "description": "Authz, audit, metrics, trace ids, structured logs, rate limits, секреты, SSRF/XSS границы.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A05"
       ],
@@ -725,20 +725,22 @@
       "branch": {
         "name": "codex/b10"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 7,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/7",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-16T16:39:17Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b10",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b10",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/7",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/35eca0fd0334217e22a2292c374a3a6ed791c6c1",
         "marker": null
       }
     },
@@ -1434,7 +1436,6 @@
         "L08"
       ],
       "missing_parents": [
-        "B10",
         "C08",
         "C14",
         "D03"
@@ -1501,7 +1502,6 @@
         "L14"
       ],
       "missing_parents": [
-        "B10",
         "C12",
         "D06"
       ],
@@ -2839,7 +2839,6 @@
         "L08"
       ],
       "missing_parents": [
-        "B10",
         "C14",
         "H01"
       ],
@@ -4453,7 +4452,6 @@
         "L11"
       ],
       "missing_parents": [
-        "B10",
         "C14",
         "H08",
         "D05",
@@ -4634,7 +4632,6 @@
         "M09"
       ],
       "missing_parents": [
-        "B10",
         "C12",
         "G16"
       ],
