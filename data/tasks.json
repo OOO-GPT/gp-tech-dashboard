@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T10:02:20.472Z",
+  "generated_at": "2026-07-16T10:04:02.650Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 24,
-    "review": 4,
+    "done": 25,
+    "review": 3,
     "branch": 2,
     "ready": 3,
     "blocked": 116
@@ -530,11 +530,12 @@
       "title": "Каталог state machines",
       "description": "Search job, item run, payment, SubscriptionSeries, wallet reservation, trust stage; Term immutable.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A07",
-        "B01"
+        "B01",
+        "J03"
       ],
       "children": [
         "C06",
@@ -547,20 +548,22 @@
       "branch": {
         "name": "codex/b06"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 14,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/14",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-16T10:03:44Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b06",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b06",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/14",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/00618a2993e573019999c9b1f5cfe48ef2fc75c2",
         "marker": null
       }
     },
@@ -971,7 +974,6 @@
         "I09"
       ],
       "missing_parents": [
-        "B06",
         "C01"
       ],
       "branch": null,
@@ -1439,7 +1441,6 @@
         "D07"
       ],
       "missing_parents": [
-        "B06",
         "C11",
         "J07"
       ],
@@ -1575,7 +1576,6 @@
         "L09"
       ],
       "missing_parents": [
-        "B06",
         "C07",
         "C14",
         "D05",
@@ -1610,7 +1610,6 @@
         "I19"
       ],
       "missing_parents": [
-        "B06",
         "C08",
         "E06"
       ],
@@ -2345,7 +2344,6 @@
         "G13"
       ],
       "missing_parents": [
-        "B06",
         "G10"
       ],
       "branch": null,
@@ -3709,6 +3707,7 @@
         "J01"
       ],
       "children": [
+        "B06",
         "E02",
         "G14"
       ],
