@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T17:20:41.076Z",
+  "generated_at": "2026-07-16T17:28:30.005Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 27,
-    "review": 4,
-    "branch": 2,
+    "review": 5,
+    "branch": 1,
     "ready": 0,
     "blocked": 116
   },
@@ -816,8 +816,8 @@
       "title": "БД и миграции",
       "description": "Postgres schema, migration runner, transactional boundaries, seed/dev reset.",
       "group_id": "C",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "A06",
         "B05"
