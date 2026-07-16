@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T16:41:22.704Z",
+  "generated_at": "2026-07-16T16:46:15.191Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 27,
-    "review": 3,
-    "branch": 3,
+    "review": 4,
+    "branch": 2,
     "ready": 0,
     "blocked": 116
   },
@@ -399,8 +399,8 @@
       "title": "Структура пакетов и модулей",
       "description": "Новая папочная структура без плоского backend и без popup/background монолитов.",
       "group_id": "B",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "A04",
         "A06",
