@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T07:32:40.732Z",
+  "generated_at": "2026-07-16T07:39:33.896Z",
   "main": {
     "ref": "main"
   },
@@ -10,11 +10,11 @@
   },
   "counts": {
     "total": 149,
-    "done": 22,
-    "review": 6,
+    "done": 23,
+    "review": 5,
     "branch": 2,
-    "ready": 1,
-    "blocked": 118
+    "ready": 3,
+    "blocked": 116
   },
   "groups": [
     {
@@ -249,7 +249,7 @@
     {
       "id": "A07",
       "title": "Единый словарь домена",
-      "description": "Tender, Lot, Item, Requirement, Candidate, Evidence, Run, Wallet, Subscription, Org, User.",
+      "description": "Tender, Item, Run, SubscriptionSeries, SubscriptionTerm, TokenLot, Wallet, Org, User.",
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
@@ -352,10 +352,10 @@
     {
       "id": "B01",
       "title": "Bounded contexts",
-      "description": "Разделить продукт на auth/org, ledger/billing, tender/EIS, search, extension-runtime, UI, ops.",
+      "description": "Контексты, ownership и SubscriptionSeries → SubscriptionTerm → TokenLot contract.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A02",
         "A03",
@@ -364,6 +364,7 @@
       "children": [
         "B02",
         "B03",
+        "B06",
         "C02",
         "C03",
         "C06",
@@ -374,20 +375,22 @@
       "branch": {
         "name": "codex/b01"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 12,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/12",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-16T07:39:17Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b01",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b01",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/12",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/714aff9c9778bd6c86de053ebe5cf296b1300695",
         "marker": null
       }
     },
@@ -396,8 +399,8 @@
       "title": "Структура пакетов и модулей",
       "description": "Новая папочная структура без плоского backend и без popup/background монолитов.",
       "group_id": "B",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A04",
         "A06",
@@ -411,9 +414,7 @@
         "H01",
         "I01"
       ],
-      "missing_parents": [
-        "B01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -430,8 +431,8 @@
       "title": "Границы владения данными",
       "description": "Кто создаёт и изменяет каждую сущность; запрет второго источника истины.",
       "group_id": "B",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B01"
       ],
@@ -440,9 +441,7 @@
         "C14",
         "C12"
       ],
-      "missing_parents": [
-        "B01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -529,12 +528,13 @@
     {
       "id": "B06",
       "title": "Каталог state machines",
-      "description": "Search job, item run, payment, subscription, wallet reservation, trust stage, PD build.",
+      "description": "Search job, item run, payment, SubscriptionSeries, wallet reservation, trust stage; Term immutable.",
       "group_id": "B",
       "status": "review",
       "status_label": "На ревью",
       "parents": [
-        "A07"
+        "A07",
+        "B01"
       ],
       "children": [
         "C06",
@@ -845,7 +845,6 @@
         "C14"
       ],
       "missing_parents": [
-        "B01",
         "C01"
       ],
       "branch": null,
@@ -877,7 +876,6 @@
         "H04"
       ],
       "missing_parents": [
-        "B01",
         "C01"
       ],
       "branch": null,
@@ -973,7 +971,6 @@
         "I09"
       ],
       "missing_parents": [
-        "B01",
         "B06",
         "C01"
       ],
@@ -991,7 +988,7 @@
     {
       "id": "C07",
       "title": "Money ledger model",
-      "description": "Account, wallet, lot, transaction, reservation, settlement, reversal, immutable audit trail.",
+      "description": "Term-attributed lots, Series→Term resolution, project FEFO slices, reservation/settlement/reversal.",
       "group_id": "C",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1006,7 +1003,6 @@
         "L09"
       ],
       "missing_parents": [
-        "B01",
         "C01"
       ],
       "branch": null,
@@ -1022,8 +1018,8 @@
     },
     {
       "id": "C08",
-      "title": "Subscription/token-lot model",
-      "description": "Личные подписки и проекты организаций создают token lots с provenance, expiry и access policy.",
+      "title": "Subscription series/term model",
+      "description": "Personal/org Series, immutable funded Terms, renewal policy и one-Term-one-TokenLot issuance.",
       "group_id": "C",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1037,7 +1033,6 @@
         "D05"
       ],
       "missing_parents": [
-        "B01",
         "C01"
       ],
       "branch": null,
@@ -1054,7 +1049,7 @@
     {
       "id": "C09",
       "title": "Payment/Billing party model",
-      "description": "Плательщик, реквизиты, заказ, provider event, invoice/receipt metadata, KYC branch.",
+      "description": "Provider-neutral Payment; one success funds at most one SubscriptionTerm, corrections append-only.",
       "group_id": "C",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1494,7 +1489,7 @@
     {
       "id": "E01",
       "title": "Append-only ledger service",
-      "description": "Транзакции, идемпотентность, reversal вместо правки, invariant checks.",
+      "description": "Term-provenance lots, transactions, idempotency, reversal вместо правки, invariant checks.",
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1562,7 +1557,7 @@
     {
       "id": "E03",
       "title": "Org budget reserve/settle",
-      "description": "Reserve → settle/release for search and extensions; ambiguity fails closed.",
+      "description": "Atomic personal Term/project FEFO reserve → settle/release; ambiguity fails closed.",
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1601,7 +1596,7 @@
     {
       "id": "E04",
       "title": "Subscription service",
-      "description": "Тарифы, user/org subscriptions, seats, renewal, grace, cancellation.",
+      "description": "User/org Series и Terms, renewal/cancellation; provider-neutral funding handoff.",
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -1634,7 +1629,7 @@
     {
       "id": "E05",
       "title": "Payment provider adapters",
-      "description": "Провайдеры acquiring/recurring, webhooks, provider-neutral service interface.",
+      "description": "Provider evidence/idempotency feeds neutral Payment; provider ids never become Series/Term identity.",
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3481,7 +3476,7 @@
     {
       "id": "I19",
       "title": "Wallet/subscription screens",
-      "description": "Один wallet, token lots, expiry, personal/project sources, source settings и history.",
+      "description": "One WalletView, Series preferences, Term/lot provenance, project sources, validity and history.",
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3804,7 +3799,7 @@
     {
       "id": "J06",
       "title": "Project funding policy",
-      "description": "Personal subscriptions и organization projects, member access и source controls.",
+      "description": "Personal Series preferences, organization projects, member access и resolved-source controls.",
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3834,7 +3829,7 @@
     {
       "id": "J07",
       "title": "Subscription token packaging",
-      "description": "Paid token lots, lifecycle/expiry и settings; без grants, included runs и financial quota.",
+      "description": "Term-funded token lots, validity и settings; без grants, included runs и financial quota.",
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -4095,7 +4090,7 @@
     {
       "id": "K06",
       "title": "Data migration scripts",
-      "description": "Перенос нужных пользователей/балансов/подписок/истории без мутаций ledger truth.",
+      "description": "Series/Term/Lot migration with provenance and idempotency, без мутаций ledger truth.",
       "group_id": "K",
       "status": "blocked",
       "status_label": "Заблокирована",
