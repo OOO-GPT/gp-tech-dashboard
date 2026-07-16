@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T14:51:39.986Z",
+  "generated_at": "2026-07-16T14:53:24.336Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 25,
-    "review": 3,
+    "done": 26,
+    "review": 2,
     "branch": 2,
     "ready": 3,
     "blocked": 116
@@ -651,8 +651,8 @@
       "title": "API-first contract",
       "description": "OpenAPI/JSON Schema + разделение AI-authored semantics/tool evidence/metadata.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A02",
         "A09",
@@ -667,20 +667,22 @@
       "branch": {
         "name": "codex/b09"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 6,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/6",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-16T14:53:02Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b09",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b09",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/6",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/86b495305b8b7e8f5905de4fc97ded854bd005af",
         "marker": null
       }
     },
@@ -2561,7 +2563,6 @@
       "missing_parents": [
         "B02",
         "B04",
-        "B09",
         "D05"
       ],
       "branch": null,
@@ -2748,7 +2749,6 @@
         "L02"
       ],
       "missing_parents": [
-        "B09",
         "H02",
         "H03",
         "H04",
@@ -4207,7 +4207,6 @@
         "L11"
       ],
       "missing_parents": [
-        "B09",
         "H02",
         "H04",
         "H06",
