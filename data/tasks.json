@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T14:53:51.550Z",
+  "generated_at": "2026-07-16T15:35:55.229Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 149,
     "done": 26,
     "review": 2,
-    "branch": 2,
-    "ready": 3,
+    "branch": 5,
+    "ready": 0,
     "blocked": 116
   },
   "groups": [
@@ -399,8 +399,8 @@
       "title": "Структура пакетов и модулей",
       "description": "Новая папочная структура без плоского backend и без popup/background монолитов.",
       "group_id": "B",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "A04",
         "A06",
@@ -415,12 +415,14 @@
         "I01"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/b02"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b02",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b02",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -431,8 +433,8 @@
       "title": "Границы владения данными",
       "description": "Кто создаёт и изменяет каждую сущность; запрет второго источника истины.",
       "group_id": "B",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "B01"
       ],
@@ -442,12 +444,14 @@
         "C12"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/b03"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b03",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b03",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -796,8 +800,8 @@
       "title": "БД и миграции",
       "description": "Postgres schema, migration runner, transactional boundaries, seed/dev reset.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "A06",
         "B05"
@@ -820,12 +824,14 @@
         "L03"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c01"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c01",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c01",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -3687,11 +3693,18 @@
         "name": "codex/j02"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 19,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/19",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j02",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j02",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/19",
         "commit": null,
         "marker": null
       }
