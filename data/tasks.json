@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-16T09:31:25.529Z",
+  "generated_at": "2026-07-16T09:32:27.139Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 23,
-    "review": 5,
+    "done": 24,
+    "review": 4,
     "branch": 2,
     "ready": 3,
     "blocked": 116
@@ -1540,8 +1540,7 @@
         "G14"
       ],
       "missing_parents": [
-        "E01",
-        "J03"
+        "E01"
       ],
       "branch": null,
       "done_commit": null,
@@ -2461,7 +2460,6 @@
         "E02",
         "E03",
         "G01",
-        "J03",
         "J04"
       ],
       "branch": null,
@@ -3703,10 +3701,10 @@
     {
       "id": "J03",
       "title": "Internal cost budget",
-      "description": "Полный metering AI/web/tools/compute/storage и верхний предел reservation.",
+      "description": "Полный metering, верхний предел и concrete ResolvedFundingSource binding.",
       "group_id": "J",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "J01"
       ],
@@ -3718,27 +3716,29 @@
       "branch": {
         "name": "codex/j03"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 16,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/16",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-16T09:32:09Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j03",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j03",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/16",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/2360ef5c29ce9eeab5d6f55988ca72f41f271ef5",
         "marker": null
       }
     },
     {
       "id": "J04",
-      "title": "Funding source routing",
-      "description": "Pinned source или earliest-expiring authorized source, способный покрыть reserve.",
+      "title": "Funding preference routing",
+      "description": "Pinned Personal Series/Project preference; concrete Term/project resolves atomically before reserve.",
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3828,7 +3828,7 @@
     },
     {
       "id": "J07",
-      "title": "Subscription token packaging",
+      "title": "Series/Term token packaging",
       "description": "Term-funded token lots, validity и settings; без grants, included runs и financial quota.",
       "group_id": "J",
       "status": "blocked",
