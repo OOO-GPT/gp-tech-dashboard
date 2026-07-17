@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-17T16:28:25.552Z",
+  "generated_at": "2026-07-17T16:36:23.999Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 149,
     "done": 29,
     "review": 3,
-    "branch": 1,
-    "ready": 1,
+    "branch": 2,
+    "ready": 0,
     "blocked": 115
   },
   "groups": [
@@ -480,8 +480,8 @@
       "title": "Правила зависимостей",
       "description": "Domain не зависит от HTTP/UI; adapters зависят внутрь; shared только для контрактов.",
       "group_id": "B",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "A04",
         "B03"
@@ -495,13 +495,22 @@
         "I01"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/b04"
+      },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 26,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/26",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b04",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b04",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/26",
         "commit": null,
         "marker": null
       }
