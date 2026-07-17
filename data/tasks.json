@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-17T16:08:37.274Z",
+  "generated_at": "2026-07-17T16:08:56.935Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 27,
-    "review": 5,
+    "done": 28,
+    "review": 4,
     "branch": 1,
     "ready": 0,
     "blocked": 116
@@ -399,8 +399,8 @@
       "title": "Структура пакетов и модулей",
       "description": "Новая папочная структура без плоского backend и без popup/background монолитов.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A04",
         "A06",
@@ -418,20 +418,22 @@
       "branch": {
         "name": "codex/b02"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 23,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/23",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-17T16:08:38Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b02",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b02",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/23",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/27ef86f1d1819f68cc2e81f02064778335e8ac1f",
         "marker": null
       }
     },
@@ -1307,7 +1309,6 @@
         "D02"
       ],
       "missing_parents": [
-        "B02",
         "B04",
         "C02"
       ],
@@ -1540,7 +1541,6 @@
         "L09"
       ],
       "missing_parents": [
-        "B02",
         "B04",
         "C07"
       ],
@@ -1794,7 +1794,6 @@
         "L03"
       ],
       "missing_parents": [
-        "B02",
         "B04"
       ],
       "branch": null,
@@ -2052,7 +2051,6 @@
         "H02"
       ],
       "missing_parents": [
-        "B02",
         "B04",
         "C06",
         "D05",
@@ -2588,7 +2586,6 @@
         "H09"
       ],
       "missing_parents": [
-        "B02",
         "B04",
         "D05"
       ],
@@ -2900,7 +2897,6 @@
         "I21"
       ],
       "missing_parents": [
-        "B02",
         "B04"
       ],
       "branch": null,
