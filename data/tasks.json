@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-17T16:36:23.999Z",
+  "generated_at": "2026-07-17T16:52:58.595Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 29,
-    "review": 3,
-    "branch": 2,
+    "review": 4,
+    "branch": 1,
     "ready": 0,
     "blocked": 115
   },
@@ -480,8 +480,8 @@
       "title": "Правила зависимостей",
       "description": "Domain не зависит от HTTP/UI; adapters зависят внутрь; shared только для контрактов.",
       "group_id": "B",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "A04",
         "B03"
