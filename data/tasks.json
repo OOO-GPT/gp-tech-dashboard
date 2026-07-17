@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-17T16:53:18.432Z",
+  "generated_at": "2026-07-17T16:54:50.502Z",
   "main": {
     "ref": "main"
   },
@@ -10,11 +10,11 @@
   },
   "counts": {
     "total": 149,
-    "done": 29,
-    "review": 4,
+    "done": 30,
+    "review": 3,
     "branch": 1,
-    "ready": 0,
-    "blocked": 115
+    "ready": 2,
+    "blocked": 113
   },
   "groups": [
     {
@@ -480,8 +480,8 @@
       "title": "Правила зависимостей",
       "description": "Domain не зависит от HTTP/UI; adapters зависят внутрь; shared только для контрактов.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A04",
         "B03"
@@ -498,20 +498,22 @@
       "branch": {
         "name": "codex/b04"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 26,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/26",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-17T16:54:35Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b04",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b04",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/26",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/eca013320b2262c1467fefdc2ddfac968bbb823f",
         "marker": null
       }
     },
@@ -1316,7 +1318,6 @@
         "D02"
       ],
       "missing_parents": [
-        "B04",
         "C02"
       ],
       "branch": null,
@@ -1548,7 +1549,6 @@
         "L09"
       ],
       "missing_parents": [
-        "B04",
         "C07"
       ],
       "branch": null,
@@ -1788,8 +1788,8 @@
       "title": "EIS client adapter",
       "description": "ЕИС через российский proxy/egress; TLS, retry, timeout и source attribution.",
       "group_id": "F",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B02",
         "B04",
@@ -1800,9 +1800,7 @@
         "F02",
         "L03"
       ],
-      "missing_parents": [
-        "B04"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -2058,7 +2056,6 @@
         "H02"
       ],
       "missing_parents": [
-        "B04",
         "C06",
         "D05",
         "F07"
@@ -2593,7 +2590,6 @@
         "H09"
       ],
       "missing_parents": [
-        "B04",
         "D05"
       ],
       "branch": null,
@@ -2890,8 +2886,8 @@
       "title": "Extension source layout",
       "description": "runtime/, content/, api/, domain/, ui/, components/, storage/, locales/, tests/.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B02",
         "B04",
@@ -2903,9 +2899,7 @@
         "I11",
         "I21"
       ],
-      "missing_parents": [
-        "B04"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
