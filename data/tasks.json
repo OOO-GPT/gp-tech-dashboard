@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-17T16:26:44.028Z",
+  "generated_at": "2026-07-17T16:28:25.552Z",
   "main": {
     "ref": "main"
   },
@@ -10,11 +10,11 @@
   },
   "counts": {
     "total": 149,
-    "done": 28,
-    "review": 4,
+    "done": 29,
+    "review": 3,
     "branch": 1,
-    "ready": 0,
-    "blocked": 116
+    "ready": 1,
+    "blocked": 115
   },
   "groups": [
     {
@@ -442,8 +442,8 @@
       "title": "Границы владения данными",
       "description": "Кто создаёт и изменяет каждую сущность; запрет второго источника истины.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "B01"
       ],
@@ -456,20 +456,22 @@
       "branch": {
         "name": "codex/b03"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 21,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/21",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-17T16:28:03Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b03",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b03",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/21",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/0250430c550d012fc3e16e60c378971a4146137d",
         "marker": null
       }
     },
@@ -478,8 +480,8 @@
       "title": "Правила зависимостей",
       "description": "Domain не зависит от HTTP/UI; adapters зависят внутрь; shared только для контрактов.",
       "group_id": "B",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A04",
         "B03"
@@ -492,9 +494,7 @@
         "H01",
         "I01"
       ],
-      "missing_parents": [
-        "B03"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1184,7 +1184,6 @@
         "H05"
       ],
       "missing_parents": [
-        "B03",
         "C01"
       ],
       "branch": null,
@@ -1248,7 +1247,6 @@
         "L08"
       ],
       "missing_parents": [
-        "B03",
         "C01",
         "C02"
       ],
