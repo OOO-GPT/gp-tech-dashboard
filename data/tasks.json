@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-21T14:07:06.254Z",
+  "generated_at": "2026-07-21T14:08:16.947Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 30,
-    "review": 3,
+    "done": 31,
+    "review": 2,
     "branch": 1,
     "ready": 2,
     "blocked": 113
@@ -3478,7 +3478,6 @@
         "I13",
         "I17",
         "I21",
-        "J02",
         "J04"
       ],
       "branch": null,
@@ -3695,8 +3694,8 @@
       "title": "Cost-to-token formula",
       "description": "Integer micro-USD, multiplier 20, token rate, ceil rounding и provenance.",
       "group_id": "J",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "J01"
       ],
@@ -3709,20 +3708,22 @@
       "branch": {
         "name": "codex/j02"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 19,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/19",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-21T14:07:48Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j02",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j02",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/19",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/fdb19899b195da6a9537b963d49e0a39ba17e815",
         "marker": null
       }
     },
@@ -3781,7 +3782,6 @@
         "I18"
       ],
       "missing_parents": [
-        "J02",
         "J06",
         "J07"
       ],
@@ -4203,8 +4203,7 @@
         "D05",
         "E01",
         "F05",
-        "G07",
-        "J02"
+        "G07"
       ],
       "branch": null,
       "done_commit": null,
