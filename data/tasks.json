@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T10:42:36.619Z",
+  "generated_at": "2026-07-22T10:43:30.523Z",
   "main": {
     "ref": "main"
   },
@@ -1827,11 +1827,18 @@
         "name": "codex/f01"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 37,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/37",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f01",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f01",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/37",
         "commit": null,
         "marker": null
       }
