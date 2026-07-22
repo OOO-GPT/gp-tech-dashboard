@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T08:28:27.281Z",
+  "generated_at": "2026-07-22T08:31:47.074Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 149,
     "done": 31,
     "review": 2,
-    "branch": 3,
-    "ready": 0,
+    "branch": 1,
+    "ready": 2,
     "blocked": 113
   },
   "groups": [
@@ -1788,8 +1788,8 @@
       "title": "EIS client adapter",
       "description": "ЕИС через российский proxy/egress; TLS, retry, timeout и source attribution.",
       "group_id": "F",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B02",
         "B04",
@@ -1801,22 +1801,13 @@
         "L03"
       ],
       "missing_parents": [],
-      "branch": {
-        "name": "codex/f01"
-      },
+      "branch": null,
       "done_commit": null,
-      "pull_request": {
-        "number": 29,
-        "url": "https://github.com/OOO-GPT/gp-tech/pull/29",
-        "state": "OPEN",
-        "is_draft": false,
-        "review_decision": null,
-        "merged_at": null
-      },
+      "pull_request": null,
       "urls": {
-        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f01",
-        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f01",
-        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/29",
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
         "commit": null,
         "marker": null
       }
@@ -2895,8 +2886,8 @@
       "title": "Extension source layout",
       "description": "runtime/, content/, api/, domain/, ui/, components/, storage/, locales/, tests/.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B02",
         "B04",
@@ -2909,22 +2900,13 @@
         "I21"
       ],
       "missing_parents": [],
-      "branch": {
-        "name": "codex/i01"
-      },
+      "branch": null,
       "done_commit": null,
-      "pull_request": {
-        "number": 30,
-        "url": "https://github.com/OOO-GPT/gp-tech/pull/30",
-        "state": "OPEN",
-        "is_draft": false,
-        "review_decision": null,
-        "merged_at": null
-      },
+      "pull_request": null,
       "urls": {
-        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i01",
-        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i01",
-        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/30",
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
         "commit": null,
         "marker": null
       }
