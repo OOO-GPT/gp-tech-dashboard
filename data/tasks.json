@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-22T13:14:01.441Z",
+  "generated_at": "2026-07-22T13:15:00.977Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 149,
-    "done": 34,
-    "review": 13,
+    "done": 35,
+    "review": 12,
     "branch": 2,
-    "ready": 2,
-    "blocked": 98
+    "ready": 4,
+    "blocked": 96
   },
   "axis_counts": {
     "admission": {
-      "complete": 34,
-      "admitted": 17,
-      "blocked": 98
+      "complete": 35,
+      "admitted": 18,
+      "blocked": 96
     },
     "execution": {
-      "done": 34,
-      "review": 13,
+      "done": 35,
+      "review": 12,
       "branch": 2,
       "parked": 0,
       "not_started": 100
@@ -1140,12 +1140,12 @@
       "title": "User/Auth model",
       "description": "Users, sessions, refresh families, credentials, email/phone verification, API keys.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A07",
         "B01",
@@ -1161,21 +1161,27 @@
       "branch": {
         "name": "codex/c02"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 39,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/39",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-22T13:14:39Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c02",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c02",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/39",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/fe5b1342c6177f12f7e119e34a2fd6ff42a6493a",
         "marker": null
       }
     },
@@ -1656,10 +1662,10 @@
       "title": "Tenancy/ownership constraints",
       "description": "Org/user/project ownership, BOLA protection, no silent personal fallback for org billing.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -1673,9 +1679,7 @@
         "H08",
         "L08"
       ],
-      "missing_parents": [
-        "C02"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -1733,10 +1737,10 @@
       "title": "Auth module scaffold",
       "description": "Слои domain/service/repository/routes, без зависимости от search или UI.",
       "group_id": "D",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -1749,9 +1753,7 @@
       "children": [
         "D02"
       ],
-      "missing_parents": [
-        "C02"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -1785,7 +1787,6 @@
         "L03"
       ],
       "missing_parents": [
-        "C02",
         "D01"
       ],
       "branch": null,
@@ -1821,7 +1822,6 @@
         "I19"
       ],
       "missing_parents": [
-        "C02",
         "D02"
       ],
       "branch": null,
