@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T11:07:17.970Z",
+  "generated_at": "2026-07-22T11:07:47.096Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 33,
-    "review": 9,
-    "branch": 7,
+    "review": 10,
+    "branch": 6,
     "ready": 0,
     "blocked": 100
   },
@@ -1287,8 +1287,8 @@
       "title": "Cache/archive model",
       "description": "Cache finalized results without semantic rewrite; archive/tool evidence versioning.",
       "group_id": "C",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "B05",
         "C01",
