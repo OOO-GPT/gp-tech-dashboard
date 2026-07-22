@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T10:43:30.523Z",
+  "generated_at": "2026-07-22T10:44:41.841Z",
   "main": {
     "ref": "main"
   },
@@ -968,11 +968,18 @@
         "name": "codex/c04"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 38,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/38",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c04",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c04",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/38",
         "commit": null,
         "marker": null
       }
