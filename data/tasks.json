@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T10:41:13.580Z",
+  "generated_at": "2026-07-22T10:42:36.619Z",
   "main": {
     "ref": "main"
   },
@@ -11,9 +11,9 @@
   "counts": {
     "total": 149,
     "done": 33,
-    "review": 2,
-    "branch": 9,
-    "ready": 5,
+    "review": 3,
+    "branch": 12,
+    "ready": 1,
     "blocked": 100
   },
   "groups": [
@@ -982,8 +982,8 @@
       "title": "Product candidate model",
       "description": "Товар, продавец, цена, наличие, происхождение, источник, доказательства, риск-флаги.",
       "group_id": "C",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "A07",
         "C01"
@@ -1092,8 +1092,8 @@
       "title": "Subscription series/term model",
       "description": "Personal/org Series, immutable funded Terms, renewal policy и one-Term-one-TokenLot issuance.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "B01",
         "C01"
@@ -1104,12 +1104,14 @@
         "D05"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c08"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c08",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c08",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -1147,8 +1149,8 @@
       "title": "Personal DB/document model",
       "description": "Папки поставщика, документы, build, vector store, attachment scope.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "C01"
       ],
@@ -1157,12 +1159,14 @@
         "H04"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c10"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c10",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c10",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -1232,8 +1236,8 @@
       "title": "Cache/archive model",
       "description": "Cache finalized results without semantic rewrite; archive/tool evidence versioning.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "B05",
         "C01",
@@ -1245,12 +1249,14 @@
         "G15"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c13"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c13",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c13",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -1293,8 +1299,8 @@
       "title": "Data migration blueprint",
       "description": "Какие таблицы создаются заново, какие данные импортируются, что остаётся legacy-readonly.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "C01"
       ],
@@ -1303,12 +1309,14 @@
         "L15"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c15"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c15",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c15",
         "pull_request": null,
         "commit": null,
         "marker": null
