@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T10:50:51.357Z",
+  "generated_at": "2026-07-22T10:52:33.107Z",
   "main": {
     "ref": "main"
   },
@@ -1092,11 +1092,18 @@
         "name": "codex/c07"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 40,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/40",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c07",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c07",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/40",
         "commit": null,
         "marker": null
       }
