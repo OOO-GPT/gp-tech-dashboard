@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T09:24:19.158Z",
+  "generated_at": "2026-07-22T09:25:10.076Z",
   "main": {
     "ref": "main"
   },
@@ -10,8 +10,8 @@
   },
   "counts": {
     "total": 149,
-    "done": 31,
-    "review": 2,
+    "done": 32,
+    "review": 1,
     "branch": 1,
     "ready": 2,
     "blocked": 113
@@ -794,8 +794,8 @@
       "title": "ADR и module README",
       "description": "У каждого bounded context: назначение, входы, выходы, инварианты, тесты, владельцы.",
       "group_id": "B",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A08"
       ],
@@ -807,20 +807,22 @@
       "branch": {
         "name": "codex/b12"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 5,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/5",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-22T09:24:50Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/b12",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/b12",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/5",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/02dad5a73d40644c22d9ebd1b3f1206c79a0b82a",
         "marker": null
       }
     },
@@ -4597,7 +4599,6 @@
         "M10"
       ],
       "missing_parents": [
-        "B12",
         "L11"
       ],
       "branch": null,
@@ -5011,7 +5012,6 @@
         "M11"
       ],
       "missing_parents": [
-        "B12",
         "L11",
         "L12",
         "M01",
