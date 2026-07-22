@@ -66,7 +66,7 @@ function countFor(status) {
 
 function renderFilters() {
   elements.filters.replaceChildren();
-  const statuses = ['all', ...STATUS_ORDER];
+  const statuses = ['all', 'blocked', 'ready', 'branch', 'review', 'done'];
 
   for (const status of statuses) {
     const button = createElement('button', {
