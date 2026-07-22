@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T10:18:27.103Z",
+  "generated_at": "2026-07-22T10:31:15.859Z",
   "main": {
     "ref": "main"
   },
@@ -1026,11 +1026,18 @@
         "name": "codex/c06"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 34,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/34",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c06",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c06",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/34",
         "commit": null,
         "marker": null
       }
