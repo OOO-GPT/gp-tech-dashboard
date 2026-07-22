@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-07-22T11:22:26.176Z",
+  "schema_version": 2,
+  "generated_at": "2026-07-22T11:23:29.252Z",
   "main": {
     "ref": "main"
   },
@@ -15,6 +15,20 @@
     "branch": 5,
     "ready": 0,
     "blocked": 100
+  },
+  "axis_counts": {
+    "admission": {
+      "complete": 33,
+      "admitted": 16,
+      "blocked": 100
+    },
+    "execution": {
+      "done": 33,
+      "review": 11,
+      "branch": 5,
+      "parked": 0,
+      "not_started": 100
+    }
   },
   "groups": [
     {
@@ -82,9 +96,15 @@
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [],
       "children": [
         "A09",
+        "A02",
+        "A03",
         "B11",
         "K01",
         "K02",
@@ -95,6 +115,11 @@
       "branch": null,
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -112,7 +137,13 @@
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
-      "parents": [],
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
+      "parents": [
+        "A01"
+      ],
       "children": [
         "B01",
         "B09",
@@ -124,6 +155,11 @@
       "branch": null,
       "done_commit": {
         "historical": true
+      },
+      "acceptance": {
+        "evidence_kind": "historical_acceptance",
+        "effective_kind": "historical_acceptance",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -141,7 +177,13 @@
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
-      "parents": [],
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
+      "parents": [
+        "A01"
+      ],
       "children": [
         "B01",
         "M10",
@@ -151,6 +193,11 @@
       "branch": null,
       "done_commit": {
         "historical": true
+      },
+      "acceptance": {
+        "evidence_kind": "historical_acceptance",
+        "effective_kind": "historical_acceptance",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -168,6 +215,10 @@
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [],
       "children": [
         "B02",
@@ -179,6 +230,11 @@
       "branch": null,
       "done_commit": {
         "historical": true
+      },
+      "acceptance": {
+        "evidence_kind": "historical_acceptance",
+        "effective_kind": "historical_acceptance",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -196,6 +252,10 @@
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [],
       "children": [
         "B10",
@@ -208,6 +268,11 @@
       "branch": null,
       "done_commit": {
         "historical": true
+      },
+      "acceptance": {
+        "evidence_kind": "historical_acceptance",
+        "effective_kind": "historical_acceptance",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -225,6 +290,10 @@
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [],
       "children": [
         "B02",
@@ -236,6 +305,11 @@
       "branch": null,
       "done_commit": {
         "historical": true
+      },
+      "acceptance": {
+        "evidence_kind": "historical_acceptance",
+        "effective_kind": "historical_acceptance",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -253,6 +327,10 @@
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [],
       "children": [
         "B01",
@@ -269,6 +347,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 10,
@@ -293,6 +376,10 @@
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [],
       "children": [
         "L01",
@@ -313,6 +400,11 @@
       "done_commit": {
         "historical": true
       },
+      "acceptance": {
+        "evidence_kind": "historical_acceptance",
+        "effective_kind": "historical_acceptance",
+        "revalidated": false
+      },
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -329,16 +421,28 @@
       "group_id": "A",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A01"
       ],
       "children": [
-        "B09"
+        "B09",
+        "K01",
+        "K04",
+        "K05"
       ],
       "missing_parents": [],
       "branch": null,
       "done_commit": {
         "historical": true
+      },
+      "acceptance": {
+        "evidence_kind": "historical_acceptance",
+        "effective_kind": "historical_acceptance",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -356,6 +460,10 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A02",
         "A03",
@@ -365,6 +473,7 @@
         "B02",
         "B03",
         "B06",
+        "B12",
         "C02",
         "C03",
         "C06",
@@ -377,6 +486,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 12,
@@ -401,15 +515,22 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A04",
         "A06",
         "B01"
       ],
       "children": [
+        "B04",
+        "B12",
         "D01",
         "E01",
         "F01",
+        "F06",
         "G01",
         "H01",
         "I01"
@@ -420,6 +541,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 23,
@@ -444,11 +570,16 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B01"
       ],
       "children": [
         "B04",
+        "B12",
         "C14",
         "C12"
       ],
@@ -458,6 +589,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 21,
@@ -482,14 +618,22 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A04",
+        "B02",
         "B03"
       ],
       "children": [
         "D01",
+        "B12",
+        "C01",
         "E01",
         "F01",
+        "F06",
         "G01",
         "H01",
         "I01"
@@ -500,6 +644,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 26,
@@ -524,6 +673,10 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A07"
       ],
@@ -531,7 +684,8 @@
         "C01",
         "C06",
         "C13",
-        "H06"
+        "H06",
+        "B09"
       ],
       "missing_parents": [],
       "branch": {
@@ -539,6 +693,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 13,
@@ -563,6 +722,10 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A07",
         "B01",
@@ -570,10 +733,15 @@
       ],
       "children": [
         "C06",
+        "C07",
+        "C08",
+        "C09",
         "D06",
         "G11",
         "E04",
-        "E03"
+        "E03",
+        "B09",
+        "I22"
       ],
       "missing_parents": [],
       "branch": {
@@ -581,6 +749,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 14,
@@ -605,10 +778,15 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A04"
       ],
       "children": [
+        "B09",
         "H07",
         "I20",
         "L02"
@@ -619,6 +797,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 3,
@@ -643,16 +826,23 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A06"
       ],
       "children": [
         "D01",
+        "C01",
         "E05",
         "F01",
         "G03",
         "H03",
-        "M01"
+        "M01",
+        "L08",
+        "L15"
       ],
       "missing_parents": [],
       "branch": {
@@ -660,6 +850,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 8,
@@ -684,15 +879,24 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A02",
         "A09",
-        "K07"
+        "B05",
+        "B06",
+        "B07"
       ],
       "children": [
         "H01",
         "H06",
-        "L02"
+        "L02",
+        "C13",
+        "G13",
+        "I22"
       ],
       "missing_parents": [],
       "branch": {
@@ -700,6 +904,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 6,
@@ -724,14 +933,25 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A05"
       ],
       "children": [
+        "D02",
         "D05",
+        "D06",
         "D07",
+        "C12",
+        "E01",
+        "E05",
+        "F01",
         "H08",
         "L08",
+        "L15",
         "L13"
       ],
       "missing_parents": [],
@@ -740,6 +960,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 7,
@@ -764,6 +989,10 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A01"
       ],
@@ -779,6 +1008,11 @@
       "branch": null,
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -796,8 +1030,16 @@
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
-        "A08"
+        "A08",
+        "B01",
+        "B02",
+        "B03",
+        "B04"
       ],
       "children": [
         "L12",
@@ -809,6 +1051,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 5,
@@ -833,9 +1080,15 @@
       "group_id": "C",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A06",
-        "B05"
+        "B04",
+        "B05",
+        "B08"
       ],
       "children": [
         "C02",
@@ -861,6 +1114,11 @@
       "done_commit": {
         "historical": false
       },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 22,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/22",
@@ -884,6 +1142,10 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A07",
         "B01",
@@ -900,6 +1162,7 @@
         "name": "codex/c02"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 39,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/39",
@@ -923,6 +1186,10 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A07",
         "B01",
@@ -938,6 +1205,7 @@
         "name": "codex/c03"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 35,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/35",
@@ -961,6 +1229,10 @@
       "group_id": "C",
       "status": "branch",
       "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "A07",
         "C01"
@@ -975,6 +1247,7 @@
         "name": "codex/c04"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 38,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/38",
@@ -998,6 +1271,10 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A07",
         "C01"
@@ -1013,6 +1290,7 @@
         "name": "codex/c05"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 36,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/36",
@@ -1036,6 +1314,10 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "B01",
         "B05",
@@ -1054,6 +1336,7 @@
         "name": "codex/c06"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 34,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/34",
@@ -1077,21 +1360,28 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "B01",
+        "B06",
         "C01"
       ],
       "children": [
         "E01",
         "E03",
         "G14",
-        "L09"
+        "L09",
+        "L15"
       ],
       "missing_parents": [],
       "branch": {
         "name": "codex/c07"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 40,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/40",
@@ -1115,8 +1405,13 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "B01",
+        "B06",
         "C01"
       ],
       "children": [
@@ -1129,6 +1424,7 @@
         "name": "codex/c08"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 43,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/43",
@@ -1152,7 +1448,12 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
+        "B06",
         "C01"
       ],
       "children": [
@@ -1165,6 +1466,7 @@
         "name": "codex/c09"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 42,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/42",
@@ -1188,18 +1490,22 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "C01"
       ],
       "children": [
-        "G09",
-        "H04"
+        "G09"
       ],
       "missing_parents": [],
       "branch": {
         "name": "codex/c10"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 45,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/45",
@@ -1223,6 +1529,10 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "C01"
       ],
@@ -1236,6 +1546,7 @@
         "name": "codex/c11"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 47,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/47",
@@ -1259,12 +1570,18 @@
       "group_id": "C",
       "status": "branch",
       "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "B03",
+        "B10",
         "C01"
       ],
       "children": [
         "D07",
+        "L08",
         "L13",
         "H05"
       ],
@@ -1273,6 +1590,7 @@
         "name": "codex/c12"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 44,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/44",
@@ -1296,21 +1614,27 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "B05",
-        "C01",
-        "K07"
+        "B09",
+        "C01"
       ],
       "children": [
         "F08",
         "G08",
-        "G15"
+        "G15",
+        "L15"
       ],
       "missing_parents": [],
       "branch": {
         "name": "codex/c13"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 46,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/46",
@@ -1334,6 +1658,10 @@
       "group_id": "C",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B03",
         "C01",
@@ -1350,6 +1678,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1366,6 +1695,10 @@
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "C01"
       ],
@@ -1378,6 +1711,7 @@
         "name": "codex/c15"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 41,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/41",
@@ -1401,6 +1735,10 @@
       "group_id": "D",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B02",
         "B04",
@@ -1416,6 +1754,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1432,7 +1771,12 @@
       "group_id": "D",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
+        "B10",
         "C02",
         "D01"
       ],
@@ -1446,6 +1790,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1462,6 +1807,10 @@
       "group_id": "D",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C02",
         "D02"
@@ -1477,6 +1826,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1493,18 +1843,24 @@
       "group_id": "D",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "D03"
       ],
       "children": [
         "J06",
-        "I19"
+        "I19",
+        "D05"
       ],
       "missing_parents": [
         "D03"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1521,11 +1877,16 @@
       "group_id": "D",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B10",
         "C08",
         "C14",
         "D03",
+        "D04",
         "K01"
       ],
       "children": [
@@ -1541,10 +1902,12 @@
       "missing_parents": [
         "C08",
         "C14",
-        "D03"
+        "D03",
+        "D04"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1561,9 +1924,14 @@
       "group_id": "D",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A05",
         "B06",
+        "B10",
         "C11",
         "J07"
       ],
@@ -1579,6 +1947,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1595,6 +1964,10 @@
       "group_id": "D",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B10",
         "C12",
@@ -1610,6 +1983,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1626,10 +2000,16 @@
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B02",
         "B04",
+        "B10",
         "C07",
+        "J01",
         "K01",
         "K05"
       ],
@@ -1640,13 +2020,15 @@
         "E08",
         "J05",
         "L01",
-        "L09"
+        "L09",
+        "L15"
       ],
       "missing_parents": [
         "C07"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1663,6 +2045,10 @@
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "E01",
         "J03"
@@ -1675,6 +2061,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1691,6 +2078,10 @@
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B06",
         "C07",
@@ -1713,6 +2104,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1729,6 +2121,10 @@
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B06",
         "C08",
@@ -1745,6 +2141,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1761,15 +2158,19 @@
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B08",
+        "B10",
         "C09",
         "E04"
       ],
       "children": [
         "M05",
-        "J05",
-        "L03"
+        "J05"
       ],
       "missing_parents": [
         "C09",
@@ -1777,6 +2178,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1793,6 +2195,10 @@
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C09"
       ],
@@ -1805,6 +2211,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1821,6 +2228,10 @@
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "E01",
         "E03",
@@ -1837,6 +2248,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1853,6 +2265,10 @@
       "group_id": "E",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A05",
         "C09",
@@ -1860,7 +2276,8 @@
       ],
       "children": [
         "H05",
-        "L09"
+        "L09",
+        "M05"
       ],
       "missing_parents": [
         "C09",
@@ -1868,6 +2285,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1884,10 +2302,15 @@
       "group_id": "F",
       "status": "branch",
       "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "B02",
         "B04",
         "B08",
+        "B10",
         "K05"
       ],
       "children": [
@@ -1899,6 +2322,7 @@
         "name": "codex/f01"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 37,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/37",
@@ -1922,6 +2346,10 @@
       "group_id": "F",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C03",
         "F01"
@@ -1938,6 +2366,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1954,6 +2383,10 @@
       "group_id": "F",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "F02"
       ],
@@ -1965,6 +2398,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -1981,18 +2415,24 @@
       "group_id": "F",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "F02"
       ],
       "children": [
         "F05",
-        "G06"
+        "G06",
+        "L08"
       ],
       "missing_parents": [
         "F02"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2009,6 +2449,10 @@
       "group_id": "F",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C04",
         "F04",
@@ -2028,6 +2472,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2044,13 +2489,20 @@
       "group_id": "F",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
+        "B02",
+        "B04",
         "K01"
       ],
       "children": [
         "F05",
         "F07",
-        "G07"
+        "G07",
+        "I22"
       ],
       "missing_parents": [],
       "branch": {
@@ -2058,6 +2510,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "consistency_revalidation",
+        "revalidated": true
       },
       "pull_request": {
         "number": 1,
@@ -2082,6 +2539,10 @@
       "group_id": "F",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C03",
         "F02",
@@ -2100,6 +2561,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2116,6 +2578,10 @@
       "group_id": "F",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C13"
       ],
@@ -2128,6 +2594,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2144,6 +2611,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B02",
         "B04",
@@ -2165,6 +2636,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2181,6 +2653,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A02",
         "G01"
@@ -2195,6 +2671,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2211,6 +2688,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B08",
         "G02"
@@ -2224,6 +2705,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2240,6 +2722,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "G02"
       ],
@@ -2252,6 +2738,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2268,13 +2755,18 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C05",
         "G04"
       ],
       "children": [
         "G06",
-        "G07"
+        "G07",
+        "L08"
       ],
       "missing_parents": [
         "C05",
@@ -2282,6 +2774,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2298,6 +2791,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C05",
         "F04",
@@ -2316,6 +2813,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2332,6 +2830,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C04",
         "F05",
@@ -2340,7 +2842,6 @@
         "G05",
         "G06",
         "G08",
-        "G09",
         "K01",
         "K02"
       ],
@@ -2354,11 +2855,11 @@
         "G03",
         "G05",
         "G06",
-        "G08",
-        "G09"
+        "G08"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2375,6 +2876,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C13",
         "F03",
@@ -2391,6 +2896,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2407,18 +2913,20 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C10"
       ],
-      "children": [
-        "G07",
-        "G13"
-      ],
+      "children": [],
       "missing_parents": [
         "C10"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2435,6 +2943,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C06",
         "G01",
@@ -2453,6 +2965,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2469,6 +2982,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B06",
         "G10"
@@ -2482,6 +2999,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2498,6 +3016,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C06",
         "G10",
@@ -2516,6 +3038,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2532,11 +3055,15 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
+        "B09",
         "C05",
         "G06",
         "G07",
-        "G09",
         "G11",
         "G12",
         "G14",
@@ -2551,7 +3078,6 @@
         "C05",
         "G06",
         "G07",
-        "G09",
         "G11",
         "G12",
         "G14",
@@ -2559,6 +3085,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2575,6 +3102,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C07",
         "E02",
@@ -2585,7 +3116,9 @@
       ],
       "children": [
         "G13",
-        "E07"
+        "E07",
+        "L08",
+        "L09"
       ],
       "missing_parents": [
         "C07",
@@ -2596,6 +3129,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2612,6 +3146,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C13",
         "F08",
@@ -2628,6 +3166,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2644,6 +3183,10 @@
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "G03",
         "G12",
@@ -2660,6 +3203,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2676,6 +3220,10 @@
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B02",
         "B04",
@@ -2697,6 +3245,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2713,6 +3262,10 @@
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C06",
         "D05",
@@ -2724,6 +3277,7 @@
       "children": [
         "H06",
         "I09",
+        "I18",
         "L02",
         "L07"
       ],
@@ -2737,6 +3291,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2753,6 +3308,10 @@
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B08",
         "C11",
@@ -2773,6 +3332,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2789,9 +3349,12 @@
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C03",
-        "C10",
         "F07",
         "F08",
         "H01",
@@ -2805,7 +3368,6 @@
       ],
       "missing_parents": [
         "C03",
-        "C10",
         "F07",
         "F08",
         "H01",
@@ -2813,6 +3375,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2829,6 +3392,10 @@
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C12",
         "D05",
@@ -2850,6 +3417,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2866,6 +3434,10 @@
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B05",
         "B09",
@@ -2886,6 +3458,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2902,6 +3475,10 @@
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B07",
         "H01"
@@ -2915,6 +3492,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2931,6 +3509,10 @@
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B10",
         "C14",
@@ -2947,6 +3529,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2963,18 +3546,24 @@
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "H01"
       ],
       "children": [
         "I02",
-        "I07"
+        "I07",
+        "L08"
       ],
       "missing_parents": [
         "H01"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -2991,6 +3580,10 @@
       "group_id": "I",
       "status": "branch",
       "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "B02",
         "B04",
@@ -3007,6 +3600,7 @@
         "name": "codex/i01"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 33,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/33",
@@ -3030,6 +3624,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "H09",
         "I01"
@@ -3046,6 +3644,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3062,6 +3661,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I01",
         "I02"
@@ -3078,6 +3681,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3094,17 +3698,23 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I02"
       ],
       "children": [
-        "I05"
+        "I05",
+        "L08"
       ],
       "missing_parents": [
         "I02"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3121,6 +3731,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I04"
       ],
@@ -3134,6 +3748,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3150,6 +3765,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I03"
       ],
@@ -3162,6 +3781,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3178,6 +3798,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "H06",
         "H09"
@@ -3193,6 +3817,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3209,6 +3834,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C11",
         "D06",
@@ -3227,6 +3856,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3243,6 +3873,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C06",
         "H02",
@@ -3251,12 +3885,12 @@
         "I05",
         "I06",
         "I07",
-        "I08",
-        "I15"
+        "I08"
       ],
       "children": [
         "I16",
-        "I17"
+        "I17",
+        "I15"
       ],
       "missing_parents": [
         "C06",
@@ -3266,11 +3900,11 @@
         "I05",
         "I06",
         "I07",
-        "I08",
-        "I15"
+        "I08"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3287,6 +3921,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I02",
         "I03"
@@ -3301,6 +3939,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3317,6 +3956,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I01",
         "K04"
@@ -3331,6 +3974,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3347,6 +3991,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I11"
       ],
@@ -3365,6 +4013,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3381,6 +4030,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I06",
         "I11",
@@ -3402,6 +4055,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3418,6 +4072,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A02",
         "F02",
@@ -3429,7 +4087,8 @@
       ],
       "children": [
         "I15",
-        "L06"
+        "L06",
+        "L10"
       ],
       "missing_parents": [
         "F02",
@@ -3441,6 +4100,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3457,23 +4117,29 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C04",
         "F05",
         "F07",
+        "I09",
         "I12",
         "I13",
         "I14",
         "I21"
       ],
       "children": [
-        "I09",
-        "L06"
+        "L06",
+        "L10"
       ],
       "missing_parents": [
         "C04",
         "F05",
         "F07",
+        "I09",
         "I12",
         "I13",
         "I14",
@@ -3481,6 +4147,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3497,6 +4164,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "G12",
         "I09",
@@ -3507,7 +4178,8 @@
       ],
       "children": [
         "L05",
-        "L06"
+        "L06",
+        "L10"
       ],
       "missing_parents": [
         "G12",
@@ -3519,6 +4191,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3535,6 +4208,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C05",
         "G13",
@@ -3546,7 +4223,9 @@
       "children": [
         "I18",
         "J08",
-        "L06"
+        "L06",
+        "L08",
+        "L10"
       ],
       "missing_parents": [
         "C05",
@@ -3558,6 +4237,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3574,7 +4254,12 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
+        "H02",
         "I12",
         "I13",
         "I17",
@@ -3583,9 +4268,11 @@
         "J04"
       ],
       "children": [
-        "L06"
+        "L06",
+        "L10"
       ],
       "missing_parents": [
+        "H02",
         "I12",
         "I13",
         "I17",
@@ -3594,6 +4281,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3610,6 +4298,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "D03",
         "D04",
@@ -3625,10 +4317,7 @@
         "J06",
         "J07"
       ],
-      "children": [
-        "L06",
-        "L05"
-      ],
+      "children": [],
       "missing_parents": [
         "D03",
         "D04",
@@ -3646,6 +4335,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3662,6 +4352,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B07",
         "D06",
@@ -3691,6 +4385,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3707,6 +4402,10 @@
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I01"
       ],
@@ -3725,6 +4424,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3741,7 +4441,14 @@
       "group_id": "I",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
+        "B06",
+        "B09",
+        "F06",
         "K04",
         "K07"
       ],
@@ -3753,6 +4460,11 @@
       "branch": null,
       "done_commit": {
         "historical": true
+      },
+      "acceptance": {
+        "evidence_kind": "historical_acceptance",
+        "effective_kind": "consistency_revalidation",
+        "revalidated": true
       },
       "pull_request": null,
       "urls": {
@@ -3770,13 +4482,18 @@
       "group_id": "J",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A02"
       ],
       "children": [
         "J02",
         "J03",
-        "J07"
+        "J07",
+        "E01"
       ],
       "missing_parents": [],
       "branch": {
@@ -3784,6 +4501,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 2,
@@ -3808,6 +4530,10 @@
       "group_id": "J",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "J01"
       ],
@@ -3822,6 +4548,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 19,
@@ -3846,6 +4577,10 @@
       "group_id": "J",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "J01"
       ],
@@ -3860,6 +4595,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 16,
@@ -3884,6 +4624,10 @@
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "J02",
         "J06",
@@ -3899,6 +4643,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3915,6 +4660,10 @@
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "E01",
         "E05"
@@ -3928,6 +4677,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3944,6 +4694,10 @@
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "D04",
         "E03"
@@ -3958,6 +4712,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -3974,6 +4729,10 @@
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "C08",
         "E04",
@@ -3990,6 +4749,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4006,18 +4766,20 @@
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "I17"
       ],
-      "children": [
-        "L06",
-        "M04"
-      ],
+      "children": [],
       "missing_parents": [
         "I17"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4034,6 +4796,10 @@
       "group_id": "J",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A05"
       ],
@@ -4047,6 +4813,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 9,
@@ -4071,6 +4842,10 @@
       "group_id": "J",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "M04"
       ],
@@ -4082,6 +4857,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4098,11 +4874,19 @@
       "group_id": "K",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A01",
-        "B11"
+        "B11",
+        "A09",
+        "K04",
+        "K07"
       ],
       "children": [
+        "K02",
         "F05",
         "F06",
         "G07",
@@ -4113,6 +4897,11 @@
       "branch": null,
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -4130,9 +4919,14 @@
       "group_id": "K",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A01",
-        "B11"
+        "B11",
+        "K01"
       ],
       "children": [
         "L04",
@@ -4146,6 +4940,11 @@
       },
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": {
         "number": 4,
@@ -4170,12 +4969,19 @@
       "group_id": "K",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A01",
         "B11",
+        "A09",
         "K07"
       ],
       "children": [
+        "K01",
+        "K05",
         "I01",
         "I11",
         "I13",
@@ -4185,6 +4991,11 @@
       "branch": null,
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -4202,9 +5013,15 @@
       "group_id": "K",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A01",
         "B11",
+        "A09",
+        "K04",
         "K07"
       ],
       "children": [
@@ -4218,6 +5035,11 @@
       "branch": null,
       "done_commit": {
         "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -4235,6 +5057,10 @@
       "group_id": "K",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B11",
         "C15",
@@ -4249,6 +5075,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4265,12 +5092,15 @@
       "group_id": "K",
       "status": "done",
       "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B11"
       ],
       "children": [
-        "B09",
-        "C13",
+        "K01",
         "K04",
         "K05",
         "K06",
@@ -4283,6 +5113,11 @@
       "branch": null,
       "done_commit": {
         "historical": true
+      },
+      "acceptance": {
+        "evidence_kind": "historical_acceptance",
+        "effective_kind": "historical_acceptance",
+        "revalidated": false
       },
       "pull_request": null,
       "urls": {
@@ -4300,6 +5135,10 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "D05",
@@ -4319,6 +5158,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4335,6 +5175,10 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "B07",
@@ -4355,6 +5199,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4371,11 +5216,14 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "C01",
         "D02",
-        "E05",
         "F01",
         "G10"
       ],
@@ -4384,12 +5232,12 @@
       ],
       "missing_parents": [
         "D02",
-        "E05",
         "F01",
         "G10"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4406,6 +5254,10 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "G15",
@@ -4421,6 +5273,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4437,25 +5290,29 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "I10",
         "I16",
-        "I19",
         "I20",
         "I22"
       ],
       "children": [
-        "L11"
+        "L11",
+        "M07"
       ],
       "missing_parents": [
         "I10",
         "I16",
-        "I19",
         "I20"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4472,6 +5329,10 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "I14",
@@ -4479,9 +5340,7 @@
         "I16",
         "I17",
         "I18",
-        "I19",
         "I22",
-        "J08",
         "K02"
       ],
       "children": [
@@ -4492,12 +5351,11 @@
         "I15",
         "I16",
         "I17",
-        "I18",
-        "I19",
-        "J08"
+        "I18"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4514,6 +5372,10 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "G10",
@@ -4530,6 +5392,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4546,26 +5409,46 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A05",
         "A08",
         "B10",
+        "C12",
         "C14",
+        "G14",
         "H08",
+        "I04",
+        "I17",
         "D05",
+        "B08",
+        "F04",
+        "G05",
+        "H09",
         "I20"
       ],
       "children": [
         "L11"
       ],
       "missing_parents": [
+        "C12",
         "C14",
+        "G14",
         "H08",
+        "I04",
+        "I17",
         "D05",
+        "F04",
+        "G05",
+        "H09",
         "I20"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4582,11 +5465,16 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "C07",
         "E07",
         "E08",
+        "G14",
         "E01",
         "E03"
       ],
@@ -4597,11 +5485,13 @@
         "C07",
         "E07",
         "E08",
+        "G14",
         "E01",
         "E03"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4618,22 +5508,38 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "I12",
         "I20",
-        "I21"
+        "I21",
+        "I14",
+        "I15",
+        "I16",
+        "I17",
+        "I18"
       ],
       "children": [
-        "L11"
+        "L11",
+        "M07"
       ],
       "missing_parents": [
         "I12",
         "I20",
-        "I21"
+        "I21",
+        "I14",
+        "I15",
+        "I16",
+        "I17",
+        "I18"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4650,6 +5556,10 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A04",
         "A06",
@@ -4683,6 +5593,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4699,19 +5610,26 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A08",
         "B12",
         "L11"
       ],
       "children": [
-        "M10"
+        "M10",
+        "M04",
+        "M08"
       ],
       "missing_parents": [
         "L11"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4728,6 +5646,10 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B10",
         "C12",
@@ -4743,6 +5665,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4759,6 +5682,10 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "D07",
         "H05"
@@ -4773,6 +5700,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4789,18 +5717,31 @@
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
-        "C15"
+        "B10",
+        "C15",
+        "B08",
+        "C07",
+        "C13",
+        "E01"
       ],
       "children": [
         "M09",
         "M08"
       ],
       "missing_parents": [
-        "C15"
+        "C15",
+        "C07",
+        "C13",
+        "E01"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4817,6 +5758,10 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B08",
         "H03",
@@ -4832,6 +5777,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4848,6 +5794,10 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "K06",
         "L11"
@@ -4862,6 +5812,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4878,6 +5829,10 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "M02"
       ],
@@ -4890,6 +5845,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4906,24 +5862,35 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
-        "J08",
+        "L12",
         "M01",
         "M02",
-        "M03"
+        "M03",
+        "M06",
+        "M07",
+        "M09"
       ],
       "children": [
         "J10",
         "M08"
       ],
       "missing_parents": [
-        "J08",
+        "L12",
         "M01",
         "M02",
-        "M03"
+        "M03",
+        "M06",
+        "M07",
+        "M09"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4940,19 +5907,24 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "E05",
-        "E06"
+        "E06",
+        "E08"
       ],
-      "children": [
-        "M08"
-      ],
+      "children": [],
       "missing_parents": [
         "E05",
-        "E06"
+        "E06",
+        "E08"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -4969,11 +5941,17 @@
       "group_id": "M",
       "status": "branch",
       "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "A03",
         "J09"
       ],
       "children": [
+        "M04",
+        "M08",
         "M10"
       ],
       "missing_parents": [],
@@ -4981,6 +5959,7 @@
         "name": "codex/m06"
       },
       "done_commit": null,
+      "acceptance": null,
       "pull_request": {
         "number": 20,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/20",
@@ -5004,17 +5983,29 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
-        "I02"
+        "I02",
+        "L05",
+        "L10"
       ],
       "children": [
+        "M04",
+        "M08",
+        "M09",
         "M10"
       ],
       "missing_parents": [
-        "I02"
+        "I02",
+        "L05",
+        "L10"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -5031,29 +6022,40 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "J10",
+        "L12",
         "L13",
         "L14",
         "L15",
         "M03",
         "M04",
-        "M05"
+        "M06",
+        "M07",
+        "M09"
       ],
       "children": [
         "M10"
       ],
       "missing_parents": [
         "J10",
+        "L12",
         "L13",
         "L14",
         "L15",
         "M03",
         "M04",
-        "M05"
+        "M06",
+        "M07",
+        "M09"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -5070,14 +6072,21 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "K06",
         "L13",
         "L14",
         "L15",
-        "M01"
+        "M01",
+        "M07"
       ],
       "children": [
+        "M04",
+        "M08",
         "M10"
       ],
       "missing_parents": [
@@ -5085,10 +6094,12 @@
         "L13",
         "L14",
         "L15",
-        "M01"
+        "M01",
+        "M07"
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -5105,6 +6116,10 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "A03",
         "B12",
@@ -5131,6 +6146,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -5147,6 +6163,10 @@
       "group_id": "M",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "M10"
       ],
@@ -5158,6 +6178,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
@@ -5174,6 +6195,10 @@
       "group_id": "Z",
       "status": "blocked",
       "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "M11"
       ],
@@ -5183,6 +6208,7 @@
       ],
       "branch": null,
       "done_commit": null,
+      "acceptance": null,
       "pull_request": null,
       "urls": {
         "compare": null,
