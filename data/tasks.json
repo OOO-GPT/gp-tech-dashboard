@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-22T12:51:34.691Z",
+  "generated_at": "2026-07-22T12:52:32.132Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 149,
-    "done": 33,
-    "review": 14,
+    "done": 34,
+    "review": 13,
     "branch": 2,
-    "ready": 0,
-    "blocked": 100
+    "ready": 2,
+    "blocked": 98
   },
   "axis_counts": {
     "admission": {
-      "complete": 33,
-      "admitted": 16,
-      "blocked": 100
+      "complete": 34,
+      "admitted": 17,
+      "blocked": 98
     },
     "execution": {
-      "done": 33,
-      "review": 14,
+      "done": 34,
+      "review": 13,
       "branch": 2,
       "parked": 0,
       "not_started": 100
@@ -3578,12 +3578,12 @@
       "title": "Extension source layout",
       "description": "runtime/, content/, api/, domain/, ui/, components/, storage/, locales/, tests/.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B02",
         "B04",
@@ -3599,21 +3599,27 @@
       "branch": {
         "name": "codex/i01"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 33,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/33",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-22T12:52:08Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i01",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i01",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/33",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/a726b215b24beb925a7157675d5340c76527e6b6",
         "marker": null
       }
     },
@@ -3639,8 +3645,7 @@
         "M07"
       ],
       "missing_parents": [
-        "H09",
-        "I01"
+        "H09"
       ],
       "branch": null,
       "done_commit": null,
@@ -3676,7 +3681,6 @@
         "I20"
       ],
       "missing_parents": [
-        "I01",
         "I02"
       ],
       "branch": null,
@@ -3954,10 +3958,10 @@
       "title": "Popup/side panel shell",
       "description": "Shell only composes routes/layout; no business rules in markup handlers.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -3969,9 +3973,7 @@
         "I13",
         "L07"
       ],
-      "missing_parents": [
-        "I01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -4400,10 +4402,10 @@
       "title": "Localization/content",
       "description": "RU/EN messages, legal copy, no drift between feature labels and contracts.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -4419,9 +4421,7 @@
         "I20",
         "L10"
       ],
-      "missing_parents": [
-        "I01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
