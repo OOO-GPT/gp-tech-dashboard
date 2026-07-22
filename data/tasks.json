@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T11:06:26.095Z",
+  "generated_at": "2026-07-22T11:07:17.970Z",
   "main": {
     "ref": "main"
   },
@@ -1304,11 +1304,18 @@
         "name": "codex/c13"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 46,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/46",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c13",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c13",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/46",
         "commit": null,
         "marker": null
       }
