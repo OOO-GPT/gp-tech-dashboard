@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-22T13:40:47.091Z",
+  "generated_at": "2026-07-22T13:44:14.096Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 35,
-    "review": 12,
-    "branch": 2,
+    "review": 13,
+    "branch": 1,
     "ready": 4,
     "blocked": 96
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 35,
-      "review": 12,
-      "branch": 2,
+      "review": 13,
+      "branch": 1,
       "parked": 0,
       "not_started": 100
     }
@@ -2300,12 +2300,12 @@
       "title": "EIS client adapter",
       "description": "ЕИС через российский proxy/egress; TLS, retry, timeout и source attribution.",
       "group_id": "F",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "B02",
         "B04",
