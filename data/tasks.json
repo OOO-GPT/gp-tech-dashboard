@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T09:25:33.539Z",
+  "generated_at": "2026-07-22T09:43:19.894Z",
   "main": {
     "ref": "main"
   },
@@ -10,11 +10,11 @@
   },
   "counts": {
     "total": 149,
-    "done": 32,
-    "review": 1,
-    "branch": 1,
-    "ready": 2,
-    "blocked": 113
+    "done": 33,
+    "review": 0,
+    "branch": 3,
+    "ready": 13,
+    "blocked": 100
   },
   "groups": [
     {
@@ -831,8 +831,8 @@
       "title": "БД и миграции",
       "description": "Postgres schema, migration runner, transactional boundaries, seed/dev reset.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
       "parents": [
         "A06",
         "B05"
@@ -858,20 +858,22 @@
       "branch": {
         "name": "codex/c01"
       },
-      "done_commit": null,
+      "done_commit": {
+        "historical": false
+      },
       "pull_request": {
         "number": 22,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/22",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-22T09:43:12Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c01",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c01",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/22",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/e67c8334668ef364c6d033df624542754564d2d1",
         "marker": null
       }
     },
@@ -880,8 +882,8 @@
       "title": "User/Auth model",
       "description": "Users, sessions, refresh families, credentials, email/phone verification, API keys.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A07",
         "B01",
@@ -893,9 +895,7 @@
         "D03",
         "C14"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -912,8 +912,8 @@
       "title": "Tender/Lot model",
       "description": "Закупка, лот, заказчик, НМЦК/цена источника, procurement framework, source и registry ids.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A07",
         "B01",
@@ -924,9 +924,7 @@
         "F07",
         "H04"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -943,8 +941,8 @@
       "title": "Requirement model",
       "description": "Требования и evidence; финальные verdicts остаются AI-authored.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A07",
         "C01"
@@ -954,9 +952,7 @@
         "G07",
         "I15"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -973,8 +969,8 @@
       "title": "Product candidate model",
       "description": "Товар, продавец, цена, наличие, происхождение, источник, доказательства, риск-флаги.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "A07",
         "C01"
@@ -985,9 +981,7 @@
         "G13",
         "I17"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1004,8 +998,8 @@
       "title": "Search run ledger model",
       "description": "SearchJob, ItemRun, Attempt, Step, Event, Snapshot, idempotency key, generation.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B01",
         "B05",
@@ -1019,9 +1013,7 @@
         "H02",
         "I09"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1038,8 +1030,8 @@
       "title": "Money ledger model",
       "description": "Term-attributed lots, Series→Term resolution, project FEFO slices, reservation/settlement/reversal.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B01",
         "C01"
@@ -1050,9 +1042,7 @@
         "G14",
         "L09"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1069,8 +1059,8 @@
       "title": "Subscription series/term model",
       "description": "Personal/org Series, immutable funded Terms, renewal policy и one-Term-one-TokenLot issuance.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B01",
         "C01"
@@ -1080,9 +1070,7 @@
         "J07",
         "D05"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1099,8 +1087,8 @@
       "title": "Payment/Billing party model",
       "description": "Provider-neutral Payment; one success funds at most one SubscriptionTerm, corrections append-only.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "C01"
       ],
@@ -1109,9 +1097,7 @@
         "E06",
         "E08"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1128,8 +1114,8 @@
       "title": "Personal DB/document model",
       "description": "Папки поставщика, документы, build, vector store, attachment scope.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "C01"
       ],
@@ -1137,9 +1123,7 @@
         "G09",
         "H04"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1156,8 +1140,8 @@
       "title": "Extension installation model",
       "description": "Installation id, runtime policy, trust signals, browser capability, version metadata.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "C01"
       ],
@@ -1166,9 +1150,7 @@
         "H03",
         "I08"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1185,8 +1167,8 @@
       "title": "Audit/outbox/events model",
       "description": "Domain events, audit records, outbox delivery, support timeline, operator actions.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B03",
         "C01"
@@ -1196,9 +1178,7 @@
         "L13",
         "H05"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1215,8 +1195,8 @@
       "title": "Cache/archive model",
       "description": "Cache finalized results without semantic rewrite; archive/tool evidence versioning.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "B05",
         "C01",
@@ -1227,9 +1207,7 @@
         "G08",
         "G15"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1260,7 +1238,6 @@
         "L08"
       ],
       "missing_parents": [
-        "C01",
         "C02"
       ],
       "branch": null,
@@ -1279,8 +1256,8 @@
       "title": "Data migration blueprint",
       "description": "Какие таблицы создаются заново, какие данные импортируются, что остаётся legacy-readonly.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "parents": [
         "C01"
       ],
@@ -1288,9 +1265,7 @@
         "K06",
         "L15"
       ],
-      "missing_parents": [
-        "C01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "pull_request": null,
@@ -1790,8 +1765,8 @@
       "title": "EIS client adapter",
       "description": "ЕИС через российский proxy/egress; TLS, retry, timeout и source attribution.",
       "group_id": "F",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "B02",
         "B04",
@@ -1803,12 +1778,14 @@
         "L03"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/f01"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f01",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f01",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -2888,8 +2865,8 @@
       "title": "Extension source layout",
       "description": "runtime/, content/, api/, domain/, ui/, components/, storage/, locales/, tests/.",
       "group_id": "I",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "B02",
         "B04",
@@ -2902,12 +2879,14 @@
         "I21"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/i01"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i01",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i01",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -4273,7 +4252,6 @@
         "L11"
       ],
       "missing_parents": [
-        "C01",
         "D02",
         "E05",
         "F01",
