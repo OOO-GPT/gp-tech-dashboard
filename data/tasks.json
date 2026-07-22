@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T09:43:42.886Z",
+  "generated_at": "2026-07-22T10:18:27.103Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 149,
     "done": 33,
     "review": 0,
-    "branch": 3,
-    "ready": 13,
+    "branch": 9,
+    "ready": 7,
     "blocked": 100
   },
   "groups": [
@@ -882,8 +882,8 @@
       "title": "User/Auth model",
       "description": "Users, sessions, refresh families, credentials, email/phone verification, API keys.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "A07",
         "B01",
@@ -896,12 +896,14 @@
         "C14"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c02"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c02",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c02",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -912,8 +914,8 @@
       "title": "Tender/Lot model",
       "description": "Закупка, лот, заказчик, НМЦК/цена источника, procurement framework, source и registry ids.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "A07",
         "B01",
@@ -925,12 +927,14 @@
         "H04"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c03"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c03",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c03",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -941,8 +945,8 @@
       "title": "Requirement model",
       "description": "Требования и evidence; финальные verdicts остаются AI-authored.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "A07",
         "C01"
@@ -953,12 +957,14 @@
         "I15"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c04"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c04",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c04",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -969,8 +975,8 @@
       "title": "Product candidate model",
       "description": "Товар, продавец, цена, наличие, происхождение, источник, доказательства, риск-флаги.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "A07",
         "C01"
@@ -982,12 +988,14 @@
         "I17"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c05"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c05",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c05",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -998,8 +1006,8 @@
       "title": "Search run ledger model",
       "description": "SearchJob, ItemRun, Attempt, Step, Event, Snapshot, idempotency key, generation.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "B01",
         "B05",
@@ -1014,12 +1022,14 @@
         "I09"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c06"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c06",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c06",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -1030,8 +1040,8 @@
       "title": "Money ledger model",
       "description": "Term-attributed lots, Series→Term resolution, project FEFO slices, reservation/settlement/reversal.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "B01",
         "C01"
@@ -1043,12 +1053,14 @@
         "L09"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c07"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c07",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c07",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -2883,11 +2895,18 @@
         "name": "codex/i01"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 33,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/33",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i01",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i01",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/33",
         "commit": null,
         "marker": null
       }
