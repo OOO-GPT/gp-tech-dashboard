@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T10:36:54.853Z",
+  "generated_at": "2026-07-22T10:38:50.717Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 33,
-    "review": 1,
-    "branch": 8,
+    "review": 2,
+    "branch": 7,
     "ready": 7,
     "blocked": 100
   },
@@ -914,8 +914,8 @@
       "title": "Tender/Lot model",
       "description": "Закупка, лот, заказчик, НМЦК/цена источника, procurement framework, source и registry ids.",
       "group_id": "C",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "A07",
         "B01",
