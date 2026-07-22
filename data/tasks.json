@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T10:52:33.107Z",
+  "generated_at": "2026-07-22T10:54:05.425Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 33,
-    "review": 3,
-    "branch": 13,
+    "review": 4,
+    "branch": 12,
     "ready": 0,
     "blocked": 100
   },
@@ -1075,8 +1075,8 @@
       "title": "Money ledger model",
       "description": "Term-attributed lots, Series→Term resolution, project FEFO slices, reservation/settlement/reversal.",
       "group_id": "C",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "parents": [
         "B01",
         "C01"
