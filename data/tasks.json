@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-22T11:44:24.167Z",
+  "generated_at": "2026-07-22T11:45:47.126Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 33,
-    "review": 12,
-    "branch": 4,
+    "review": 13,
+    "branch": 3,
     "ready": 0,
     "blocked": 100
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 33,
-      "review": 12,
-      "branch": 4,
+      "review": 13,
+      "branch": 3,
       "parked": 0,
       "not_started": 100
     }
@@ -1227,12 +1227,12 @@
       "title": "Requirement model",
       "description": "Требования и evidence; финальные verdicts остаются AI-authored.",
       "group_id": "C",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A07",
         "C01"
