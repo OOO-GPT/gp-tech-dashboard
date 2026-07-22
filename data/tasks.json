@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T10:38:50.717Z",
+  "generated_at": "2026-07-22T10:41:13.580Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 149,
     "done": 33,
     "review": 2,
-    "branch": 7,
-    "ready": 7,
+    "branch": 9,
+    "ready": 5,
     "blocked": 100
   },
   "groups": [
@@ -999,11 +999,18 @@
         "name": "codex/c05"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 36,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/36",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c05",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c05",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/36",
         "commit": null,
         "marker": null
       }
@@ -1166,8 +1173,8 @@
       "title": "Extension installation model",
       "description": "Installation id, runtime policy, trust signals, browser capability, version metadata.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "C01"
       ],
@@ -1177,12 +1184,14 @@
         "I08"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c11"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c11",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c11",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -1193,8 +1202,8 @@
       "title": "Audit/outbox/events model",
       "description": "Domain events, audit records, outbox delivery, support timeline, operator actions.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "B03",
         "C01"
@@ -1205,12 +1214,14 @@
         "H05"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c12"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c12",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c12",
         "pull_request": null,
         "commit": null,
         "marker": null
