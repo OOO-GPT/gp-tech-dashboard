@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T10:44:41.841Z",
+  "generated_at": "2026-07-22T10:50:51.357Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 149,
     "done": 33,
     "review": 3,
-    "branch": 12,
-    "ready": 1,
+    "branch": 13,
+    "ready": 0,
     "blocked": 100
   },
   "groups": [
@@ -900,11 +900,18 @@
         "name": "codex/c02"
       },
       "done_commit": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 39,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/39",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c02",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c02",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/39",
         "commit": null,
         "marker": null
       }
@@ -1129,8 +1136,8 @@
       "title": "Payment/Billing party model",
       "description": "Provider-neutral Payment; one success funds at most one SubscriptionTerm, corrections append-only.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "parents": [
         "C01"
       ],
@@ -1140,12 +1147,14 @@
         "E08"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c09"
+      },
       "done_commit": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c09",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c09",
         "pull_request": null,
         "commit": null,
         "marker": null
