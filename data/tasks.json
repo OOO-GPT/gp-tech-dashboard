@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-23T08:23:44.863Z",
+  "generated_at": "2026-07-23T08:44:48.752Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 149,
-    "done": 36,
-    "review": 12,
+    "done": 37,
+    "review": 11,
     "branch": 1,
     "ready": 4,
     "blocked": 96
   },
   "axis_counts": {
     "admission": {
-      "complete": 36,
-      "admitted": 17,
+      "complete": 37,
+      "admitted": 16,
       "blocked": 96
     },
     "execution": {
-      "done": 36,
-      "review": 12,
+      "done": 37,
+      "review": 11,
       "branch": 1,
       "parked": 0,
       "not_started": 100
@@ -1218,11 +1218,18 @@
         "effective_kind": "main_integration",
         "revalidated": false
       },
-      "pull_request": null,
+      "pull_request": {
+        "number": 35,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/35",
+        "state": "MERGED",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": "2026-07-23T08:44:23Z"
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c03",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c03",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/35",
         "commit": "https://github.com/OOO-GPT/gp-tech/commit/414127115096ea9569c96d46dacd0aaa6e3dd559",
         "marker": null
       }
@@ -1232,12 +1239,12 @@
       "title": "Requirement model",
       "description": "Требования и evidence; финальные verdicts остаются AI-authored.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A07",
         "C01"
@@ -1251,21 +1258,27 @@
       "branch": {
         "name": "codex/c04"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 38,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/38",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-23T08:44:23Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c04",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c04",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/38",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/96cdefc6db4ad2f9be710d0d8e287ba798290106",
         "marker": null
       }
     },
@@ -2465,7 +2478,6 @@
         "L01"
       ],
       "missing_parents": [
-        "C04",
         "F04"
       ],
       "branch": null,
@@ -2847,7 +2859,6 @@
         "L01"
       ],
       "missing_parents": [
-        "C04",
         "F05",
         "G03",
         "G05",
@@ -4134,7 +4145,6 @@
         "L10"
       ],
       "missing_parents": [
-        "C04",
         "F05",
         "F07",
         "I09",
