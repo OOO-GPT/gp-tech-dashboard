@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-23T14:35:04.695Z",
+  "generated_at": "2026-07-23T14:37:20.826Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 149,
-    "done": 37,
-    "review": 11,
+    "done": 38,
+    "review": 10,
     "branch": 1,
     "ready": 4,
     "blocked": 96
   },
   "axis_counts": {
     "admission": {
-      "complete": 37,
-      "admitted": 16,
+      "complete": 38,
+      "admitted": 15,
       "blocked": 96
     },
     "execution": {
-      "done": 37,
-      "review": 11,
+      "done": 38,
+      "review": 10,
       "branch": 1,
       "parked": 0,
       "not_started": 100
@@ -1421,12 +1421,12 @@
       "title": "Subscription series/term model",
       "description": "Personal/org Series, immutable funded Terms, renewal policy и one-Term-one-TokenLot issuance.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B01",
         "B06",
@@ -1441,21 +1441,27 @@
       "branch": {
         "name": "codex/c08"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 43,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/43",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-23T14:36:49Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c08",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c08",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/43",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/569304691af82f817f839b011da628e32489a25e",
         "marker": null
       }
     },
@@ -1912,7 +1918,6 @@
         "L08"
       ],
       "missing_parents": [
-        "C08",
         "C14",
         "D03",
         "D04"
@@ -2148,7 +2153,6 @@
         "I19"
       ],
       "missing_parents": [
-        "C08",
         "E06"
       ],
       "branch": null,
@@ -4750,7 +4754,6 @@
         "J04"
       ],
       "missing_parents": [
-        "C08",
         "E04"
       ],
       "branch": null,
