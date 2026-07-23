@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-23T06:20:37.638Z",
+  "generated_at": "2026-07-23T08:23:44.863Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 149,
-    "done": 35,
-    "review": 13,
+    "done": 36,
+    "review": 12,
     "branch": 1,
     "ready": 4,
     "blocked": 96
   },
   "axis_counts": {
     "admission": {
-      "complete": 35,
-      "admitted": 18,
+      "complete": 36,
+      "admitted": 17,
       "blocked": 96
     },
     "execution": {
-      "done": 35,
-      "review": 13,
+      "done": 36,
+      "review": 12,
       "branch": 1,
       "parked": 0,
       "not_started": 100
@@ -1190,12 +1190,12 @@
       "title": "Tender/Lot model",
       "description": "Закупка, лот, заказчик, НМЦК/цена источника, procurement framework, source и registry ids.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A07",
         "B01",
@@ -1210,21 +1210,20 @@
       "branch": {
         "name": "codex/c03"
       },
-      "done_commit": null,
-      "acceptance": null,
-      "pull_request": {
-        "number": 35,
-        "url": "https://github.com/OOO-GPT/gp-tech/pull/35",
-        "state": "OPEN",
-        "is_draft": false,
-        "review_decision": null,
-        "merged_at": null
+      "done_commit": {
+        "historical": false
       },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
+      "pull_request": null,
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c03",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c03",
-        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/35",
-        "commit": null,
+        "pull_request": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/414127115096ea9569c96d46dacd0aaa6e3dd559",
         "marker": null
       }
     },
@@ -2361,7 +2360,6 @@
         "I14"
       ],
       "missing_parents": [
-        "C03",
         "F01"
       ],
       "branch": null,
@@ -2555,7 +2553,6 @@
         "I15"
       ],
       "missing_parents": [
-        "C03",
         "F02",
         "F05"
       ],
@@ -3367,7 +3364,6 @@
         "L02"
       ],
       "missing_parents": [
-        "C03",
         "F07",
         "F08",
         "H01",
