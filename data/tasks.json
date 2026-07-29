@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-29T16:26:15.518Z",
+  "generated_at": "2026-07-29T16:27:10.570Z",
   "main": {
     "ref": "main"
   },
@@ -11,22 +11,22 @@
   "counts": {
     "total": 149,
     "done": 38,
-    "review": 10,
+    "review": 9,
     "branch": 1,
     "ready": 4,
-    "blocked": 96
+    "blocked": 97
   },
   "axis_counts": {
     "admission": {
       "complete": 38,
-      "admitted": 15,
-      "blocked": 96
+      "admitted": 14,
+      "blocked": 97
     },
     "execution": {
       "done": 38,
-      "review": 10,
+      "review": 9,
       "branch": 1,
-      "parked": 0,
+      "parked": 1,
       "not_started": 100
     }
   },
@@ -580,6 +580,7 @@
       "children": [
         "B04",
         "B12",
+        "C05",
         "C14",
         "C12"
       ],
@@ -614,7 +615,7 @@
     {
       "id": "B04",
       "title": "Правила зависимостей",
-      "description": "Domain не зависит от HTTP/UI; adapters зависят внутрь; shared только для контрактов.",
+      "description": "Domain не зависит от HTTP/UI; официальный Agents SDK допускается только в cognitive-core adapter boundary.",
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
@@ -635,6 +636,7 @@
         "F01",
         "F06",
         "G01",
+        "G03",
         "H01",
         "I01"
       ],
@@ -822,7 +824,7 @@
     {
       "id": "B08",
       "title": "Config/secrets/flags contract",
-      "description": "Все env/секреты/флаги описаны, валидируются на старте и не расползаются по коду.",
+      "description": "OpenAI Agents SDK/model/limits/tracing config и secrets валидируются на старте; tracing закрыт до G16.",
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
@@ -875,7 +877,7 @@
     {
       "id": "B09",
       "title": "API-first contract",
-      "description": "OpenAPI/JSON Schema + разделение AI-authored semantics/tool evidence/metadata.",
+      "description": "Structured final output, tool evidence и SDK metadata разделены; raw responses/RunState/attempt_count не публичны.",
       "group_id": "B",
       "status": "done",
       "status_label": "Готова",
@@ -895,6 +897,8 @@
         "H06",
         "L02",
         "C13",
+        "G02",
+        "G07",
         "G13",
         "I22"
       ],
@@ -945,10 +949,12 @@
         "D05",
         "D06",
         "D07",
+        "C05",
         "C12",
         "E01",
         "E05",
         "F01",
+        "G03",
         "H08",
         "L08",
         "L15",
@@ -1284,26 +1290,33 @@
     },
     {
       "id": "C05",
-      "title": "Product candidate model",
-      "description": "Товар, продавец, цена, наличие, происхождение, источник, доказательства, риск-флаги.",
+      "title": "Рабочее пространство кандидатов",
+      "description": "Run-scoped CandidateEntry внутри CandidateWorkspace; агент создаёт, читает и меняет записи только через tools; глобального Candidate aggregate нет, это не RecommendedProduct.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "blocked",
+      "status_label": "Заблокирована",
+      "admission_status": "blocked",
+      "admission_status_label": "Заблокирована графом",
+      "execution_status": "parked",
+      "execution_status_label": "Ветка припаркована",
       "parents": [
         "A07",
-        "C01"
+        "B03",
+        "B10",
+        "C01",
+        "C06"
       ],
       "children": [
-        "G05",
-        "G06",
-        "G13",
-        "I17"
+        "G02",
+        "G07",
+        "G11",
+        "G16",
+        "L03",
+        "L04"
       ],
-      "missing_parents": [],
+      "missing_parents": [
+        "C06"
+      ],
       "branch": {
         "name": "codex/c05"
       },
@@ -1327,8 +1340,8 @@
     },
     {
       "id": "C06",
-      "title": "Search run ledger model",
-      "description": "SearchJob, ItemRun, Attempt, Step, Event, Snapshot, idempotency key, generation.",
+      "title": "Жизненный цикл поискового запуска",
+      "description": "SearchBatch, один ItemRun = один логический Agents SDK run; укрупнённый Attempt/terminal outcome без доменной сущности Step.",
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
@@ -1343,11 +1356,15 @@
         "C01"
       ],
       "children": [
+        "C05",
         "G01",
+        "G07",
         "G10",
+        "G11",
         "G12",
         "H02",
-        "I09"
+        "I09",
+        "L03"
       ],
       "missing_parents": [],
       "branch": {
@@ -1590,7 +1607,7 @@
     {
       "id": "C12",
       "title": "Audit/outbox/events model",
-      "description": "Domain events, audit records, outbox delivery, support timeline, operator actions.",
+      "description": "Domain/audit/outbox events и sanitized SDK/tool refs; не candidate payload, RunState или semantic writer.",
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
@@ -1634,7 +1651,7 @@
     {
       "id": "C13",
       "title": "Cache/archive model",
-      "description": "Cache finalized results without semantic rewrite; archive/tool evidence versioning.",
+      "description": "Exact frozen SearchResultFinalized/evidence/SDK metadata; не candidate workspace и без semantic rewrite.",
       "group_id": "C",
       "status": "review",
       "status_label": "На ревью",
@@ -1650,7 +1667,10 @@
       "children": [
         "F08",
         "G08",
+        "G07",
+        "G13",
         "G15",
+        "L03",
         "L15"
       ],
       "missing_parents": [],
@@ -2071,6 +2091,7 @@
         "J03"
       ],
       "children": [
+        "G03",
         "G14"
       ],
       "missing_parents": [
@@ -2619,8 +2640,8 @@
     },
     {
       "id": "G01",
-      "title": "Search orchestrator",
-      "description": "Создаёт item runs и ведёт до AI finalizer; не выбирает result после него.",
+      "title": "Координатор запуска Agents SDK",
+      "description": "Запускает один логический SDK run на ItemRun, передаёт input/limits и принимает terminal outcome; второго agent loop нет.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2661,8 +2682,8 @@
     },
     {
       "id": "G02",
-      "title": "Agent contract/prompts/tools",
-      "description": "Cognitive core contract: AI-authored final result, tools as evidence.",
+      "title": "Контракт агента Agents SDK",
+      "description": "Agent definitions, instructions, tools/tool schemas, handoffs и strict output schema; cognitive core — единственный автор смысла.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2672,14 +2693,18 @@
       "execution_status_label": "Не начата",
       "parents": [
         "A02",
+        "B09",
+        "C05",
         "G01"
       ],
       "children": [
         "G03",
         "G04",
-        "G06"
+        "G06",
+        "L04"
       ],
       "missing_parents": [
+        "C05",
         "G01"
       ],
       "branch": null,
@@ -2696,8 +2721,8 @@
     },
     {
       "id": "G03",
-      "title": "AI provider adapter",
-      "description": "Модели, retries, cancellation, usage telemetry, response validation.",
+      "title": "Интеграция OpenAI Agents SDK runtime",
+      "description": "Runner, OpenAI model transport, Responses identities, usage и runtime config; без generic provider framework.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2706,15 +2731,25 @@
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
+        "B04",
         "B08",
-        "G02"
+        "B10",
+        "E02",
+        "G02",
+        "G14"
       ],
       "children": [
         "G07",
-        "G16"
+        "G11",
+        "G12",
+        "G16",
+        "L03",
+        "L04"
       ],
       "missing_parents": [
-        "G02"
+        "E02",
+        "G02",
+        "G14"
       ],
       "branch": null,
       "done_commit": null,
@@ -2730,8 +2765,8 @@
     },
     {
       "id": "G04",
-      "title": "Internet search adapters",
-      "description": "Поисковые провайдеры, marketplace/site discovery, query generation, dedup.",
+      "title": "Tools интернет-поиска",
+      "description": "Дают агенту source evidence из search providers; это не backend stage и не автор выбора кандидата.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2763,8 +2798,8 @@
     },
     {
       "id": "G05",
-      "title": "Product page extraction",
-      "description": "Цена, наличие, характеристики, продавец, происхождение, URL и snapshot metadata.",
+      "title": "Tools доказательств о товаре",
+      "description": "Получают и извлекают цену, наличие, характеристики, продавца, происхождение, URL и snapshot metadata для агента.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2773,7 +2808,6 @@
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
-        "C05",
         "G04"
       ],
       "children": [
@@ -2782,7 +2816,6 @@
         "L08"
       ],
       "missing_parents": [
-        "C05",
         "G04"
       ],
       "branch": null,
@@ -2799,8 +2832,8 @@
     },
     {
       "id": "G06",
-      "title": "Evidence normalizer",
-      "description": "Цитаты/URL/source evidence до finalizer; не verdict downgrader после него.",
+      "title": "Tools нормализации evidence",
+      "description": "Технически проверяют citations/URL/source snapshots до final output; не ранжируют, не выносят verdict и не меняют result.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2809,17 +2842,14 @@
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
-        "C05",
         "F04",
         "G02",
         "G05"
       ],
       "children": [
-        "G07",
-        "G13"
+        "G07"
       ],
       "missing_parents": [
-        "C05",
         "F04",
         "G02",
         "G05"
@@ -2838,8 +2868,8 @@
     },
     {
       "id": "G07",
-      "title": "Match/verdict engine",
-      "description": "AI-owned verdict/finalizer; deterministic logic только как tool evidence.",
+      "title": "Контракт AI-authored final result",
+      "description": "Strict structured RunResult.final_output → SearchResultFinalized; без обязательного отдельного finalizer model call и post-final mutation.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2848,7 +2878,11 @@
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
+        "B09",
         "C04",
+        "C05",
+        "C06",
+        "C13",
         "F05",
         "F06",
         "G03",
@@ -2860,9 +2894,14 @@
       ],
       "children": [
         "G13",
+        "L03",
+        "L04",
         "L01"
       ],
       "missing_parents": [
+        "C05",
+        "C06",
+        "C13",
         "F05",
         "G03",
         "G05",
@@ -2883,8 +2922,8 @@
     },
     {
       "id": "G08",
-      "title": "Archive-first engine",
-      "description": "Исторические закупки/контракты/search memory перед дорогим web-first поиском.",
+      "title": "Archive-first evidence tool",
+      "description": "Агент запрашивает исторические закупки, контракты и search memory как evidence внутри того же ItemRun.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2920,8 +2959,8 @@
     },
     {
       "id": "G09",
-      "title": "Personal DB search integration",
-      "description": "Опционально подключать документы поставщика к item run как ранний file_search контекст.",
+      "title": "Personal DB evidence tool",
+      "description": "Агент при разрешённом scope запрашивает документы поставщика внутри того же ItemRun через file_search/tool.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2950,8 +2989,8 @@
     },
     {
       "id": "G10",
-      "title": "Worker/threading model",
-      "description": "Очередь, parallel item runs, leases, backpressure, per-user/org concurrency.",
+      "title": "Очередь и concurrency ItemRun",
+      "description": "Admission, parallel ItemRuns, leases, backpressure, execution-capacity и suspended quotas per user/org; не semantic loop.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -2989,8 +3028,8 @@
     },
     {
       "id": "G11",
-      "title": "Cancel/retry/timeout semantics",
-      "description": "Отмена job/item, retry approval, transient errors, deterministic terminal states.",
+      "title": "Управление Agents SDK run",
+      "description": "Cancel, timeout, replay-safe technical retry, explicit pause/resume и terminal outcome без смены ItemRun при поддержанном continuation.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3000,13 +3039,20 @@
       "execution_status_label": "Не начата",
       "parents": [
         "B06",
+        "C05",
+        "C06",
+        "G03",
         "G10"
       ],
       "children": [
         "G12",
-        "G13"
+        "G13",
+        "L03"
       ],
       "missing_parents": [
+        "C05",
+        "C06",
+        "G03",
         "G10"
       ],
       "branch": null,
@@ -3023,8 +3069,8 @@
     },
     {
       "id": "G12",
-      "title": "Progress/event stream",
-      "description": "События прогресса, snapshots, polling/SSE contract, browser resume after reload.",
+      "title": "Проекция прогресса SDK",
+      "description": "Sanitized ModelResponse/RunItem/tool/handoff events в polling/SSE; без lifecycle Step и раскрытия reasoning.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3034,6 +3080,7 @@
       "execution_status_label": "Не начата",
       "parents": [
         "C06",
+        "G03",
         "G10",
         "G11"
       ],
@@ -3045,6 +3092,7 @@
       ],
       "missing_parents": [
         "C06",
+        "G03",
         "G10",
         "G11"
       ],
@@ -3062,8 +3110,8 @@
     },
     {
       "id": "G13",
-      "title": "Result projection API",
-      "description": "Frozen SearcherResponse: projection without backend/UI semantic mutation.",
+      "title": "API проекции финального результата",
+      "description": "Проецирует только сохранённый frozen SearchResultFinalized из C13; candidate workspace и semantic mutation исключены.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3073,8 +3121,7 @@
       "execution_status_label": "Не начата",
       "parents": [
         "B09",
-        "C05",
-        "G06",
+        "C13",
         "G07",
         "G11",
         "G12",
@@ -3087,8 +3134,7 @@
         "G16"
       ],
       "missing_parents": [
-        "C05",
-        "G06",
+        "C13",
         "G07",
         "G11",
         "G12",
@@ -3109,8 +3155,8 @@
     },
     {
       "id": "G14",
-      "title": "Cost reservation settlement",
-      "description": "Reserve до затрат; settle measured cost при success/cancel/failure; release только остатка.",
+      "title": "Reserve/settlement стоимости agent run",
+      "description": "Reserve до SDK run; aggregate model/tool cost и settle при success/cancel/failure, release только остатка.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3127,8 +3173,10 @@
         "J04"
       ],
       "children": [
+        "G03",
         "G13",
         "E07",
+        "L03",
         "L08",
         "L09"
       ],
@@ -3153,8 +3201,8 @@
     },
     {
       "id": "G15",
-      "title": "Search cache/dedup policy",
-      "description": "Reuse finalized results without semantic normalization; versioned payloads.",
+      "title": "Cache/dedup финального результата",
+      "description": "Reuse только frozen finalized results/evidence с version binding; без semantic normalization.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3190,8 +3238,8 @@
     },
     {
       "id": "G16",
-      "title": "Search replay diagnostics",
-      "description": "Trace по item run: inputs, tools, candidates, verdicts, costs, errors, replay id.",
+      "title": "Диагностика Agents SDK run",
+      "description": "Связывает ItemRun/Attempt с response/request/call/trace/span ids, tool/candidate revisions, cost и errors; не authority и не replay state.",
       "group_id": "G",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -3200,15 +3248,18 @@
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
+        "C05",
         "G03",
         "G12",
         "G13"
       ],
       "children": [
         "L04",
+        "L08",
         "L13"
       ],
       "missing_parents": [
+        "C05",
         "G03",
         "G12",
         "G13"
@@ -3270,7 +3321,7 @@
     {
       "id": "H02",
       "title": "Async search API",
-      "description": "preflight/start/progress/continue/extend/cancel/usage-history endpoints.",
+      "description": "Preflight/start/coarse progress/cancel/result/usage; без raw SDK events, public resume или fresh-retry endpoint.",
       "group_id": "H",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -4172,7 +4223,7 @@
     {
       "id": "I16",
       "title": "Search progress screen",
-      "description": "Per-item runs, retry/cancel, live progress, resumable after tab/popup reload.",
+      "description": "Per-item cancel и coarse progress; reload читает canonical projection и не создаёт retry/resume/Step.",
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -4216,7 +4267,7 @@
     {
       "id": "I17",
       "title": "Results/evidence screen",
-      "description": "Render AI-authored result/evidence; no hidden evaluator or fallback copy.",
+      "description": "Render only frozen AI-authored result/evidence; candidate workspace и hidden evaluator недоступны.",
       "group_id": "I",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -4225,7 +4276,6 @@
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
-        "C05",
         "G13",
         "I09",
         "I12",
@@ -4240,7 +4290,6 @@
         "L10"
       ],
       "missing_parents": [
-        "C05",
         "G13",
         "I09",
         "I12",
@@ -5180,7 +5229,7 @@
     {
       "id": "L02",
       "title": "API contract tests",
-      "description": "OpenAPI schema, generated client contracts, error payloads.",
+      "description": "Structured final output carrier, no raw SDK/RunState/attempt_count, generated client и typed errors.",
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -5221,7 +5270,7 @@
     {
       "id": "L03",
       "title": "Integration tests",
-      "description": "DB transactions, fake EIS, fake payments, fake queues, repository adapters.",
+      "description": "RunState compatibility/fencing, cancel/crash/cost races, DB/tools/queues без duplicate side effects.",
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -5231,18 +5280,32 @@
       "execution_status_label": "Не начата",
       "parents": [
         "A08",
+        "C05",
+        "C06",
+        "C13",
+        "G03",
+        "G07",
+        "G14",
         "C01",
         "D02",
         "F01",
-        "G10"
+        "G10",
+        "G11"
       ],
       "children": [
         "L11"
       ],
       "missing_parents": [
+        "C05",
+        "C06",
+        "C13",
+        "G03",
+        "G07",
+        "G14",
         "D02",
         "F01",
-        "G10"
+        "G10",
+        "G11"
       ],
       "branch": null,
       "done_commit": null,
@@ -5259,7 +5322,7 @@
     {
       "id": "L04",
       "title": "AI/search deterministic tests",
-      "description": "Mock tools/model and assert semantic freeze/no hidden postprocessors.",
+      "description": "Fake SDK model: tool call/output/next turn/final output; identity и semantic freeze без second loop.",
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -5269,6 +5332,10 @@
       "execution_status_label": "Не начата",
       "parents": [
         "A08",
+        "C05",
+        "G02",
+        "G03",
+        "G07",
         "G15",
         "G16",
         "K02"
@@ -5277,6 +5344,10 @@
         "L11"
       ],
       "missing_parents": [
+        "C05",
+        "G02",
+        "G03",
+        "G07",
         "G15",
         "G16"
       ],
@@ -5334,7 +5405,7 @@
     {
       "id": "L06",
       "title": "End-to-end supplier journeys",
-      "description": "Открыть закупку → AI-authored result → renderer/cache/billing proof.",
+      "description": "Один ItemRun/SDK run → один frozen result → renderer/cache/billing без workspace leakage.",
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -5377,7 +5448,7 @@
     {
       "id": "L07",
       "title": "Performance/load tests",
-      "description": "Параллельные item runs, queue backpressure, API latency, extension responsiveness.",
+      "description": "Параллельные ItemRuns, permits/backpressure/cost; turns/tools не считаются отдельной concurrency.",
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -5429,6 +5500,7 @@
         "C12",
         "C14",
         "G14",
+        "G16",
         "H08",
         "I04",
         "I17",
@@ -5446,6 +5518,7 @@
         "C12",
         "C14",
         "G14",
+        "G16",
         "H08",
         "I04",
         "I17",
