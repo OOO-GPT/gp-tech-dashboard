@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T19:37:29.463Z",
+  "generated_at": "2026-07-30T19:44:42.224Z",
   "main": {
     "ref": "main"
   },
@@ -10,24 +10,24 @@
   },
   "counts": {
     "total": 149,
-    "done": 44,
-    "review": 3,
-    "branch": 8,
+    "done": 45,
+    "review": 2,
+    "branch": 9,
     "ready": 1,
-    "blocked": 93
+    "blocked": 92
   },
   "axis_counts": {
     "admission": {
-      "complete": 44,
+      "complete": 45,
       "admitted": 12,
-      "blocked": 93
+      "blocked": 92
     },
     "execution": {
-      "done": 44,
-      "review": 3,
-      "branch": 8,
+      "done": 45,
+      "review": 2,
+      "branch": 9,
       "parked": 1,
-      "not_started": 93
+      "not_started": 92
     }
   },
   "groups": [
@@ -1683,12 +1683,12 @@
       "title": "Cache/archive model",
       "description": "Exact frozen SearchResultFinalized/evidence/SDK metadata; не candidate workspace и без semantic rewrite.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B05",
         "B09",
@@ -1707,21 +1707,27 @@
       "branch": {
         "name": "codex/c13"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 46,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/46",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-30T19:44:19Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c13",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c13",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/46",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/9711610e4ac190895175a3bdf248c9b15b10cc3a",
         "marker": null
       }
     },
@@ -2645,10 +2651,10 @@
       "title": "Tender/EIS cache policy",
       "description": "TTL, revalidation, provenance, cache busting, stale-safe responses.",
       "group_id": "F",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2658,9 +2664,7 @@
         "G15",
         "H04"
       ],
-      "missing_parents": [
-        "C13"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -2936,7 +2940,6 @@
       "missing_parents": [
         "C05",
         "C06",
-        "C13",
         "F05",
         "G03",
         "G05",
@@ -2976,7 +2979,6 @@
         "G15"
       ],
       "missing_parents": [
-        "C13",
         "F03",
         "G04"
       ],
@@ -3169,7 +3171,6 @@
         "G16"
       ],
       "missing_parents": [
-        "C13",
         "G07",
         "G11",
         "G12",
@@ -3254,7 +3255,6 @@
         "L04"
       ],
       "missing_parents": [
-        "C13",
         "F08",
         "G08"
       ],
@@ -4072,11 +4072,18 @@
       },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 49,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/49",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i11",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i11",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/49",
         "commit": null,
         "marker": null
       }
@@ -4494,12 +4501,12 @@
       "title": "Localization/content",
       "description": "RU/EN messages, legal copy, no drift between feature labels and contracts.",
       "group_id": "I",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "I01"
       ],
@@ -4514,13 +4521,15 @@
         "L10"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/i21"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i21",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i21",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -5331,7 +5340,6 @@
       "missing_parents": [
         "C05",
         "C06",
-        "C13",
         "G03",
         "G07",
         "G14",
@@ -5846,7 +5854,6 @@
       ],
       "missing_parents": [
         "C15",
-        "C13",
         "E01"
       ],
       "branch": null,
