@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T09:39:06.892Z",
+  "generated_at": "2026-07-30T09:39:48.359Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 149,
-    "done": 39,
-    "review": 8,
+    "done": 40,
+    "review": 7,
     "branch": 1,
-    "ready": 5,
-    "blocked": 96
+    "ready": 6,
+    "blocked": 95
   },
   "axis_counts": {
     "admission": {
-      "complete": 39,
+      "complete": 40,
       "admitted": 14,
-      "blocked": 96
+      "blocked": 95
     },
     "execution": {
-      "done": 39,
-      "review": 8,
+      "done": 40,
+      "review": 7,
       "branch": 1,
       "parked": 1,
       "not_started": 100
@@ -1493,12 +1493,12 @@
       "title": "Payment/Billing party model",
       "description": "Provider-neutral Payment; one success funds at most one SubscriptionTerm, corrections append-only.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B06",
         "C01"
@@ -1512,21 +1512,27 @@
       "branch": {
         "name": "codex/c09"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 42,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/42",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-30T09:39:36Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c09",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c09",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/42",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/672262ce3b971c2efcef35a633d2626d68ed44fd",
         "marker": null
       }
     },
@@ -2213,7 +2219,6 @@
         "J05"
       ],
       "missing_parents": [
-        "C09",
         "E04"
       ],
       "branch": null,
@@ -2233,10 +2238,10 @@
       "title": "Billing party/KYC service",
       "description": "ИНН/КПП, плательщик, hold/remediation, provider requirements.",
       "group_id": "E",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2246,9 +2251,7 @@
         "M05",
         "E04"
       ],
-      "missing_parents": [
-        "C09"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -2320,7 +2323,6 @@
         "M05"
       ],
       "missing_parents": [
-        "C09",
         "E01"
       ],
       "branch": null,
