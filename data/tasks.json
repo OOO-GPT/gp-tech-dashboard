@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T09:17:38.754Z",
+  "generated_at": "2026-07-30T09:18:31.979Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 149,
-    "done": 38,
-    "review": 9,
+    "done": 39,
+    "review": 8,
     "branch": 1,
-    "ready": 4,
-    "blocked": 97
+    "ready": 5,
+    "blocked": 96
   },
   "axis_counts": {
     "admission": {
-      "complete": 38,
+      "complete": 39,
       "admitted": 14,
-      "blocked": 97
+      "blocked": 96
     },
     "execution": {
-      "done": 38,
-      "review": 9,
+      "done": 39,
+      "review": 8,
       "branch": 1,
       "parked": 1,
       "not_started": 100
@@ -1393,12 +1393,12 @@
       "title": "Money ledger model",
       "description": "Term-attributed lots, Series→Term resolution, project FEFO slices, reservation/settlement/reversal.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B01",
         "B06",
@@ -1415,21 +1415,27 @@
       "branch": {
         "name": "codex/c07"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 40,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/40",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-30T09:18:11Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c07",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c07",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/40",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/2851a0b64969631ad6110a341e90d687e18f279b",
         "marker": null
       }
     },
@@ -2035,10 +2041,10 @@
       "title": "Append-only ledger service",
       "description": "Term-provenance lots, transactions, idempotency, reversal вместо правки, invariant checks.",
       "group_id": "E",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2060,9 +2066,7 @@
         "L09",
         "L15"
       ],
-      "missing_parents": [
-        "C07"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -2135,7 +2139,6 @@
         "L09"
       ],
       "missing_parents": [
-        "C07",
         "C14",
         "D05",
         "E01"
@@ -3181,7 +3184,6 @@
         "L09"
       ],
       "missing_parents": [
-        "C07",
         "E02",
         "E03",
         "G01",
@@ -5564,7 +5566,6 @@
         "L11"
       ],
       "missing_parents": [
-        "C07",
         "E07",
         "E08",
         "G14",
@@ -5817,7 +5818,6 @@
       ],
       "missing_parents": [
         "C15",
-        "C07",
         "C13",
         "E01"
       ],
