@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T10:10:36.947Z",
+  "generated_at": "2026-07-30T10:11:35.224Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 149,
-    "done": 40,
-    "review": 7,
+    "done": 41,
+    "review": 6,
     "branch": 1,
     "ready": 6,
     "blocked": 95
   },
   "axis_counts": {
     "admission": {
-      "complete": 40,
-      "admitted": 14,
+      "complete": 41,
+      "admitted": 13,
       "blocked": 95
     },
     "execution": {
-      "done": 40,
-      "review": 7,
+      "done": 41,
+      "review": 6,
       "branch": 1,
       "parked": 1,
       "not_started": 100
@@ -1580,12 +1580,12 @@
       "title": "Extension installation model",
       "description": "Installation id, runtime policy, trust signals, browser capability, version metadata.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "C01"
       ],
@@ -1598,21 +1598,27 @@
       "branch": {
         "name": "codex/c11"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 47,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/47",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-30T10:11:09Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c11",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c11",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/47",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/ab77fcbda8e0f8ae14905ae328dc6325ecd9fdb3",
         "marker": null
       }
     },
@@ -1991,7 +1997,6 @@
         "D07"
       ],
       "missing_parents": [
-        "C11",
         "J07"
       ],
       "branch": null,
@@ -3392,7 +3397,6 @@
         "M01"
       ],
       "missing_parents": [
-        "C11",
         "D05",
         "D06",
         "H01"
@@ -3919,7 +3923,6 @@
         "I20"
       ],
       "missing_parents": [
-        "C11",
         "D06",
         "H03",
         "H08"
