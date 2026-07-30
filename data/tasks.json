@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T19:03:56.379Z",
+  "generated_at": "2026-07-30T19:37:29.463Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 149,
     "done": 44,
     "review": 3,
-    "branch": 1,
-    "ready": 8,
+    "branch": 8,
+    "ready": 1,
     "blocked": 93
   },
   "axis_counts": {
@@ -25,9 +25,9 @@
     "execution": {
       "done": 44,
       "review": 3,
-      "branch": 1,
+      "branch": 8,
       "parked": 1,
-      "not_started": 100
+      "not_started": 93
     }
   },
   "groups": [
@@ -1730,12 +1730,12 @@
       "title": "Tenancy/ownership constraints",
       "description": "Org/user/project ownership, BOLA protection, no silent personal fallback for org billing.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "B03",
         "C01",
@@ -1748,13 +1748,15 @@
         "L08"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c14"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c14",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c14",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -1805,12 +1807,12 @@
       "title": "Auth module scaffold",
       "description": "Слои domain/service/repository/routes, без зависимости от search или UI.",
       "group_id": "D",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "B02",
         "B04",
@@ -1822,13 +1824,15 @@
         "D02"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/d01"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/d01",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/d01",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -2063,12 +2067,12 @@
       "title": "Append-only ledger service",
       "description": "Term-provenance lots, transactions, idempotency, reversal вместо правки, invariant checks.",
       "group_id": "E",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "B02",
         "B04",
@@ -2089,13 +2093,15 @@
         "L15"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/e01"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/e01",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/e01",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -2254,12 +2260,12 @@
       "title": "Billing party/KYC service",
       "description": "ИНН/КПП, плательщик, hold/remediation, provider requirements.",
       "group_id": "E",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "C09"
       ],
@@ -2268,13 +2274,15 @@
         "E04"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/e06"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/e06",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/e06",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -2408,12 +2416,12 @@
       "title": "Tender resolver",
       "description": "По registry number/URL найти закупку и определить procurement_framework для extraction strategy.",
       "group_id": "F",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "C03",
         "F01"
@@ -2425,13 +2433,15 @@
         "I14"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/f02"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f02",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f02",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -2987,24 +2997,26 @@
       "title": "Personal DB evidence tool",
       "description": "Агент при разрешённом scope запрашивает документы поставщика внутри того же ItemRun через file_search/tool.",
       "group_id": "G",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "C10"
       ],
       "children": [],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/g09"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/g09",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/g09",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -4039,12 +4051,12 @@
       "title": "Popup/side panel shell",
       "description": "Shell only composes routes/layout; no business rules in markup handlers.",
       "group_id": "I",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "I01",
         "K04"
@@ -4055,13 +4067,15 @@
         "L07"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/i11"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i11",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i11",
         "pull_request": null,
         "commit": null,
         "marker": null
