@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T21:16:28.151Z",
+  "generated_at": "2026-07-30T21:17:49.759Z",
   "main": {
     "ref": "main"
   },
@@ -1854,7 +1854,7 @@
         "number": 54,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/54",
         "state": "OPEN",
-        "is_draft": true,
+        "is_draft": false,
         "review_decision": null,
         "merged_at": null
       },
@@ -4580,7 +4580,7 @@
         "number": 52,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/52",
         "state": "OPEN",
-        "is_draft": false,
+        "is_draft": true,
         "review_decision": null,
         "merged_at": null
       },
