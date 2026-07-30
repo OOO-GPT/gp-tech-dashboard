@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T20:48:18.718Z",
+  "generated_at": "2026-07-30T20:49:38.842Z",
   "main": {
     "ref": "main"
   },
@@ -9,25 +9,25 @@
     "url": "https://github.com/OOO-GPT/gp-tech"
   },
   "counts": {
-    "total": 149,
-    "done": 45,
+    "total": 148,
+    "done": 46,
     "review": 8,
-    "branch": 3,
+    "branch": 2,
     "ready": 1,
-    "blocked": 92
+    "blocked": 91
   },
   "axis_counts": {
     "admission": {
-      "complete": 45,
-      "admitted": 12,
-      "blocked": 92
+      "complete": 46,
+      "admitted": 11,
+      "blocked": 91
     },
     "execution": {
-      "done": 45,
+      "done": 46,
       "review": 8,
-      "branch": 3,
+      "branch": 2,
       "parked": 1,
-      "not_started": 92
+      "not_started": 91
     }
   },
   "groups": [
@@ -73,7 +73,7 @@
     },
     {
       "id": "K",
-      "title": "Наследие и миграция"
+      "title": "Наследие и вывод старой системы"
     },
     {
       "id": "L",
@@ -186,6 +186,7 @@
       ],
       "children": [
         "B01",
+        "C15",
         "M10",
         "M06"
       ],
@@ -1007,7 +1008,7 @@
         "K02",
         "K04",
         "K05",
-        "K06",
+        "C15",
         "K07"
       ],
       "missing_parents": [],
@@ -1777,41 +1778,48 @@
     },
     {
       "id": "C15",
-      "title": "Data migration blueprint",
-      "description": "Какие таблицы создаются заново, какие данные импортируются, что остаётся legacy-readonly.",
+      "title": "Legacy persistence inventory and clean-start boundary",
+      "description": "Полный read-only inventory legacy persistence; operational data transfer отсутствует, target state создаётся только новыми flows.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
+        "A03",
+        "B11",
         "C01"
       ],
       "children": [
-        "K06",
-        "L15"
+        "M10"
       ],
       "missing_parents": [],
       "branch": {
         "name": "codex/c15"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 41,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/41",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-30T20:49:15Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c15",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c15",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/41",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/4da7c1754ed9d841a2470bc39bf7fd17f82e381a",
         "marker": null
       }
     },
@@ -4093,12 +4101,12 @@
       "title": "Popup/side panel shell",
       "description": "Shell only composes routes/layout; no business rules in markup handlers.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "I01",
         "K04"
@@ -5200,41 +5208,6 @@
       }
     },
     {
-      "id": "K06",
-      "title": "Data migration scripts",
-      "description": "Series/Term/Lot migration with provenance and idempotency, без мутаций ledger truth.",
-      "group_id": "K",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
-      "parents": [
-        "B11",
-        "C15",
-        "K07"
-      ],
-      "children": [
-        "M02",
-        "M09"
-      ],
-      "missing_parents": [
-        "C15"
-      ],
-      "branch": null,
-      "done_commit": null,
-      "acceptance": null,
-      "pull_request": null,
-      "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
-        "commit": null,
-        "marker": null
-      }
-    },
-    {
       "id": "K07",
       "title": "Legacy sunset gates",
       "description": "Обязательный upstream для всех legacy sunset handoff decisions; rollback before delete.",
@@ -5252,7 +5225,6 @@
         "K01",
         "K04",
         "K05",
-        "K06",
         "I13",
         "I22",
         "M01",
@@ -5881,7 +5853,7 @@
     {
       "id": "L15",
       "title": "Backup/restore/DR",
-      "description": "Бэкапы БД, restore rehearsal, ledger safety, archive/index rebuild, secret rotation.",
+      "description": "Бэкапы и restore rehearsal только нового canonical state; ledger safety, archive/index rebuild, secret rotation.",
       "group_id": "L",
       "status": "blocked",
       "status_label": "Заблокирована",
@@ -5891,7 +5863,6 @@
       "execution_status_label": "Не начата",
       "parents": [
         "B10",
-        "C15",
         "B08",
         "C07",
         "C13",
@@ -5902,7 +5873,6 @@
         "M08"
       ],
       "missing_parents": [
-        "C15",
         "E01"
       ],
       "branch": null,
@@ -5965,7 +5935,6 @@
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
-        "K06",
         "L11"
       ],
       "children": [
@@ -5973,7 +5942,6 @@
         "M04"
       ],
       "missing_parents": [
-        "K06",
         "L11"
       ],
       "branch": null,
@@ -6243,7 +6211,6 @@
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
-        "K06",
         "L13",
         "L14",
         "L15",
@@ -6256,7 +6223,6 @@
         "M10"
       ],
       "missing_parents": [
-        "K06",
         "L13",
         "L14",
         "L15",
@@ -6289,6 +6255,7 @@
       "parents": [
         "A03",
         "B12",
+        "C15",
         "K07",
         "L11",
         "L12",
