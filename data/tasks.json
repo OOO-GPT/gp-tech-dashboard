@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T21:23:38.987Z",
+  "generated_at": "2026-07-30T21:25:09.350Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 148,
     "done": 46,
-    "review": 8,
-    "branch": 2,
+    "review": 9,
+    "branch": 1,
     "ready": 1,
     "blocked": 91
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 46,
-      "review": 8,
-      "branch": 2,
+      "review": 9,
+      "branch": 1,
       "parked": 1,
       "not_started": 91
     }
@@ -2095,12 +2095,12 @@
       "title": "Append-only ledger service",
       "description": "Term-provenance lots, transactions, idempotency, reversal вместо правки, invariant checks.",
       "group_id": "E",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "B02",
         "B04",
