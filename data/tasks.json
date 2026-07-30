@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T20:06:26.630Z",
+  "generated_at": "2026-07-30T20:07:04.799Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 45,
-    "review": 4,
-    "branch": 7,
+    "review": 5,
+    "branch": 6,
     "ready": 1,
     "blocked": 92
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 45,
-      "review": 4,
-      "branch": 7,
+      "review": 5,
+      "branch": 6,
       "parked": 1,
       "not_started": 92
     }
@@ -3020,12 +3020,12 @@
       "title": "Personal DB evidence tool",
       "description": "Агент при разрешённом scope запрашивает документы поставщика внутри того же ItemRun через file_search/tool.",
       "group_id": "G",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "C10"
       ],
