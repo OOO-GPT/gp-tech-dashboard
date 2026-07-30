@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T18:53:06.619Z",
+  "generated_at": "2026-07-30T18:53:58.822Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 149,
-    "done": 43,
-    "review": 4,
+    "done": 44,
+    "review": 3,
     "branch": 1,
-    "ready": 7,
-    "blocked": 94
+    "ready": 8,
+    "blocked": 93
   },
   "axis_counts": {
     "admission": {
-      "complete": 43,
+      "complete": 44,
       "admitted": 12,
-      "blocked": 94
+      "blocked": 93
     },
     "execution": {
-      "done": 43,
-      "review": 4,
+      "done": 44,
+      "review": 3,
       "branch": 1,
       "parked": 1,
       "not_started": 100
@@ -2358,12 +2358,12 @@
       "title": "EIS client adapter",
       "description": "ЕИС через российский proxy/egress; TLS, retry, timeout и source attribution.",
       "group_id": "F",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B02",
         "B04",
@@ -2379,21 +2379,27 @@
       "branch": {
         "name": "codex/f01"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 37,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/37",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-30T18:53:36Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f01",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f01",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/37",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/3e6c30e3fc32b72ea8c54980bd0bad2ef04fca9f",
         "marker": null
       }
     },
@@ -2402,10 +2408,10 @@
       "title": "Tender resolver",
       "description": "По registry number/URL найти закупку и определить procurement_framework для extraction strategy.",
       "group_id": "F",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2418,9 +2424,7 @@
         "F07",
         "I14"
       ],
-      "missing_parents": [
-        "F01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -5318,7 +5322,6 @@
         "G07",
         "G14",
         "D02",
-        "F01",
         "G10",
         "G11"
       ],
