@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T19:58:55.630Z",
+  "generated_at": "2026-07-30T20:01:28.140Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 45,
-    "review": 2,
-    "branch": 9,
+    "review": 3,
+    "branch": 8,
     "ready": 1,
     "blocked": 92
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 45,
-      "review": 2,
-      "branch": 9,
+      "review": 3,
+      "branch": 8,
       "parked": 1,
       "not_started": 92
     }
@@ -1759,11 +1759,18 @@
       },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 53,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/53",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c14",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c14",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/53",
         "commit": null,
         "marker": null
       }
@@ -4515,12 +4522,12 @@
       "title": "Localization/content",
       "description": "RU/EN messages, legal copy, no drift between feature labels and contracts.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "I01"
       ],
