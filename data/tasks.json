@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-30T20:14:27.642Z",
+  "generated_at": "2026-07-30T20:16:10.496Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 149,
     "done": 45,
-    "review": 6,
-    "branch": 5,
+    "review": 7,
+    "branch": 4,
     "ready": 1,
     "blocked": 92
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 45,
-      "review": 6,
-      "branch": 5,
+      "review": 7,
+      "branch": 4,
       "parked": 1,
       "not_started": 92
     }
@@ -2443,12 +2443,12 @@
       "title": "Tender resolver",
       "description": "По registry number/URL найти закупку и определить procurement_framework для extraction strategy.",
       "group_id": "F",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "C03",
         "F01"
