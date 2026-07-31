@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-31T04:46:15.636Z",
+  "generated_at": "2026-07-31T05:51:57.636Z",
   "main": {
     "ref": "main"
   },
@@ -11,9 +11,9 @@
   "counts": {
     "total": 148,
     "done": 46,
-    "review": 9,
+    "review": 8,
     "branch": 1,
-    "ready": 1,
+    "ready": 2,
     "blocked": 91
   },
   "axis_counts": {
@@ -24,10 +24,10 @@
     },
     "execution": {
       "done": 46,
-      "review": 9,
+      "review": 8,
       "branch": 1,
       "parked": 1,
-      "not_started": 91
+      "not_started": 92
     }
   },
   "groups": [
@@ -1344,12 +1344,12 @@
       "title": "Жизненный цикл поискового запуска",
       "description": "SearchBatch, один ItemRun = один логический Agents SDK run; укрупнённый Attempt/terminal outcome без доменной сущности Step.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
+      "status": "ready",
+      "status_label": "Можно приступать",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "execution_status": "not_started",
+      "execution_status_label": "Не начата",
       "parents": [
         "B01",
         "B05",
@@ -1368,23 +1368,14 @@
         "L03"
       ],
       "missing_parents": [],
-      "branch": {
-        "name": "codex/c06"
-      },
+      "branch": null,
       "done_commit": null,
       "acceptance": null,
-      "pull_request": {
-        "number": 34,
-        "url": "https://github.com/OOO-GPT/gp-tech/pull/34",
-        "state": "OPEN",
-        "is_draft": false,
-        "review_decision": null,
-        "merged_at": null
-      },
+      "pull_request": null,
       "urls": {
-        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c06",
-        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c06",
-        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/34",
+        "compare": null,
+        "branch": null,
+        "pull_request": null,
         "commit": null,
         "marker": null
       }
