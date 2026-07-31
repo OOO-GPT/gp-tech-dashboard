@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-31T08:55:43.713Z",
+  "generated_at": "2026-07-31T08:56:38.748Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 148,
-    "done": 47,
-    "review": 9,
+    "done": 48,
+    "review": 8,
     "branch": 1,
     "ready": 1,
     "blocked": 90
   },
   "axis_counts": {
     "admission": {
-      "complete": 47,
-      "admitted": 11,
+      "complete": 48,
+      "admitted": 10,
       "blocked": 90
     },
     "execution": {
-      "done": 47,
-      "review": 9,
+      "done": 48,
+      "review": 8,
       "branch": 1,
       "parked": 0,
       "not_started": 91
@@ -1741,12 +1741,12 @@
       "title": "Tenancy/ownership constraints",
       "description": "Org/user/project ownership, BOLA protection, no silent personal fallback for org billing.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B03",
         "C01",
@@ -1762,21 +1762,27 @@
       "branch": {
         "name": "codex/c14"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 53,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/53",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-31T08:56:15Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c14",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c14",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/53",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/4ae0d7f1a12638e02d7ec744362f830969e06065",
         "marker": null
       }
     },
@@ -2004,7 +2010,6 @@
         "L08"
       ],
       "missing_parents": [
-        "C14",
         "D03",
         "D04"
       ],
@@ -2206,7 +2211,6 @@
         "L09"
       ],
       "missing_parents": [
-        "C14",
         "D05",
         "E01"
       ],
@@ -3666,7 +3670,6 @@
         "L08"
       ],
       "missing_parents": [
-        "C14",
         "H01"
       ],
       "branch": null,
@@ -5572,7 +5575,6 @@
         "L11"
       ],
       "missing_parents": [
-        "C14",
         "G14",
         "G16",
         "H08",
