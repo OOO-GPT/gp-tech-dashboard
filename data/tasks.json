@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-31T08:42:58.462Z",
+  "generated_at": "2026-07-31T08:43:38.912Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 148,
     "done": 47,
-    "review": 8,
-    "branch": 2,
+    "review": 9,
+    "branch": 1,
     "ready": 1,
     "blocked": 90
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 47,
-      "review": 8,
-      "branch": 2,
+      "review": 9,
+      "branch": 1,
       "parked": 0,
       "not_started": 91
     }
@@ -1294,12 +1294,12 @@
       "title": "Рабочее пространство кандидатов",
       "description": "Run-scoped CandidateEntry внутри CandidateWorkspace; агент создаёт, читает и меняет записи только через tools; глобального Candidate aggregate нет, это не RecommendedProduct.",
       "group_id": "C",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A07",
         "B03",
