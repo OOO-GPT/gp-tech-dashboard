@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-31T05:51:57.636Z",
+  "generated_at": "2026-07-31T05:54:37.181Z",
   "main": {
     "ref": "main"
   },
@@ -11,9 +11,9 @@
   "counts": {
     "total": 148,
     "done": 46,
-    "review": 8,
+    "review": 9,
     "branch": 1,
-    "ready": 2,
+    "ready": 1,
     "blocked": 91
   },
   "axis_counts": {
@@ -24,10 +24,10 @@
     },
     "execution": {
       "done": 46,
-      "review": 8,
+      "review": 9,
       "branch": 1,
       "parked": 1,
-      "not_started": 92
+      "not_started": 91
     }
   },
   "groups": [
@@ -1344,12 +1344,12 @@
       "title": "Жизненный цикл поискового запуска",
       "description": "SearchBatch, один ItemRun = один логический Agents SDK run; укрупнённый Attempt/terminal outcome без доменной сущности Step.",
       "group_id": "C",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "B01",
         "B05",
@@ -1368,14 +1368,23 @@
         "L03"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/c06"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 58,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/58",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c06",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c06",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/58",
         "commit": null,
         "marker": null
       }
