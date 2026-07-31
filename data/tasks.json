@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-31T10:26:08.263Z",
+  "generated_at": "2026-07-31T10:27:24.519Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 148,
-    "done": 49,
-    "review": 7,
+    "done": 50,
+    "review": 6,
     "branch": 1,
     "ready": 2,
     "blocked": 89
   },
   "axis_counts": {
     "admission": {
-      "complete": 49,
-      "admitted": 10,
+      "complete": 50,
+      "admitted": 9,
       "blocked": 89
     },
     "execution": {
-      "done": 49,
-      "review": 7,
+      "done": 50,
+      "review": 6,
       "branch": 1,
       "parked": 0,
       "not_started": 91
@@ -1294,12 +1294,12 @@
       "title": "Рабочее пространство кандидатов",
       "description": "Run-scoped CandidateEntry внутри CandidateWorkspace; агент создаёт, читает и меняет записи только через tools; глобального Candidate aggregate нет, это не RecommendedProduct.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A07",
         "B03",
@@ -1319,21 +1319,27 @@
       "branch": {
         "name": "codex/c05"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 60,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/60",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-31T10:26:59Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c05",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c05",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/60",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/81dc0817033862ec8494102b841459c29b3fe650",
         "marker": null
       }
     },
@@ -2797,7 +2803,6 @@
         "L04"
       ],
       "missing_parents": [
-        "C05",
         "G01"
       ],
       "branch": null,
@@ -2992,7 +2997,6 @@
         "L01"
       ],
       "missing_parents": [
-        "C05",
         "F05",
         "G03",
         "G05",
@@ -3146,7 +3150,6 @@
         "L03"
       ],
       "missing_parents": [
-        "C05",
         "G03",
         "G10"
       ],
@@ -3350,7 +3353,6 @@
         "L13"
       ],
       "missing_parents": [
-        "C05",
         "G03",
         "G12",
         "G13"
@@ -5363,7 +5365,6 @@
         "L11"
       ],
       "missing_parents": [
-        "C05",
         "G03",
         "G07",
         "G14",
@@ -5408,7 +5409,6 @@
         "L11"
       ],
       "missing_parents": [
-        "C05",
         "G02",
         "G03",
         "G07",
