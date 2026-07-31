@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-31T09:28:02.984Z",
+  "generated_at": "2026-07-31T09:29:12.669Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 148,
-    "done": 48,
-    "review": 8,
+    "done": 49,
+    "review": 7,
     "branch": 1,
-    "ready": 1,
-    "blocked": 90
+    "ready": 2,
+    "blocked": 89
   },
   "axis_counts": {
     "admission": {
-      "complete": 48,
+      "complete": 49,
       "admitted": 10,
-      "blocked": 90
+      "blocked": 89
     },
     "execution": {
-      "done": 48,
-      "review": 8,
+      "done": 49,
+      "review": 7,
       "branch": 1,
       "parked": 0,
       "not_started": 91
@@ -1838,12 +1838,12 @@
       "title": "Auth module scaffold",
       "description": "Слои domain/service/repository/routes, без зависимости от search или UI.",
       "group_id": "D",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B02",
         "B04",
@@ -1858,21 +1858,27 @@
       "branch": {
         "name": "codex/d01"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 54,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/54",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-31T09:28:48Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/d01",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/d01",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/54",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/f38c9369eba662c92ec9a0aa76c1952337fa285c",
         "marker": null
       }
     },
@@ -1881,10 +1887,10 @@
       "title": "Signup/login/session flow",
       "description": "Регистрация, вход, refresh, logout, step-up, verification, rate limits.",
       "group_id": "D",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -1896,9 +1902,7 @@
         "D03",
         "L03"
       ],
-      "missing_parents": [
-        "D01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
