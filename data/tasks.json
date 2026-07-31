@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-31T05:56:26.873Z",
+  "generated_at": "2026-07-31T06:11:50.671Z",
   "main": {
     "ref": "main"
   },
@@ -10,23 +10,23 @@
   },
   "counts": {
     "total": 148,
-    "done": 46,
-    "review": 9,
-    "branch": 1,
+    "done": 47,
+    "review": 8,
+    "branch": 2,
     "ready": 1,
-    "blocked": 91
+    "blocked": 90
   },
   "axis_counts": {
     "admission": {
-      "complete": 46,
+      "complete": 47,
       "admitted": 11,
-      "blocked": 91
+      "blocked": 90
     },
     "execution": {
-      "done": 46,
-      "review": 9,
-      "branch": 1,
-      "parked": 1,
+      "done": 47,
+      "review": 8,
+      "branch": 2,
+      "parked": 0,
       "not_started": 91
     }
   },
@@ -1294,12 +1294,12 @@
       "title": "Рабочее пространство кандидатов",
       "description": "Run-scoped CandidateEntry внутри CandidateWorkspace; агент создаёт, читает и меняет записи только через tools; глобального Candidate aggregate нет, это не RecommendedProduct.",
       "group_id": "C",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "parked",
-      "execution_status_label": "Ветка припаркована",
+      "status": "branch",
+      "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "A07",
         "B03",
@@ -1315,9 +1315,7 @@
         "L03",
         "L04"
       ],
-      "missing_parents": [
-        "C06"
-      ],
+      "missing_parents": [],
       "branch": {
         "name": "codex/c05"
       },
@@ -1344,12 +1342,12 @@
       "title": "Жизненный цикл поискового запуска",
       "description": "SearchBatch, один ItemRun = один логический Agents SDK run; укрупнённый Attempt/terminal outcome без доменной сущности Step.",
       "group_id": "C",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B01",
         "B05",
@@ -1371,21 +1369,27 @@
       "branch": {
         "name": "codex/c06"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 58,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/58",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-07-31T05:56:51Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/c06",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/c06",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/58",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/7d4e653774d70609d3d2d0f471d98614ce8e5be8",
         "marker": null
       }
     },
@@ -2746,7 +2750,6 @@
         "H02"
       ],
       "missing_parents": [
-        "C06",
         "D05",
         "F07"
       ],
@@ -2982,7 +2985,6 @@
       ],
       "missing_parents": [
         "C05",
-        "C06",
         "F05",
         "G03",
         "G05",
@@ -3097,7 +3099,6 @@
         "L07"
       ],
       "missing_parents": [
-        "C06",
         "G01",
         "H08"
       ],
@@ -3138,7 +3139,6 @@
       ],
       "missing_parents": [
         "C05",
-        "C06",
         "G03",
         "G10"
       ],
@@ -3178,7 +3178,6 @@
         "G16"
       ],
       "missing_parents": [
-        "C06",
         "G03",
         "G10",
         "G11"
@@ -3429,7 +3428,6 @@
         "L07"
       ],
       "missing_parents": [
-        "C06",
         "D05",
         "G01",
         "G12",
@@ -4040,7 +4038,6 @@
         "I15"
       ],
       "missing_parents": [
-        "C06",
         "H02",
         "H04",
         "I03",
@@ -5360,7 +5357,6 @@
       ],
       "missing_parents": [
         "C05",
-        "C06",
         "G03",
         "G07",
         "G14",
