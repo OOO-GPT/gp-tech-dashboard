@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-01T13:37:08.269Z",
+  "generated_at": "2026-08-01T13:38:09.321Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 148,
-    "done": 52,
-    "review": 4,
+    "done": 53,
+    "review": 3,
     "branch": 1,
-    "ready": 3,
-    "blocked": 88
+    "ready": 5,
+    "blocked": 86
   },
   "axis_counts": {
     "admission": {
-      "complete": 52,
-      "admitted": 8,
-      "blocked": 88
+      "complete": 53,
+      "admitted": 9,
+      "blocked": 86
     },
     "execution": {
-      "done": 52,
-      "review": 4,
+      "done": 53,
+      "review": 3,
       "branch": 1,
       "parked": 0,
       "not_started": 91
@@ -2476,12 +2476,12 @@
       "title": "Tender resolver",
       "description": "По registry number/URL найти закупку и определить procurement_framework для extraction strategy.",
       "group_id": "F",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "C03",
         "F01"
@@ -2496,21 +2496,27 @@
       "branch": {
         "name": "codex/f02"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 55,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/55",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-08-01T13:37:45Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f02",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f02",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/55",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/5352d04825eca7326b5496323aed4fab4da28b35",
         "marker": null
       }
     },
@@ -2519,10 +2525,10 @@
       "title": "Contract resolver",
       "description": "Контракты и исторические поставки как источник archive-first evidence.",
       "group_id": "F",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2531,9 +2537,7 @@
       "children": [
         "G08"
       ],
-      "missing_parents": [
-        "F02"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -2551,10 +2555,10 @@
       "title": "Document fetch/extract",
       "description": "Применить 44/223 extraction strategy, извлечь ТЗ/PDF/DOCX и сохранить source metadata.",
       "group_id": "F",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2565,9 +2569,7 @@
         "G06",
         "L08"
       ],
-      "missing_parents": [
-        "F02"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -2692,7 +2694,6 @@
         "I15"
       ],
       "missing_parents": [
-        "F02",
         "F05"
       ],
       "branch": null,
@@ -4254,7 +4255,6 @@
         "L10"
       ],
       "missing_parents": [
-        "F02",
         "H04",
         "I05",
         "I12",
