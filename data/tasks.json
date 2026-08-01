@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-01T16:17:47.164Z",
+  "generated_at": "2026-08-01T16:19:42.363Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 148,
-    "done": 54,
-    "review": 2,
+    "done": 55,
+    "review": 1,
     "branch": 1,
-    "ready": 5,
-    "blocked": 86
+    "ready": 8,
+    "blocked": 83
   },
   "axis_counts": {
     "admission": {
-      "complete": 54,
-      "admitted": 8,
-      "blocked": 86
+      "complete": 55,
+      "admitted": 10,
+      "blocked": 83
     },
     "execution": {
-      "done": 54,
-      "review": 2,
+      "done": 55,
+      "review": 1,
       "branch": 1,
       "parked": 0,
       "not_started": 91
@@ -2114,12 +2114,12 @@
       "title": "Append-only ledger service",
       "description": "Term-provenance lots, transactions, idempotency, reversal вместо правки, invariant checks.",
       "group_id": "E",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B02",
         "B04",
@@ -2143,21 +2143,27 @@
       "branch": {
         "name": "codex/e01"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 50,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/50",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-08-01T16:19:13Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/e01",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/e01",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/50",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/90dacb79a374772956ee965fd395e4da6cc06162",
         "marker": null
       }
     },
@@ -2166,10 +2172,10 @@
       "title": "Internal cost meter",
       "description": "Resource telemetry, versioned rates, integer micro-USD и cost completeness.",
       "group_id": "E",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2180,9 +2186,7 @@
         "G03",
         "G14"
       ],
-      "missing_parents": [
-        "E01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -2221,8 +2225,7 @@
         "L09"
       ],
       "missing_parents": [
-        "D05",
-        "E01"
+        "D05"
       ],
       "branch": null,
       "done_commit": null,
@@ -2369,7 +2372,6 @@
         "L09"
       ],
       "missing_parents": [
-        "E01",
         "E03",
         "G14"
       ],
@@ -2390,10 +2392,10 @@
       "title": "Refund/reversal/dispute flow",
       "description": "Ошибочные списания, charge reversal, operator path, audit and notifications.",
       "group_id": "E",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2406,9 +2408,7 @@
         "L09",
         "M05"
       ],
-      "missing_parents": [
-        "E01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -4844,7 +4844,6 @@
         "I19"
       ],
       "missing_parents": [
-        "E01",
         "E05"
       ],
       "branch": null,
@@ -5287,7 +5286,6 @@
       ],
       "missing_parents": [
         "D05",
-        "E01",
         "F05",
         "G07"
       ],
@@ -5636,7 +5634,6 @@
         "E07",
         "E08",
         "G14",
-        "E01",
         "E03"
       ],
       "branch": null,
@@ -5863,10 +5860,10 @@
       "title": "Backup/restore/DR",
       "description": "Бэкапы и restore rehearsal только нового canonical state; ledger safety, archive/index rebuild, secret rotation.",
       "group_id": "L",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -5880,9 +5877,7 @@
         "M09",
         "M08"
       ],
-      "missing_parents": [
-        "E01"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
