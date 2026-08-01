@@ -433,19 +433,29 @@ code,
   letter-spacing: 0.02em;
 }
 
-.status-badge {
+.status-badge,
+.dead-end-badge {
   display: inline-flex;
   align-items: center;
   min-height: 24px;
   padding: 3px 8px;
-  border: 1px solid var(--status-border);
   border-radius: 999px;
-  background: var(--status-bg);
-  color: var(--status-text);
   font-size: 11px;
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
+}
+
+.status-badge {
+  border: 1px solid var(--status-border);
+  background: var(--status-bg);
+  color: var(--status-text);
+}
+
+.dead-end-badge {
+  border: 1px solid var(--blocked-border);
+  background: var(--blocked-bg);
+  color: var(--blocked-text);
 }
 
 .task-card h3 {

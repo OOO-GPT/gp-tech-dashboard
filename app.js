@@ -162,18 +162,30 @@ function pluralize(value, one, few, many) {
 }
 
 function createTaskCard(task) {
+  const isDeadEnd = Array.isArray(task.children) && task.children.length === 0;
   const button = createElement('button', {
     className: 'task-card',
     dataset: { status: task.status },
     attributes: {
       type: 'button',
-      'aria-label': `${task.id}, ${task.title}, ${statusLabel(task.status)}. ${taskReason(task)}`
+      'aria-label': `${task.id}, ${task.title}, ${statusLabel(task.status)}${isDeadEnd ? ', тупик: нет исходящих вершин' : ''}. ${taskReason(task)}`
     }
   });
 
   const topLine = createElement('div', { className: 'task-card__topline' });
+  topLine.append(createElement('span', { className: 'task-id', text: task.id }));
+  if (isDeadEnd) {
+    topLine.append(
+      createElement('span', {
+        className: 'dead-end-badge',
+        text: 'Тупик',
+        attributes: {
+          title: 'Нет исходящих вершин'
+        }
+      })
+    );
+  }
   topLine.append(
-    createElement('span', { className: 'task-id', text: task.id }),
     createElement('span', {
       className: 'status-badge',
       text: statusLabel(task.status),

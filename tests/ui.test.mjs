@@ -38,6 +38,38 @@ test('фильтры статусов расположены в согласов
   );
 });
 
+test('тупиковые вершины получают серую метку между ID и статусом', async () => {
+  const [script, css] = await Promise.all([
+    readFile(resolve(repoRoot, 'app.js'), 'utf8'),
+    readFile(resolve(repoRoot, 'styles.css'), 'utf8')
+  ]);
+
+  const toplineStart = script.indexOf("const topLine = createElement('div', { className: 'task-card__topline' });");
+  const toplineEnd = script.indexOf("const title = createElement('h3'", toplineStart);
+  const topline = script.slice(toplineStart, toplineEnd);
+
+  assert.ok(toplineStart >= 0 && toplineEnd > toplineStart, 'Не найдено построение заголовка карточки');
+  assert.match(script, /Array\.isArray\(task\.children\) && task\.children\.length === 0/);
+  assert.match(script, /isDeadEnd \? ', тупик: нет исходящих вершин' : ''/);
+  assert.match(topline, /if \(isDeadEnd\)/);
+  assert.match(topline, /text: 'Тупик'/);
+  assert.match(topline, /title: 'Нет исходящих вершин'/);
+
+  const taskIdIndex = topline.indexOf("className: 'task-id'");
+  const deadEndIndex = topline.indexOf("className: 'dead-end-badge'");
+  const statusIndex = topline.indexOf("className: 'status-badge'");
+  assert.ok(
+    taskIdIndex >= 0 && taskIdIndex < deadEndIndex && deadEndIndex < statusIndex,
+    'Метка должна находиться между ID и статусом'
+  );
+
+  const deadEndStyles = [...css.matchAll(/(?:^|\n)\.dead-end-badge\s*\{([^}]*)\}/g)].at(-1)?.[1] ?? '';
+  assert.match(css, /\.status-badge,\s*\.dead-end-badge\s*\{[^}]*border-radius:\s*999px/s);
+  assert.match(deadEndStyles, /border:\s*1px solid var\(--blocked-border\)/);
+  assert.match(deadEndStyles, /background:\s*var\(--blocked-bg\)/);
+  assert.match(deadEndStyles, /color:\s*var\(--blocked-text\)/);
+});
+
 test('browser script синтаксически корректен', () => {
   const result = spawnSync(process.execPath, ['--check', resolve(repoRoot, 'app.js')], {
     encoding: 'utf8'
