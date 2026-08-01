@@ -1,3 +1,5 @@
+import { classifyDeadEnds } from './dead-ends.js';
+
 const STATUS_META = {
   done: { label: 'Готова', order: 0 },
   review: { label: 'На ревью', order: 1 },
@@ -7,6 +9,17 @@ const STATUS_META = {
 };
 
 const STATUS_ORDER = Object.keys(STATUS_META);
+
+const DEAD_END_META = {
+  direct: {
+    title: 'Нет исходящих вершин',
+    ariaDescription: 'нет исходящих вершин'
+  },
+  transitive: {
+    title: 'Ни один исходящий путь не ведёт к Z99',
+    ariaDescription: 'ни один исходящий путь не ведёт к Z99'
+  }
+};
 
 const elements = {
   filters: document.querySelector('#status-filters'),
@@ -35,7 +48,8 @@ const view = {
   status: 'all',
   group: 'all',
   query: '',
-  selectedTaskId: null
+  selectedTaskId: null,
+  deadEnds: new Map()
 };
 
 function createElement(tag, options = {}) {
@@ -162,25 +176,27 @@ function pluralize(value, one, few, many) {
 }
 
 function createTaskCard(task) {
-  const isDeadEnd = Array.isArray(task.children) && task.children.length === 0;
+  const deadEndKind = view.deadEnds.get(task.id) ?? null;
+  const deadEndMeta = DEAD_END_META[deadEndKind] ?? null;
   const button = createElement('button', {
     className: 'task-card',
     dataset: { status: task.status },
     attributes: {
       type: 'button',
-      'aria-label': `${task.id}, ${task.title}, ${statusLabel(task.status)}${isDeadEnd ? ', тупик: нет исходящих вершин' : ''}. ${taskReason(task)}`
+      'aria-label': `${task.id}, ${task.title}, ${statusLabel(task.status)}${deadEndMeta ? `, тупик: ${deadEndMeta.ariaDescription}` : ''}. ${taskReason(task)}`
     }
   });
 
   const topLine = createElement('div', { className: 'task-card__topline' });
   topLine.append(createElement('span', { className: 'task-id', text: task.id }));
-  if (isDeadEnd) {
+  if (deadEndMeta) {
     topLine.append(
       createElement('span', {
         className: 'dead-end-badge',
         text: 'Тупик',
+        dataset: { kind: deadEndKind },
         attributes: {
-          title: 'Нет исходящих вершин'
+          title: deadEndMeta.title
         }
       })
     );
@@ -463,6 +479,7 @@ async function loadSnapshot() {
     const response = await fetch('./data/tasks.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     view.snapshot = await response.json();
+    view.deadEnds = classifyDeadEnds(view.snapshot.tasks);
     renderSnapshotMeta();
     renderFilters();
     renderGroupOptions();
