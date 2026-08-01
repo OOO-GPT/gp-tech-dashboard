@@ -30,6 +30,10 @@
   --blocked-border: #94a3b8;
   --blocked-text: #475569;
 
+  --dead-end-direct-bg: #fee2e2;
+  --dead-end-direct-border: #ef4444;
+  --dead-end-direct-text: #991b1b;
+
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
 }
@@ -452,7 +456,13 @@ code,
   color: var(--status-text);
 }
 
-.dead-end-badge {
+.dead-end-badge[data-kind="direct"] {
+  border: 1px solid var(--dead-end-direct-border);
+  background: var(--dead-end-direct-bg);
+  color: var(--dead-end-direct-text);
+}
+
+.dead-end-badge[data-kind="transitive"] {
   border: 1px solid var(--blocked-border);
   background: var(--blocked-bg);
   color: var(--blocked-text);
