@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-01T15:35:37.001Z",
+  "generated_at": "2026-08-01T15:54:42.528Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 148,
-    "done": 53,
-    "review": 3,
+    "done": 54,
+    "review": 2,
     "branch": 1,
     "ready": 5,
     "blocked": 86
   },
   "axis_counts": {
     "admission": {
-      "complete": 53,
-      "admitted": 9,
+      "complete": 54,
+      "admitted": 8,
       "blocked": 86
     },
     "execution": {
-      "done": 53,
-      "review": 3,
+      "done": 54,
+      "review": 2,
       "branch": 1,
       "parked": 0,
       "not_started": 91
@@ -3057,12 +3057,12 @@
       "title": "Personal DB evidence tool",
       "description": "Агент при разрешённом scope запрашивает документы поставщика внутри того же ItemRun через file_search/tool.",
       "group_id": "G",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "C10"
       ],
@@ -3071,21 +3071,27 @@
       "branch": {
         "name": "codex/g09"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 51,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/51",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-08-01T15:54:19Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/g09",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/g09",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/51",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/48722205a8bbd1eaf298a3066304528fda3b2a74",
         "marker": null
       }
     },
