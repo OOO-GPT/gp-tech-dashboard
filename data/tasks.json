@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-01T11:59:45.753Z",
+  "generated_at": "2026-08-01T12:01:04.925Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 148,
-    "done": 51,
-    "review": 5,
+    "done": 52,
+    "review": 4,
     "branch": 1,
     "ready": 3,
     "blocked": 88
   },
   "axis_counts": {
     "admission": {
-      "complete": 51,
-      "admitted": 9,
+      "complete": 52,
+      "admitted": 8,
       "blocked": 88
     },
     "execution": {
-      "done": 51,
-      "review": 5,
+      "done": 52,
+      "review": 4,
       "branch": 1,
       "parked": 0,
       "not_started": 91
@@ -4258,8 +4258,7 @@
         "H04",
         "I05",
         "I12",
-        "I13",
-        "I21"
+        "I13"
       ],
       "branch": null,
       "done_commit": null,
@@ -4304,8 +4303,7 @@
         "I09",
         "I12",
         "I13",
-        "I14",
-        "I21"
+        "I14"
       ],
       "branch": null,
       "done_commit": null,
@@ -4348,8 +4346,7 @@
         "I09",
         "I10",
         "I12",
-        "I13",
-        "I21"
+        "I13"
       ],
       "branch": null,
       "done_commit": null,
@@ -4392,8 +4389,7 @@
         "G13",
         "I09",
         "I12",
-        "I13",
-        "I21"
+        "I13"
       ],
       "branch": null,
       "done_commit": null,
@@ -4436,7 +4432,6 @@
         "I12",
         "I13",
         "I17",
-        "I21",
         "J04"
       ],
       "branch": null,
@@ -4488,7 +4483,6 @@
         "I07",
         "I12",
         "I13",
-        "I21",
         "J05",
         "J06",
         "J07"
@@ -4540,8 +4534,7 @@
         "I07",
         "I08",
         "I12",
-        "I13",
-        "I21"
+        "I13"
       ],
       "branch": null,
       "done_commit": null,
@@ -4560,12 +4553,12 @@
       "title": "Localization/content",
       "description": "RU/EN messages, legal copy, no drift between feature labels and contracts.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "I01"
       ],
@@ -4583,21 +4576,27 @@
       "branch": {
         "name": "codex/i21"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 52,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/52",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-08-01T12:00:42Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i21",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i21",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/52",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/753e514e6bd1002c2fe4782adfad2cce99c25193",
         "marker": null
       }
     },
@@ -5675,7 +5674,6 @@
       "missing_parents": [
         "I12",
         "I20",
-        "I21",
         "I14",
         "I15",
         "I16",
