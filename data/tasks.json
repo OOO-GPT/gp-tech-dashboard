@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-01T11:36:57.351Z",
+  "generated_at": "2026-08-01T11:38:59.510Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 148,
-    "done": 50,
-    "review": 6,
+    "done": 51,
+    "review": 5,
     "branch": 1,
-    "ready": 2,
-    "blocked": 89
+    "ready": 3,
+    "blocked": 88
   },
   "axis_counts": {
     "admission": {
-      "complete": 50,
+      "complete": 51,
       "admitted": 9,
-      "blocked": 89
+      "blocked": 88
     },
     "execution": {
-      "done": 50,
-      "review": 6,
+      "done": 51,
+      "review": 5,
       "branch": 1,
       "parked": 0,
       "not_started": 91
@@ -4107,12 +4107,12 @@
       "title": "Popup/side panel shell",
       "description": "Shell only composes routes/layout; no business rules in markup handlers.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "I01",
         "K04"
@@ -4126,21 +4126,27 @@
       "branch": {
         "name": "codex/i11"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 49,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/49",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-08-01T11:38:26Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i11",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i11",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/49",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/0a55789469d6df41d4b8c76b0939ba7486c43fba",
         "marker": null
       }
     },
@@ -4149,10 +4155,10 @@
       "title": "UI component system",
       "description": "Buttons, cards, tables, dialogs, tokens, accessibility, empty/error states.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -4168,9 +4174,7 @@
         "I20",
         "L10"
       ],
-      "missing_parents": [
-        "I11"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -4210,8 +4214,7 @@
         "I20"
       ],
       "missing_parents": [
-        "I06",
-        "I11"
+        "I06"
       ],
       "branch": null,
       "done_commit": null,
@@ -5531,8 +5534,7 @@
       ],
       "missing_parents": [
         "G10",
-        "H02",
-        "I11"
+        "H02"
       ],
       "branch": null,
       "done_commit": null,
