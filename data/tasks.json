@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-02T03:31:15.608Z",
+  "generated_at": "2026-08-02T03:33:57.413Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 148,
     "done": 55,
-    "review": 1,
-    "branch": 9,
+    "review": 2,
+    "branch": 8,
     "ready": 0,
     "blocked": 83
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 55,
-      "review": 1,
-      "branch": 9,
+      "review": 2,
+      "branch": 8,
       "parked": 0,
       "not_started": 83
     }
@@ -2410,12 +2410,12 @@
       "title": "Refund/reversal/dispute flow",
       "description": "Ошибочные списания, charge reversal, operator path, audit and notifications.",
       "group_id": "E",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A05",
         "C09",
