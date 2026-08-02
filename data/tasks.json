@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-02T02:31:35.832Z",
+  "generated_at": "2026-08-02T02:39:30.941Z",
   "main": {
     "ref": "main"
   },
@@ -4220,11 +4220,18 @@
       },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 65,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/65",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i12",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i12",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/65",
         "commit": null,
         "marker": null
       }
