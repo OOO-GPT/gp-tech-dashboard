@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-02T22:06:54.660Z",
+  "generated_at": "2026-08-02T22:13:08.575Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 148,
     "done": 55,
-    "review": 5,
-    "branch": 5,
+    "review": 6,
+    "branch": 4,
     "ready": 0,
     "blocked": 83
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 55,
-      "review": 5,
-      "branch": 5,
+      "review": 6,
+      "branch": 4,
       "parked": 0,
       "not_started": 83
     }
@@ -4216,12 +4216,12 @@
       "title": "UI component system",
       "description": "Buttons, cards, tables, dialogs, tokens, accessibility, empty/error states.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "I11"
       ],
