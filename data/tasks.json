@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-02T21:45:39.836Z",
+  "generated_at": "2026-08-02T21:49:34.219Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 148,
     "done": 55,
-    "review": 4,
-    "branch": 6,
+    "review": 5,
+    "branch": 5,
     "ready": 0,
     "blocked": 83
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 55,
-      "review": 4,
-      "branch": 6,
+      "review": 5,
+      "branch": 5,
       "parked": 0,
       "not_started": 83
     }
@@ -2181,12 +2181,12 @@
       "title": "Internal cost meter",
       "description": "Resource telemetry, versioned rates, integer micro-USD и cost completeness.",
       "group_id": "E",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "E01",
         "J03"
