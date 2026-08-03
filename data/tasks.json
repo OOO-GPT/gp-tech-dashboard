@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-03T16:22:19.064Z",
+  "generated_at": "2026-08-03T16:22:52.930Z",
   "main": {
     "ref": "main"
   },
@@ -88,6 +88,20 @@
       "title": "Завершение"
     }
   ],
+  "current_focus": {
+    "schema_version": 1,
+    "task_id": "E08",
+    "frontier_id": "E08-F1",
+    "selection_reason": "Текущая принятая в работу вершина с материализованным пакетом и открытым review handoff.",
+    "admission_status": "admitted",
+    "execution_status": "review",
+    "status": "review",
+    "pull_request": {
+      "number": 62,
+      "url": "https://github.com/OOO-GPT/gp-tech/pull/62",
+      "is_draft": false
+    }
+  },
   "tasks": [
     {
       "id": "A01",
