@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-03T09:05:27.958Z",
+  "generated_at": "2026-08-03T09:09:00.285Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 148,
     "done": 55,
-    "review": 7,
-    "branch": 3,
+    "review": 8,
+    "branch": 2,
     "ready": 0,
     "blocked": 83
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 55,
-      "review": 7,
-      "branch": 3,
+      "review": 8,
+      "branch": 2,
       "parked": 0,
       "not_started": 83
     }
@@ -2552,12 +2552,12 @@
       "title": "Contract resolver",
       "description": "Контракты и исторические поставки как источник archive-first evidence.",
       "group_id": "F",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "F02"
       ],
