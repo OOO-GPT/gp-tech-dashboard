@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-04T00:02:27.940Z",
+  "generated_at": "2026-08-04T00:06:08.990Z",
   "main": {
     "ref": "main"
   },
@@ -10,22 +10,22 @@
   },
   "counts": {
     "total": 148,
-    "done": 60,
+    "done": 63,
     "review": 1,
-    "branch": 4,
-    "ready": 0,
-    "blocked": 83
+    "branch": 1,
+    "ready": 2,
+    "blocked": 81
   },
   "axis_counts": {
     "admission": {
-      "complete": 60,
-      "admitted": 5,
-      "blocked": 83
+      "complete": 63,
+      "admitted": 4,
+      "blocked": 81
     },
     "execution": {
-      "done": 60,
+      "done": 63,
       "review": 1,
-      "branch": 4,
+      "branch": 1,
       "parked": 0,
       "not_started": 83
     }
@@ -2282,10 +2282,10 @@
       "title": "Subscription service",
       "description": "User/org Series и Terms, renewal/cancellation; provider-neutral funding handoff.",
       "group_id": "E",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2298,9 +2298,7 @@
         "J07",
         "I19"
       ],
-      "missing_parents": [
-        "E06"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -2354,12 +2352,12 @@
       "title": "Billing party/KYC service",
       "description": "ИНН/КПП, плательщик, hold/remediation, provider requirements.",
       "group_id": "E",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "C09"
       ],
@@ -2371,14 +2369,27 @@
       "branch": {
         "name": "codex/e06"
       },
-      "done_commit": null,
-      "acceptance": null,
-      "pull_request": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
+      "pull_request": {
+        "number": 56,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/56",
+        "state": "MERGED",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": "2026-08-03T19:38:07Z"
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/e06",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/e06",
-        "pull_request": null,
-        "commit": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/56",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/5c0e75b9f4368d5763ddf7ac0c598b187eb3335a",
         "marker": null
       }
     },
@@ -2616,12 +2627,12 @@
       "title": "Document fetch/extract",
       "description": "Применить 44/223 extraction strategy, извлечь ТЗ/PDF/DOCX и сохранить source metadata.",
       "group_id": "F",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "F02"
       ],
@@ -2634,14 +2645,27 @@
       "branch": {
         "name": "codex/f04"
       },
-      "done_commit": null,
-      "acceptance": null,
-      "pull_request": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
+      "pull_request": {
+        "number": 68,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/68",
+        "state": "MERGED",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": "2026-08-03T19:38:06Z"
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f04",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f04",
-        "pull_request": null,
-        "commit": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/68",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/864d9fcd5f966aba798f0b5dc24ea22c591ad1d5",
         "marker": null
       }
     },
@@ -2650,10 +2674,10 @@
       "title": "Requirement extraction",
       "description": "Извлечь requirements/evidence для AI-core, не финальные user verdicts.",
       "group_id": "F",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -2669,9 +2693,7 @@
         "I15",
         "L01"
       ],
-      "missing_parents": [
-        "F04"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -2776,12 +2798,12 @@
       "title": "Tender/EIS cache policy",
       "description": "TTL, revalidation, provenance, cache busting, stale-safe responses.",
       "group_id": "F",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "C13"
       ],
@@ -2793,14 +2815,27 @@
       "branch": {
         "name": "codex/f08"
       },
-      "done_commit": null,
-      "acceptance": null,
-      "pull_request": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
+      "pull_request": {
+        "number": 66,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/66",
+        "state": "MERGED",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": "2026-08-03T19:38:06Z"
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f08",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f08",
-        "pull_request": null,
-        "commit": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/66",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/698c896cb6559e40f91c73a68622606aaadb5dc4",
         "marker": null
       }
     },
@@ -3013,7 +3048,6 @@
         "G07"
       ],
       "missing_parents": [
-        "F04",
         "G02",
         "G05"
       ],
@@ -3384,7 +3418,6 @@
         "L04"
       ],
       "missing_parents": [
-        "F08",
         "G08"
       ],
       "branch": null,
@@ -3591,7 +3624,6 @@
       ],
       "missing_parents": [
         "F07",
-        "F08",
         "H01",
         "I05"
       ],
@@ -5659,7 +5691,6 @@
         "I04",
         "I17",
         "D05",
-        "F04",
         "G05",
         "H09",
         "I20"
@@ -6137,8 +6168,7 @@
       ],
       "children": [],
       "missing_parents": [
-        "E05",
-        "E06"
+        "E05"
       ],
       "branch": null,
       "done_commit": null,
