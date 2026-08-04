@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-04T21:56:16.139Z",
+  "generated_at": "2026-08-04T23:02:32.532Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 148,
     "done": 63,
     "review": 1,
-    "branch": 1,
-    "ready": 2,
+    "branch": 3,
+    "ready": 0,
     "blocked": 81
   },
   "axis_counts": {
@@ -25,9 +25,9 @@
     "execution": {
       "done": 63,
       "review": 1,
-      "branch": 1,
+      "branch": 3,
       "parked": 0,
-      "not_started": 83
+      "not_started": 81
     }
   },
   "groups": [
@@ -2282,12 +2282,12 @@
       "title": "Subscription service",
       "description": "User/org Series и Terms, renewal/cancellation; provider-neutral funding handoff.",
       "group_id": "E",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "B06",
         "C08",
@@ -2299,13 +2299,15 @@
         "I19"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/e04"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/e04",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/e04",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -2674,12 +2676,12 @@
       "title": "Requirement extraction",
       "description": "Извлечь requirements/evidence для AI-core, не финальные user verdicts.",
       "group_id": "F",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "C04",
         "F04",
@@ -2694,13 +2696,15 @@
         "L01"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/f05"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f05",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f05",
         "pull_request": null,
         "commit": null,
         "marker": null
