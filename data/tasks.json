@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-05T13:30:12.351Z",
+  "generated_at": "2026-08-05T13:53:19.401Z",
   "main": {
     "ref": "main"
   },
@@ -26,8 +26,8 @@
       "done": 63,
       "review": 2,
       "branch": 2,
-      "parked": 0,
-      "not_started": 81
+      "parked": 1,
+      "not_started": 80
     }
   },
   "groups": [
@@ -2783,8 +2783,8 @@
       "status_label": "Заблокирована",
       "admission_status": "blocked",
       "admission_status_label": "Заблокирована графом",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "parked",
+      "execution_status_label": "Ветка припаркована",
       "parents": [
         "C03",
         "F02",
@@ -2799,14 +2799,23 @@
       "missing_parents": [
         "F05"
       ],
-      "branch": null,
+      "branch": {
+        "name": "codex/f07"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 96,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/96",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f07",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f07",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/96",
         "commit": null,
         "marker": null
       }
