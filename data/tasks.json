@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-05T01:07:03.312Z",
+  "generated_at": "2026-08-05T01:14:39.631Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 148,
     "done": 63,
-    "review": 1,
-    "branch": 3,
+    "review": 2,
+    "branch": 2,
     "ready": 0,
     "blocked": 81
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 63,
-      "review": 1,
-      "branch": 3,
+      "review": 2,
+      "branch": 2,
       "parked": 0,
       "not_started": 81
     }
@@ -2683,12 +2683,12 @@
       "title": "Requirement extraction",
       "description": "Извлечь requirements/evidence для AI-core, не финальные user verdicts.",
       "group_id": "F",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "C04",
         "F04",
