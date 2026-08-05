@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-05T15:19:50.166Z",
+  "generated_at": "2026-08-05T16:31:41.099Z",
   "main": {
     "ref": "main"
   },
@@ -10,23 +10,23 @@
   },
   "counts": {
     "total": 148,
-    "done": 63,
-    "review": 2,
-    "branch": 2,
+    "done": 64,
+    "review": 1,
+    "branch": 3,
     "ready": 0,
-    "blocked": 81
+    "blocked": 80
   },
   "axis_counts": {
     "admission": {
-      "complete": 63,
+      "complete": 64,
       "admitted": 4,
-      "blocked": 81
+      "blocked": 80
     },
     "execution": {
-      "done": 63,
-      "review": 2,
-      "branch": 2,
-      "parked": 1,
+      "done": 64,
+      "review": 1,
+      "branch": 3,
+      "parked": 0,
       "not_started": 80
     }
   },
@@ -2683,12 +2683,12 @@
       "title": "Requirement extraction",
       "description": "Извлечь requirements/evidence для AI-core, не финальные user verdicts.",
       "group_id": "F",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "C04",
         "F04",
@@ -2706,21 +2706,27 @@
       "branch": {
         "name": "codex/f05"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 90,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/90",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-08-05T16:31:05Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/f05",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/f05",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/90",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/d6ac846aa936ff71ff91fcab47acca15d31874f9",
         "marker": null
       }
     },
@@ -2779,12 +2785,12 @@
       "title": "Item splitter/object SID",
       "description": "Стабильные позиции закупки, object_sid, item text, характеристики, количество.",
       "group_id": "F",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "parked",
-      "execution_status_label": "Ветка припаркована",
+      "status": "branch",
+      "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "C03",
         "F02",
@@ -2796,9 +2802,7 @@
         "H04",
         "I15"
       ],
-      "missing_parents": [
-        "F05"
-      ],
+      "missing_parents": [],
       "branch": {
         "name": "codex/f07"
       },
@@ -3123,7 +3127,6 @@
         "L01"
       ],
       "missing_parents": [
-        "F05",
         "G03",
         "G05",
         "G06",
@@ -4438,7 +4441,6 @@
         "L10"
       ],
       "missing_parents": [
-        "F05",
         "F07",
         "I09",
         "I13",
@@ -5414,7 +5416,6 @@
       ],
       "missing_parents": [
         "D05",
-        "F05",
         "G07"
       ],
       "branch": null,
