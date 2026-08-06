@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-06T07:54:20.171Z",
+  "generated_at": "2026-08-06T07:54:40.693Z",
   "main": {
     "ref": "main"
   },
@@ -2483,7 +2483,7 @@
     {
       "id": "F01",
       "title": "EIS client adapter",
-      "description": "ЕИС через российский proxy/egress; TLS, retry, timeout и source attribution.",
+      "description": "ЕИС через direct route или явно настроенный российский proxy/egress; scoped CA, TLS, retry, timeout и source attribution.",
       "group_id": "F",
       "status": "done",
       "status_label": "Готова",
