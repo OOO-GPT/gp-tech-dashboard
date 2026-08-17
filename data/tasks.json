@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-17T23:41:33.741Z",
+  "generated_at": "2026-08-17T23:57:23.556Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 148,
     "done": 65,
-    "review": 2,
-    "branch": 2,
+    "review": 3,
+    "branch": 1,
     "ready": 0,
     "blocked": 79
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 65,
-      "review": 2,
-      "branch": 2,
+      "review": 3,
+      "branch": 1,
       "parked": 0,
       "not_started": 79
     }
@@ -2295,12 +2295,12 @@
       "title": "Subscription service",
       "description": "User/org Series и Terms, renewal/cancellation; provider-neutral funding handoff.",
       "group_id": "E",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "B06",
         "C08",
