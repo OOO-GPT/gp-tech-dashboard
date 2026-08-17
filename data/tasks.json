@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-17T14:01:12.123Z",
+  "generated_at": "2026-08-17T14:33:45.525Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 148,
     "done": 65,
     "review": 0,
-    "branch": 3,
-    "ready": 1,
+    "branch": 4,
+    "ready": 0,
     "blocked": 79
   },
   "axis_counts": {
@@ -25,9 +25,9 @@
     "execution": {
       "done": 65,
       "review": 0,
-      "branch": 3,
+      "branch": 4,
       "parked": 0,
-      "not_started": 80
+      "not_started": 79
     }
   },
   "groups": [
@@ -1955,12 +1955,12 @@
       "title": "Organization lifecycle",
       "description": "Создание организации, membership, Owner/Admin/Member, invite/join/remove.",
       "group_id": "D",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "C02",
         "D02"
@@ -1971,13 +1971,15 @@
         "I19"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/d03"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/d03",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/d03",
         "pull_request": null,
         "commit": null,
         "marker": null
