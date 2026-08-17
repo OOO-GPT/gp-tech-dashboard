@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-17T21:28:57.043Z",
+  "generated_at": "2026-08-17T21:50:37.319Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 148,
     "done": 65,
-    "review": 1,
-    "branch": 3,
+    "review": 2,
+    "branch": 2,
     "ready": 0,
     "blocked": 79
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 65,
-      "review": 1,
-      "branch": 3,
+      "review": 2,
+      "branch": 2,
       "parked": 0,
       "not_started": 79
     }
@@ -1955,12 +1955,12 @@
       "title": "Organization lifecycle",
       "description": "Создание организации, membership, Owner/Admin/Member, invite/join/remove.",
       "group_id": "D",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "C02",
         "D02"
@@ -1976,11 +1976,18 @@
       },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 113,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/113",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/d03",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/d03",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/113",
         "commit": null,
         "marker": null
       }
