@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-17T13:25:29.503Z",
+  "generated_at": "2026-08-17T13:55:46.041Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 148,
-    "done": 64,
-    "review": 1,
+    "done": 65,
+    "review": 0,
     "branch": 3,
-    "ready": 0,
-    "blocked": 80
+    "ready": 1,
+    "blocked": 79
   },
   "axis_counts": {
     "admission": {
-      "complete": 64,
+      "complete": 65,
       "admitted": 4,
-      "blocked": 80
+      "blocked": 79
     },
     "execution": {
-      "done": 64,
-      "review": 1,
+      "done": 65,
+      "review": 0,
       "branch": 3,
       "parked": 0,
       "not_started": 80
@@ -90,16 +90,16 @@
   ],
   "current_focus": {
     "schema_version": 1,
-    "task_id": "D02",
-    "frontier_id": "D02-F1",
-    "selection_reason": "Текущая допущенная вершина с опубликованным review marker и открытым pull request.",
+    "task_id": "F07",
+    "frontier_id": "F07-F1",
+    "selection_reason": "D02 принята; глобальный focus возвращён к уже опубликованной admitted ветке F07 с открытым PR #96.",
     "admission_status": "admitted",
-    "execution_status": "review",
-    "status": "review",
+    "execution_status": "branch",
+    "status": "branch",
     "pull_request": {
-      "number": 61,
-      "url": "https://github.com/OOO-GPT/gp-tech/pull/61",
-      "is_draft": false
+      "number": 96,
+      "url": "https://github.com/OOO-GPT/gp-tech/pull/96",
+      "is_draft": true
     }
   },
   "tasks": [
@@ -1907,12 +1907,12 @@
       "title": "Signup/login/session flow",
       "description": "Регистрация, вход, refresh, logout, step-up, verification, rate limits.",
       "group_id": "D",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B10",
         "C02",
@@ -1926,21 +1926,27 @@
       "branch": {
         "name": "codex/d02"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 61,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/61",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-08-17T13:55:25Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/d02",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/d02",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/61",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/5bc1b22104e5a2811fbaa2bcdd9ae43ce9c9de36",
         "marker": null
       }
     },
@@ -1949,10 +1955,10 @@
       "title": "Organization lifecycle",
       "description": "Создание организации, membership, Owner/Admin/Member, invite/join/remove.",
       "group_id": "D",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -1964,9 +1970,7 @@
         "D05",
         "I19"
       ],
-      "missing_parents": [
-        "D02"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -5496,7 +5500,6 @@
         "G03",
         "G07",
         "G14",
-        "D02",
         "G10",
         "G11"
       ],
