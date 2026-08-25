@@ -5,7 +5,7 @@ import { spawnSync } from 'node:child_process';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { classifyDeadEnds } from '../dead-ends.js';
-import { sortDependencies } from '../dependency-order.js';
+import { formatDependencyLabel, sortDependencies } from '../dependency-order.js';
 
 const repoRoot = resolve(fileURLToPath(new URL('..', import.meta.url)));
 
@@ -69,6 +69,35 @@ test('done-зависимости используют merged_at до появл
   assert.deepEqual(sortDependencies(['OLDER', 'NEWER'], tasks), ['NEWER', 'OLDER']);
 });
 
+test('у done-зависимостей дата показывается в формате ДД.ММ', () => {
+  assert.equal(
+    formatDependencyLabel({
+      id: 'DONE',
+      title: 'Завершённая задача',
+      status: 'done',
+      status_entered_at: '2026-02-10T22:30:00.000Z'
+    }),
+    'DONE · Завершённая задача · 11.02'
+  );
+  assert.equal(
+    formatDependencyLabel({
+      id: 'FALLBACK',
+      title: 'Завершённая через PR',
+      status: 'done',
+      pull_request: { merged_at: '2026-08-03T19:38:06.000Z' }
+    }),
+    'FALLBACK · Завершённая через PR · 03.08'
+  );
+  assert.equal(
+    formatDependencyLabel({ id: 'READY', title: 'Готовая к старту', status: 'ready' }),
+    'READY · Готовая к старту'
+  );
+  assert.equal(
+    formatDependencyLabel({ id: 'HIST', title: 'Историческая', status: 'done' }),
+    'HIST · Историческая'
+  );
+});
+
 test('классификатор различает прямые и транзитивные тупики', () => {
   const tasks = [
     { id: 'Z99', children: [] },
@@ -118,7 +147,7 @@ test('метка тупика расположена между ID и стату
 
   assert.ok(toplineStart >= 0 && toplineEnd > toplineStart, 'Не найдено построение заголовка карточки');
   assert.match(script, /import \{ classifyDeadEnds \} from '\.\/dead-ends\.js';/);
-  assert.match(script, /import \{ sortDependencies \} from '\.\/dependency-order\.js';/);
+  assert.match(script, /import \{ formatDependencyLabel, sortDependencies \} from '\.\/dependency-order\.js';/);
   assert.match(script, /view\.deadEnds = classifyDeadEnds\(view\.snapshot\.tasks\)/);
   assert.match(topline, /text: 'Тупик'/);
   assert.match(topline, /dataset: \{ kind: deadEndKind \}/);

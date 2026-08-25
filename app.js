@@ -1,5 +1,5 @@
 import { classifyDeadEnds } from './dead-ends.js';
-import { sortDependencies } from './dependency-order.js';
+import { formatDependencyLabel, sortDependencies } from './dependency-order.js';
 
 const STATUS_META = {
   done: { label: 'Готова', order: 0 },
@@ -288,7 +288,7 @@ function dependencyChip(taskId) {
   const task = taskById(taskId);
   const chip = createElement('button', {
     className: 'dependency-chip',
-    text: task ? `${task.id} · ${statusLabel(task.status)}` : taskId,
+    text: task ? formatDependencyLabel(task) : taskId,
     dataset: { status: task?.status ?? 'blocked' },
     attributes: { type: 'button' }
   });

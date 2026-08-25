@@ -17,6 +17,23 @@ function statusEnteredAt(task) {
     (task.status === 'done' ? timestamp(task.pull_request?.merged_at) : null);
 }
 
+function formatShortDate(value) {
+  if (value === null) return null;
+  return new Intl.DateTimeFormat('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    timeZone: 'Europe/Moscow'
+  }).format(new Date(value));
+}
+
+export function formatDependencyLabel(task) {
+  const label = `${task.id} · ${task.title}`;
+  if (task.status !== 'done') return label;
+
+  const doneDate = formatShortDate(statusEnteredAt(task));
+  return doneDate ? `${label} · ${doneDate}` : label;
+}
+
 export function sortDependencies(taskIds, tasks) {
   const tasksById = new Map(tasks.map((task) => [task.id, task]));
 
