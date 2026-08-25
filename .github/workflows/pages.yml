@@ -70,7 +70,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist/data
-          cp index.html styles.css app.js dead-ends.js .nojekyll dist/
+          cp index.html styles.css app.js dead-ends.js dependency-order.js .nojekyll dist/
           cp data/tasks.json dist/data/tasks.json
           test -z "$(find dist -type l -print -quit)"
 

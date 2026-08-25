@@ -1,4 +1,5 @@
 import { classifyDeadEnds } from './dead-ends.js';
+import { sortDependencies } from './dependency-order.js';
 
 const STATUS_META = {
   done: { label: 'Готова', order: 0 },
@@ -295,13 +296,14 @@ function dependencyChip(taskId) {
   return chip;
 }
 
-function renderDependencies(target, taskIds, emptyText) {
+function renderDependencies(target, taskIds, emptyText, { sortByStatus = false } = {}) {
   target.replaceChildren();
   if (!taskIds?.length) {
     target.append(createElement('p', { className: 'dependency-list__empty', text: emptyText }));
     return;
   }
-  for (const taskId of taskIds) target.append(dependencyChip(taskId));
+  const orderedTaskIds = sortByStatus ? sortDependencies(taskIds, view.snapshot.tasks) : taskIds;
+  for (const taskId of orderedTaskIds) target.append(dependencyChip(taskId));
 }
 
 function addGitFact(label, value, link) {
@@ -412,7 +414,12 @@ function openTask(taskId, options = {}) {
   elements.dialogTitle.textContent = task.title;
   elements.dialogDescription.textContent = task.description;
   elements.dialogReason.textContent = taskReason(task);
-  renderDependencies(elements.dialogParents, task.parents, 'Корневая задача — зависимостей нет.');
+  renderDependencies(
+    elements.dialogParents,
+    task.parents,
+    'Корневая задача — зависимостей нет.',
+    { sortByStatus: true }
+  );
   renderDependencies(elements.dialogChildren, task.children, 'Эта задача никого напрямую не разблокирует.');
   renderGitFacts(task);
   configureAction(task);

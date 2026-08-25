@@ -5,6 +5,7 @@ import { spawnSync } from 'node:child_process';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { classifyDeadEnds } from '../dead-ends.js';
+import { sortDependencies } from '../dependency-order.js';
 
 const repoRoot = resolve(fileURLToPath(new URL('..', import.meta.url)));
 
@@ -37,6 +38,35 @@ test('фильтры статусов расположены в согласов
     script,
     /const statuses = \['all', 'blocked', 'ready', 'branch', 'review', 'done'\];/
   );
+});
+
+test('зависимости сортируются от свежих done до blocked по времени входа в статус', () => {
+  const tasks = [
+    { id: 'DONE_OLD', status: 'done', status_entered_at: '2026-08-01T10:00:00.000Z' },
+    { id: 'DONE_NEW', status: 'done', status_entered_at: '2026-08-05T10:00:00.000Z' },
+    { id: 'REVIEW_OLD', status: 'review', status_entered_at: '2026-08-02T10:00:00.000Z' },
+    { id: 'REVIEW_NEW', status: 'review', status_entered_at: '2026-08-06T10:00:00.000Z' },
+    { id: 'BRANCH', status: 'branch', status_entered_at: '2026-08-07T10:00:00.000Z' },
+    { id: 'READY', status: 'ready', status_entered_at: '2026-08-08T10:00:00.000Z' },
+    { id: 'BLOCKED', status: 'blocked', status_entered_at: '2026-08-09T10:00:00.000Z' }
+  ];
+
+  assert.deepEqual(
+    sortDependencies(
+      ['BLOCKED', 'DONE_OLD', 'REVIEW_OLD', 'READY', 'DONE_NEW', 'BRANCH', 'REVIEW_NEW'],
+      tasks
+    ),
+    ['DONE_NEW', 'DONE_OLD', 'REVIEW_NEW', 'REVIEW_OLD', 'BRANCH', 'READY', 'BLOCKED']
+  );
+});
+
+test('done-зависимости используют merged_at до появления нового поля снимка', () => {
+  const tasks = [
+    { id: 'OLDER', status: 'done', pull_request: { merged_at: '2026-08-01T10:00:00.000Z' } },
+    { id: 'NEWER', status: 'done', pull_request: { merged_at: '2026-08-02T10:00:00.000Z' } }
+  ];
+
+  assert.deepEqual(sortDependencies(['OLDER', 'NEWER'], tasks), ['NEWER', 'OLDER']);
 });
 
 test('классификатор различает прямые и транзитивные тупики', () => {
@@ -88,6 +118,7 @@ test('метка тупика расположена между ID и стату
 
   assert.ok(toplineStart >= 0 && toplineEnd > toplineStart, 'Не найдено построение заголовка карточки');
   assert.match(script, /import \{ classifyDeadEnds \} from '\.\/dead-ends\.js';/);
+  assert.match(script, /import \{ sortDependencies \} from '\.\/dependency-order\.js';/);
   assert.match(script, /view\.deadEnds = classifyDeadEnds\(view\.snapshot\.tasks\)/);
   assert.match(topline, /text: 'Тупик'/);
   assert.match(topline, /dataset: \{ kind: deadEndKind \}/);
@@ -103,7 +134,7 @@ test('метка тупика расположена между ID и стату
   assert.match(css, /\.status-badge,\s*\.dead-end-badge\s*\{[^}]*border-radius:\s*999px/s);
   assert.match(css, /\.dead-end-badge\[data-kind="direct"\]\s*\{[^}]*var\(--dead-end-direct-bg\)/s);
   assert.match(css, /\.dead-end-badge\[data-kind="transitive"\]\s*\{[^}]*var\(--blocked-bg\)/s);
-  assert.match(workflow, /cp index\.html styles\.css app\.js dead-ends\.js \.nojekyll dist\//);
+  assert.match(workflow, /cp index\.html styles\.css app\.js dead-ends\.js dependency-order\.js \.nojekyll dist\//);
 });
 
 test('browser script синтаксически корректен', () => {
