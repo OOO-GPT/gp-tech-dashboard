@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-01T18:45:50.433Z",
+  "generated_at": "2026-09-01T19:23:21.598Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 151,
     "done": 120,
-    "review": 0,
-    "branch": 3,
+    "review": 1,
+    "branch": 2,
     "ready": 2,
     "blocked": 26
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 120,
-      "review": 0,
-      "branch": 3,
+      "review": 1,
+      "branch": 2,
       "parked": 1,
       "not_started": 27
     }
@@ -5008,12 +5008,12 @@
       "title": "Tender overview screen",
       "description": "Закупка, заказчик, позиции, НМЦК/цена источника, framework и provenance.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A02",
         "F02",
@@ -5038,7 +5038,7 @@
         "number": 203,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/203",
         "state": "OPEN",
-        "is_draft": true,
+        "is_draft": false,
         "review_decision": null,
         "merged_at": null
       },
