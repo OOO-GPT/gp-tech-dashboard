@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-01T16:33:21.177Z",
+  "generated_at": "2026-09-01T16:41:24.429Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 151,
-    "done": 118,
-    "review": 2,
+    "done": 119,
+    "review": 1,
     "branch": 3,
     "ready": 2,
     "blocked": 26
   },
   "axis_counts": {
     "admission": {
-      "complete": 118,
-      "admitted": 7,
+      "complete": 119,
+      "admitted": 6,
       "blocked": 26
     },
     "execution": {
-      "done": 118,
-      "review": 2,
+      "done": 119,
+      "review": 1,
       "branch": 3,
       "parked": 1,
       "not_started": 27
@@ -6602,12 +6602,12 @@
       "title": "Observability dashboards",
       "description": "Oldest eligible age, dispatch/activation latency, worker/heartbeat/reaper/orphan/H08/cap-skip и PostgreSQL saturation без sensitive labels.",
       "group_id": "L",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "B10",
         "C12",
@@ -6623,21 +6623,27 @@
       "branch": {
         "name": "codex/l13"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 179,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/179",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-01T16:40:56Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l13",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l13",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/179",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/3420537bdc58e35ea1431ffd470540824d034257",
         "marker": null
       }
     },
@@ -7053,7 +7059,6 @@
       "missing_parents": [
         "J10",
         "L12",
-        "L13",
         "M03",
         "M04",
         "M06",
@@ -7097,7 +7102,6 @@
         "M12"
       ],
       "missing_parents": [
-        "L13",
         "M07"
       ],
       "branch": null,
@@ -7215,7 +7219,6 @@
       ],
       "missing_parents": [
         "L07",
-        "L13",
         "M09",
         "M11"
       ],
