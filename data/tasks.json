@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-01T17:15:25.963Z",
+  "generated_at": "2026-09-01T18:45:50.433Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 151,
-    "done": 119,
-    "review": 1,
+    "done": 120,
+    "review": 0,
     "branch": 3,
     "ready": 2,
     "blocked": 26
   },
   "axis_counts": {
     "admission": {
-      "complete": 119,
-      "admitted": 6,
+      "complete": 120,
+      "admitted": 5,
       "blocked": 26
     },
     "execution": {
-      "done": 119,
-      "review": 1,
+      "done": 120,
+      "review": 0,
       "branch": 3,
       "parked": 1,
       "not_started": 27
@@ -90,15 +90,15 @@
   ],
   "current_focus": {
     "schema_version": 1,
-    "task_id": "L07",
-    "frontier_id": "L07-F1",
-    "selection_reason": "L07-F1 допущен графом и передан на проверку через открытый PR #194; глобальный фокус следует текущей активной вершине.",
+    "task_id": "G17",
+    "frontier_id": "G17-F1",
+    "selection_reason": "G17-F1 выбран после закрытия L07: вершина допущена графом, имеет активный draft PR #180 и адресует единственное признанное нарушение dashboard.",
     "admission_status": "admitted",
-    "execution_status": "review",
-    "status": "review",
+    "execution_status": "branch",
+    "status": "branch",
     "pull_request": {
-      "number": 194,
-      "url": "https://github.com/OOO-GPT/gp-tech/pull/194",
+      "number": 180,
+      "url": "https://github.com/OOO-GPT/gp-tech/pull/180",
       "is_draft": true
     }
   },
@@ -5034,11 +5034,18 @@
       },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 203,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/203",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i14",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i14",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/203",
         "commit": null,
         "marker": null
       }
@@ -6323,12 +6330,12 @@
       "title": "Performance/load tests",
       "description": "Eligible FIFO, saturated-user bypass, starvation risk, PostgreSQL lock/pool contention, reaper lag и replica sizing.",
       "group_id": "L",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A08",
         "H10",
@@ -6344,21 +6351,27 @@
       "branch": {
         "name": "codex/l07"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
-        "number": 194,
-        "url": "https://github.com/OOO-GPT/gp-tech/pull/194",
-        "state": "OPEN",
-        "is_draft": true,
+        "number": 204,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/204",
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-01T18:45:19Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l07",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l07",
-        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/194",
-        "commit": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/204",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/4daae257d3d9f2c2d07cc91989d30ea29eb5a154",
         "marker": null
       }
     },
@@ -6545,7 +6558,6 @@
         "L03",
         "L05",
         "L06",
-        "L07",
         "L08",
         "L10"
       ],
@@ -7218,7 +7230,6 @@
         "Z99"
       ],
       "missing_parents": [
-        "L07",
         "M09",
         "M11"
       ],
