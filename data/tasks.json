@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-02T10:51:46.722Z",
+  "generated_at": "2026-09-02T14:42:05.753Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 151,
     "done": 122,
-    "review": 2,
-    "branch": 2,
+    "review": 3,
+    "branch": 1,
     "ready": 0,
     "blocked": 25
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 122,
-      "review": 2,
-      "branch": 2,
+      "review": 3,
+      "branch": 1,
       "parked": 0,
       "not_started": 25
     }
@@ -94,8 +94,8 @@
     "frontier_id": "I07-F1",
     "selection_reason": "I07-F1 выбран после закрытия L03: прямые родители H06 и H09 приняты в main, открыт Draft PR #205, а активный owner-correction cluster продолжает уже начатое выполнение.",
     "admission_status": "admitted",
-    "execution_status": "branch",
-    "status": "branch",
+    "execution_status": "review",
+    "status": "review",
     "pull_request": {
       "number": 205,
       "url": "https://github.com/OOO-GPT/gp-tech/pull/205",
@@ -4690,12 +4690,12 @@
       "title": "Extension API client",
       "description": "Generated client + auth refresh + org headers + idempotency + retry policy.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "H06",
         "H09"
