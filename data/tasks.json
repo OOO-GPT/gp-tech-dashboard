@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-02T07:16:26.816Z",
+  "generated_at": "2026-09-02T10:41:41.418Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 151,
     "done": 121,
-    "review": 2,
-    "branch": 3,
+    "review": 3,
+    "branch": 2,
     "ready": 0,
     "blocked": 25
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 121,
-      "review": 2,
-      "branch": 3,
+      "review": 3,
+      "branch": 2,
       "parked": 0,
       "not_started": 25
     }
@@ -94,12 +94,12 @@
     "frontier_id": "L03-F1",
     "selection_reason": "L03-F1 выбран после закрытия G17: все прямые родители приняты в main, открыт PR #178, вершина допущена графом и продолжает обязательную forward-only v7 consumer correction.",
     "admission_status": "admitted",
-    "execution_status": "branch",
-    "status": "branch",
+    "execution_status": "review",
+    "status": "review",
     "pull_request": {
       "number": 178,
       "url": "https://github.com/OOO-GPT/gp-tech/pull/178",
-      "is_draft": true
+      "is_draft": false
     }
   },
   "tasks": [
@@ -6167,12 +6167,12 @@
       "title": "Integration tests",
       "description": "Multi-worker, lease-loss, crash boundary, maintenance race и no-duplicate-side-effect proof поверх H10/G10.",
       "group_id": "L",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A08",
         "C05",
@@ -6202,7 +6202,7 @@
         "number": 178,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/178",
         "state": "OPEN",
-        "is_draft": true,
+        "is_draft": false,
         "review_decision": null,
         "merged_at": null
       },
