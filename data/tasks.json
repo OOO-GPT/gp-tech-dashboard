@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-01T23:35:38.167Z",
+  "generated_at": "2026-09-02T01:22:39.375Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 151,
     "done": 120,
-    "review": 1,
-    "branch": 4,
+    "review": 2,
+    "branch": 3,
     "ready": 0,
     "blocked": 26
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 120,
-      "review": 1,
-      "branch": 4,
+      "review": 2,
+      "branch": 3,
       "parked": 1,
       "not_started": 25
     }
@@ -6116,12 +6116,12 @@
       "title": "API contract tests",
       "description": "Structured final output carrier, no raw SDK/RunState/attempt_count, generated client и typed errors.",
       "group_id": "L",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A08",
         "B07",
@@ -6144,7 +6144,7 @@
         "number": 206,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/206",
         "state": "OPEN",
-        "is_draft": true,
+        "is_draft": false,
         "review_decision": null,
         "merged_at": null
       },
