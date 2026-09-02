@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-02T05:57:19.090Z",
+  "generated_at": "2026-09-02T07:16:26.816Z",
   "main": {
     "ref": "main"
   },
@@ -10,23 +10,23 @@
   },
   "counts": {
     "total": 151,
-    "done": 120,
+    "done": 121,
     "review": 2,
     "branch": 3,
     "ready": 0,
-    "blocked": 26
+    "blocked": 25
   },
   "axis_counts": {
     "admission": {
-      "complete": 120,
+      "complete": 121,
       "admitted": 5,
-      "blocked": 26
+      "blocked": 25
     },
     "execution": {
-      "done": 120,
+      "done": 121,
       "review": 2,
       "branch": 3,
-      "parked": 1,
+      "parked": 0,
       "not_started": 25
     }
   },
@@ -90,15 +90,15 @@
   ],
   "current_focus": {
     "schema_version": 1,
-    "task_id": "G17",
-    "frontier_id": "G17-F1",
-    "selection_reason": "G17-F1 выбран после закрытия L07: вершина допущена графом, имеет активный draft PR #180 и адресует единственное признанное нарушение dashboard.",
+    "task_id": "L03",
+    "frontier_id": "L03-F1",
+    "selection_reason": "L03-F1 выбран после закрытия G17: все прямые родители приняты в main, открыт PR #178, вершина допущена графом и продолжает обязательную forward-only v7 consumer correction.",
     "admission_status": "admitted",
     "execution_status": "branch",
     "status": "branch",
     "pull_request": {
-      "number": 180,
-      "url": "https://github.com/OOO-GPT/gp-tech/pull/180",
+      "number": 178,
+      "url": "https://github.com/OOO-GPT/gp-tech/pull/178",
       "is_draft": true
     }
   },
@@ -3825,12 +3825,12 @@
       "title": "Сериализация агрегата учёта логического запуска",
       "description": "Собирает точные байты общего агрегата только из созданных владельцами проекций; не вычисляет и не переопределяет жизненный цикл, использование, стоимость, токены, расчёты, бухгалтерские факты или пользовательский смысл.",
       "group_id": "G",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "C06",
         "C07",
@@ -3851,21 +3851,27 @@
       "branch": {
         "name": "codex/g17"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 180,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/180",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-02T07:03:22Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/g17",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/g17",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/180",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/ed7b3570427ab80db30cb0deb3203bbfb2033b54",
         "marker": null
       }
     },
@@ -6161,12 +6167,12 @@
       "title": "Integration tests",
       "description": "Multi-worker, lease-loss, crash boundary, maintenance race и no-duplicate-side-effect proof поверх H10/G10.",
       "group_id": "L",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "parked",
-      "execution_status_label": "Ветка припаркована",
+      "status": "branch",
+      "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "A08",
         "C05",
@@ -6186,9 +6192,7 @@
       "children": [
         "L11"
       ],
-      "missing_parents": [
-        "G17"
-      ],
+      "missing_parents": [],
       "branch": {
         "name": "codex/l03"
       },
@@ -6465,9 +6469,7 @@
       "children": [
         "L11"
       ],
-      "missing_parents": [
-        "G17"
-      ],
+      "missing_parents": [],
       "branch": {
         "name": "codex/l09"
       },
