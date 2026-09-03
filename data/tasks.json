@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-03T10:41:06.709Z",
+  "generated_at": "2026-09-03T12:45:48.716Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 151,
-    "done": 123,
-    "review": 2,
+    "done": 124,
+    "review": 1,
     "branch": 1,
-    "ready": 0,
-    "blocked": 25
+    "ready": 3,
+    "blocked": 22
   },
   "axis_counts": {
     "admission": {
-      "complete": 123,
-      "admitted": 3,
-      "blocked": 25
+      "complete": 124,
+      "admitted": 5,
+      "blocked": 22
     },
     "execution": {
-      "done": 123,
-      "review": 2,
+      "done": 124,
+      "review": 1,
       "branch": 1,
       "parked": 0,
       "not_started": 25
@@ -90,15 +90,15 @@
   ],
   "current_focus": {
     "schema_version": 1,
-    "task_id": "I07",
-    "frontier_id": "I07-F1",
-    "selection_reason": "I07-F1 выбран после закрытия L03: прямые родители H06 и H09 приняты в main, открыт Draft PR #205, а активный owner-correction cluster продолжает уже начатое выполнение.",
+    "task_id": "I14",
+    "frontier_id": "I14-F2",
+    "selection_reason": "I14-F2 выбран после закрытия I07: dashboard определяет I14 как admitted/review с открытым Draft PR #203, тогда как другой активный кандидат M06 заблокирован внешними legal-фактами.",
     "admission_status": "admitted",
     "execution_status": "review",
     "status": "review",
     "pull_request": {
-      "number": 205,
-      "url": "https://github.com/OOO-GPT/gp-tech/pull/205",
+      "number": 203,
+      "url": "https://github.com/OOO-GPT/gp-tech/pull/203",
       "is_draft": true
     }
   },
@@ -1925,6 +1925,8 @@
       ],
       "children": [
         "D03",
+        "H06",
+        "I07",
         "L03"
       ],
       "missing_parents": [],
@@ -3950,7 +3952,8 @@
         "G12",
         "G13",
         "G14",
-        "H01"
+        "H01",
+        "H03"
       ],
       "children": [
         "H06",
@@ -4006,6 +4009,7 @@
         "H01"
       ],
       "children": [
+        "H02",
         "H06",
         "I08",
         "M01"
@@ -4160,6 +4164,7 @@
       "parents": [
         "B05",
         "B09",
+        "D02",
         "H02",
         "H03",
         "H04",
@@ -4688,17 +4693,19 @@
     {
       "id": "I07",
       "title": "Extension API client",
-      "description": "Generated client + auth refresh + org headers + idempotency + retry policy.",
+      "description": "Generated client + auth refresh + exact headers + idempotency + retry policy.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
+        "D02",
         "H06",
-        "H09"
+        "H09",
+        "I08"
       ],
       "children": [
         "I09",
@@ -4709,21 +4716,27 @@
       "branch": {
         "name": "codex/i07"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
-        "number": 205,
-        "url": "https://github.com/OOO-GPT/gp-tech/pull/205",
-        "state": "OPEN",
-        "is_draft": true,
+        "number": 209,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/209",
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-03T12:45:03Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i07",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i07",
-        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/205",
-        "commit": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/209",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/1bb0087d2e878d10a16cd0eb57bc62fb28651152",
         "marker": null
       }
     },
@@ -4746,6 +4759,7 @@
       ],
       "children": [
         "I09",
+        "I07",
         "I20"
       ],
       "missing_parents": [],
@@ -4781,10 +4795,10 @@
       "title": "Search controller",
       "description": "UI-independent orchestration: import tender, start run, poll/stream, cancel, continue.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -4802,9 +4816,7 @@
         "I17",
         "I15"
       ],
-      "missing_parents": [
-        "I07"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -5053,7 +5065,7 @@
         "number": 203,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/203",
         "state": "OPEN",
-        "is_draft": false,
+        "is_draft": true,
         "review_decision": null,
         "merged_at": null
       },
@@ -5229,10 +5241,10 @@
       "title": "Wallet/subscription screens",
       "description": "One WalletView, Series preferences, Term/lot provenance, project sources, validity and history.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -5250,9 +5262,7 @@
         "J07"
       ],
       "children": [],
-      "missing_parents": [
-        "I07"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -5270,10 +5280,10 @@
       "title": "Onboarding/errors/recovery UI",
       "description": "Понятные ошибки, trust recovery, maintenance overlay, payment-required states.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -5293,9 +5303,7 @@
         "L10",
         "L08"
       ],
-      "missing_parents": [
-        "I07"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
