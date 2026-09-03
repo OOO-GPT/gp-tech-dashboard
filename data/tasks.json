@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-03T10:04:17.684Z",
+  "generated_at": "2026-09-03T10:41:06.709Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 151,
-    "done": 122,
-    "review": 3,
+    "done": 123,
+    "review": 2,
     "branch": 1,
     "ready": 0,
     "blocked": 25
   },
   "axis_counts": {
     "admission": {
-      "complete": 122,
-      "admitted": 4,
+      "complete": 123,
+      "admitted": 3,
       "blocked": 25
     },
     "execution": {
-      "done": 122,
-      "review": 3,
+      "done": 123,
+      "review": 2,
       "branch": 1,
       "parked": 0,
       "not_started": 25
@@ -6122,12 +6122,12 @@
       "title": "API contract tests",
       "description": "Structured final output carrier, no raw SDK/RunState/attempt_count, generated client и typed errors.",
       "group_id": "L",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A08",
         "B07",
@@ -6144,21 +6144,27 @@
       "branch": {
         "name": "codex/l02"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 206,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/206",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-03T10:40:30Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l02",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l02",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/206",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/7ee0741c838aedf34452cc947d1cb96711368f5b",
         "marker": null
       }
     },
@@ -6580,7 +6586,6 @@
         "M10"
       ],
       "missing_parents": [
-        "L02",
         "L05",
         "L06",
         "L08",
