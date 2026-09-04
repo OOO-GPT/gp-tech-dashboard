@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-04T13:35:49.892Z",
+  "generated_at": "2026-09-04T17:03:58.293Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 151,
     "done": 124,
-    "review": 2,
-    "branch": 3,
+    "review": 3,
+    "branch": 2,
     "ready": 0,
     "blocked": 22
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 124,
-      "review": 2,
-      "branch": 3,
+      "review": 3,
+      "branch": 2,
       "parked": 0,
       "not_started": 22
     }
@@ -5298,12 +5298,12 @@
       "title": "Onboarding/errors/recovery UI",
       "description": "Понятные ошибки, trust recovery, maintenance overlay, payment-required states.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "B07",
         "D06",
