@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-04T09:25:28.541Z",
+  "generated_at": "2026-09-04T13:35:49.892Z",
   "main": {
     "ref": "main"
   },
@@ -11,9 +11,9 @@
   "counts": {
     "total": 151,
     "done": 124,
-    "review": 1,
-    "branch": 1,
-    "ready": 3,
+    "review": 2,
+    "branch": 3,
+    "ready": 0,
     "blocked": 22
   },
   "axis_counts": {
@@ -24,10 +24,10 @@
     },
     "execution": {
       "done": 124,
-      "review": 1,
-      "branch": 1,
+      "review": 2,
+      "branch": 3,
       "parked": 0,
-      "not_started": 25
+      "not_started": 22
     }
   },
   "groups": [
@@ -4795,12 +4795,12 @@
       "title": "Search controller",
       "description": "UI-independent orchestration: import tender, start run, poll/stream, cancel, continue.",
       "group_id": "I",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "C06",
         "H02",
@@ -4817,14 +4817,23 @@
         "I15"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/i09"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 212,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/212",
+        "state": "OPEN",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i09",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i09",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/212",
         "commit": null,
         "marker": null
       }
@@ -5241,12 +5250,12 @@
       "title": "Wallet/subscription screens",
       "description": "One WalletView, Series preferences, Term/lot provenance, project sources, validity and history.",
       "group_id": "I",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "D03",
         "D04",
@@ -5263,14 +5272,23 @@
       ],
       "children": [],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/i19"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 211,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/211",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i19",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i19",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/211",
         "commit": null,
         "marker": null
       }
@@ -5280,12 +5298,12 @@
       "title": "Onboarding/errors/recovery UI",
       "description": "Понятные ошибки, trust recovery, maintenance overlay, payment-required states.",
       "group_id": "I",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "B07",
         "D06",
@@ -5304,14 +5322,23 @@
         "L08"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/i20"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 210,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/210",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i20",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i20",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/210",
         "commit": null,
         "marker": null
       }
