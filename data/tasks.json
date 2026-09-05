@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T12:37:04.097Z",
+  "generated_at": "2026-09-05T13:19:46.929Z",
   "main": {
     "ref": "main"
   },
@@ -10,24 +10,24 @@
   },
   "counts": {
     "total": 151,
-    "done": 125,
-    "review": 3,
-    "branch": 1,
-    "ready": 2,
-    "blocked": 20
+    "done": 126,
+    "review": 2,
+    "branch": 4,
+    "ready": 0,
+    "blocked": 19
   },
   "axis_counts": {
     "admission": {
-      "complete": 125,
+      "complete": 126,
       "admitted": 6,
-      "blocked": 20
+      "blocked": 19
     },
     "execution": {
-      "done": 125,
-      "review": 3,
-      "branch": 1,
+      "done": 126,
+      "review": 2,
+      "branch": 4,
       "parked": 0,
-      "not_started": 22
+      "not_started": 19
     }
   },
   "groups": [
@@ -90,15 +90,15 @@
   ],
   "current_focus": {
     "schema_version": 1,
-    "task_id": "I14",
-    "frontier_id": "I14-F2",
-    "selection_reason": "I14-F2 выбран после закрытия I07: dashboard определяет I14 как admitted/review с открытым Draft PR #203, тогда как другой активный кандидат M06 заблокирован внешними legal-фактами.",
+    "task_id": "I20",
+    "frontier_id": "I20-F1",
+    "selection_reason": "После I14 done следующей в принятой последовательности слияния выбрана I20 с открытым PR #210.",
     "admission_status": "admitted",
     "execution_status": "review",
     "status": "review",
     "pull_request": {
-      "number": 203,
-      "url": "https://github.com/OOO-GPT/gp-tech/pull/203",
+      "number": 210,
+      "url": "https://github.com/OOO-GPT/gp-tech/pull/210",
       "is_draft": true
     }
   },
@@ -4809,7 +4809,8 @@
         "I05",
         "I06",
         "I07",
-        "I08"
+        "I08",
+        "I14"
       ],
       "children": [
         "I16",
@@ -4829,18 +4830,18 @@
         "revalidated": false
       },
       "pull_request": {
-        "number": 212,
-        "url": "https://github.com/OOO-GPT/gp-tech/pull/212",
+        "number": 214,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/214",
         "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": "2026-09-05T12:36:29Z"
+        "merged_at": "2026-09-05T13:04:48Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i09",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i09",
-        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/212",
-        "commit": "https://github.com/OOO-GPT/gp-tech/commit/c48a49ea915760f492a306a6cc9c67987637c501",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/214",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/19c0eeb7f01bce045dfac29652eadac4b38f2b15",
         "marker": null
       }
     },
@@ -5050,12 +5051,12 @@
       "title": "Tender overview screen",
       "description": "Закупка, заказчик, позиции, НМЦК/цена источника, framework и provenance.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A02",
         "F02",
@@ -5066,6 +5067,7 @@
         "I21"
       ],
       "children": [
+        "I09",
         "I15",
         "L06",
         "L10"
@@ -5074,21 +5076,27 @@
       "branch": {
         "name": "codex/i14"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 203,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/203",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-05T12:47:40Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i14",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i14",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/203",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/398fe16e07ba6351a3e2433cb9b68ded9ced5cc7",
         "marker": null
       }
     },
@@ -5097,12 +5105,12 @@
       "title": "Requirement/item screen",
       "description": "Позиция ТЗ, характеристики, documents и read-only extracted search scope.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "status": "branch",
+      "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "C04",
         "F05",
@@ -5117,16 +5125,16 @@
         "L06",
         "L10"
       ],
-      "missing_parents": [
-        "I14"
-      ],
-      "branch": null,
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/i15"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i15",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i15",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -5137,12 +5145,12 @@
       "title": "Search progress screen",
       "description": "Per-item cancel и coarse progress; reload читает canonical projection и не создаёт retry/resume/Step.",
       "group_id": "I",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "G12",
         "I09",
@@ -5157,13 +5165,15 @@
         "L10"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/i16"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i16",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i16",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -5174,12 +5184,12 @@
       "title": "Results/evidence screen",
       "description": "Render only frozen AI-authored result/evidence; candidate workspace и hidden evaluator недоступны.",
       "group_id": "I",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "G13",
         "I09",
@@ -5195,13 +5205,15 @@
         "L10"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/i17"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i17",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i17",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -6377,7 +6389,6 @@
         "L11"
       ],
       "missing_parents": [
-        "I14",
         "I15",
         "I16",
         "I17",
@@ -6573,7 +6584,6 @@
       ],
       "missing_parents": [
         "I20",
-        "I14",
         "I15",
         "I16",
         "I17",
