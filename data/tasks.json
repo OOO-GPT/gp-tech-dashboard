@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T01:15:07.057Z",
+  "generated_at": "2026-09-05T05:50:23.258Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 151,
     "done": 124,
-    "review": 3,
-    "branch": 2,
+    "review": 4,
+    "branch": 1,
     "ready": 0,
     "blocked": 22
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 124,
-      "review": 3,
-      "branch": 2,
+      "review": 4,
+      "branch": 1,
       "parked": 0,
       "not_started": 22
     }
@@ -5250,12 +5250,12 @@
       "title": "Wallet/subscription screens",
       "description": "One WalletView, Series preferences, Term/lot provenance, project sources, validity and history.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "D03",
         "D04",
