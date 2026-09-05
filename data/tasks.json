@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T21:57:33.287Z",
+  "generated_at": "2026-09-05T22:14:22.416Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 151,
-    "done": 128,
-    "review": 3,
+    "done": 129,
+    "review": 2,
     "branch": 1,
     "ready": 0,
     "blocked": 19
   },
   "axis_counts": {
     "admission": {
-      "complete": 128,
-      "admitted": 4,
+      "complete": 129,
+      "admitted": 3,
       "blocked": 19
     },
     "execution": {
-      "done": 128,
-      "review": 3,
+      "done": 129,
+      "review": 2,
       "branch": 1,
       "parked": 0,
       "not_started": 19
@@ -5117,12 +5117,12 @@
       "title": "Requirement/item screen",
       "description": "Позиция ТЗ, характеристики, documents и read-only extracted search scope.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "C04",
         "F05",
@@ -5141,21 +5141,27 @@
       "branch": {
         "name": "codex/i15"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 215,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/215",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-05T22:13:52Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i15",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i15",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/215",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/7968402be5479625db1871727fa05806c43f194b",
         "marker": null
       }
     },
@@ -6447,7 +6453,6 @@
         "L11"
       ],
       "missing_parents": [
-        "I15",
         "I16",
         "I17",
         "I18"
@@ -6640,7 +6645,6 @@
         "M07"
       ],
       "missing_parents": [
-        "I15",
         "I16",
         "I17",
         "I18"
