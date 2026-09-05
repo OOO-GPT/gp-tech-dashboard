@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T09:28:21.580Z",
+  "generated_at": "2026-09-05T12:37:04.097Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 151,
-    "done": 124,
-    "review": 4,
+    "done": 125,
+    "review": 3,
     "branch": 1,
-    "ready": 0,
-    "blocked": 22
+    "ready": 2,
+    "blocked": 20
   },
   "axis_counts": {
     "admission": {
-      "complete": 124,
-      "admitted": 5,
-      "blocked": 22
+      "complete": 125,
+      "admitted": 6,
+      "blocked": 20
     },
     "execution": {
-      "done": 124,
-      "review": 4,
+      "done": 125,
+      "review": 3,
       "branch": 1,
       "parked": 0,
       "not_started": 22
@@ -99,7 +99,7 @@
     "pull_request": {
       "number": 203,
       "url": "https://github.com/OOO-GPT/gp-tech/pull/203",
-      "is_draft": false
+      "is_draft": true
     }
   },
   "tasks": [
@@ -4795,12 +4795,12 @@
       "title": "Search controller",
       "description": "UI-independent orchestration: import tender, start run, poll/stream, cancel, continue.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "C06",
         "H02",
@@ -4820,21 +4820,27 @@
       "branch": {
         "name": "codex/i09"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 212,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/212",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-05T12:36:29Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i09",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i09",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/212",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/c48a49ea915760f492a306a6cc9c67987637c501",
         "marker": null
       }
     },
@@ -5074,7 +5080,7 @@
         "number": 203,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/203",
         "state": "OPEN",
-        "is_draft": false,
+        "is_draft": true,
         "review_decision": null,
         "merged_at": null
       },
@@ -5112,7 +5118,6 @@
         "L10"
       ],
       "missing_parents": [
-        "I09",
         "I14"
       ],
       "branch": null,
@@ -5132,10 +5137,10 @@
       "title": "Search progress screen",
       "description": "Per-item cancel и coarse progress; reload читает canonical projection и не создаёт retry/resume/Step.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -5151,9 +5156,7 @@
         "L06",
         "L10"
       ],
-      "missing_parents": [
-        "I09"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -5171,10 +5174,10 @@
       "title": "Results/evidence screen",
       "description": "Render only frozen AI-authored result/evidence; candidate workspace и hidden evaluator недоступны.",
       "group_id": "I",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -5191,9 +5194,7 @@
         "L08",
         "L10"
       ],
-      "missing_parents": [
-        "I09"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
