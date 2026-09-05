@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T14:11:22.151Z",
+  "generated_at": "2026-09-05T15:47:29.085Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 151,
     "done": 127,
-    "review": 1,
-    "branch": 4,
+    "review": 3,
+    "branch": 2,
     "ready": 0,
     "blocked": 19
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 127,
-      "review": 1,
-      "branch": 4,
+      "review": 3,
+      "branch": 2,
       "parked": 0,
       "not_started": 19
     }
@@ -5152,12 +5152,12 @@
       "title": "Search progress screen",
       "description": "Per-item cancel и coarse progress; reload читает canonical projection и не создаёт retry/resume/Step.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "G12",
         "I09",
@@ -5198,12 +5198,12 @@
       "title": "Results/evidence screen",
       "description": "Render only frozen AI-authored result/evidence; candidate workspace и hidden evaluator недоступны.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "G13",
         "I09",
