@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T15:47:29.085Z",
+  "generated_at": "2026-09-05T16:25:14.242Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 151,
-    "done": 127,
-    "review": 3,
+    "done": 128,
+    "review": 2,
     "branch": 2,
     "ready": 0,
     "blocked": 19
   },
   "axis_counts": {
     "admission": {
-      "complete": 127,
-      "admitted": 5,
+      "complete": 128,
+      "admitted": 4,
       "blocked": 19
     },
     "execution": {
-      "done": 127,
-      "review": 3,
+      "done": 128,
+      "review": 2,
       "branch": 2,
       "parked": 0,
       "not_started": 19
@@ -90,15 +90,15 @@
   ],
   "current_focus": {
     "schema_version": 1,
-    "task_id": "I19",
-    "frontier_id": "I19-F1",
-    "selection_reason": "I19 — следующая вершина принятой последовательности после I20. Перед переключением подтверждены admitted/review, открытый PR #211 и отсутствие незавершённых родителей.",
+    "task_id": "M06",
+    "frontier_id": "M06-F1",
+    "selection_reason": "Решение разработчика: после I19 фокус M06; подтверждены admitted/branch, PR #20, missing_parents=[]. Внешние юридические и деловые блокировки сохраняются; указатель не одобряет документы, реальные платежи и не запускает новую реализацию.",
     "admission_status": "admitted",
-    "execution_status": "review",
-    "status": "review",
+    "execution_status": "branch",
+    "status": "branch",
     "pull_request": {
-      "number": 211,
-      "url": "https://github.com/OOO-GPT/gp-tech/pull/211",
+      "number": 20,
+      "url": "https://github.com/OOO-GPT/gp-tech/pull/20",
       "is_draft": true
     }
   },
@@ -860,7 +860,8 @@
         "H10",
         "M01",
         "L08",
-        "L15"
+        "L15",
+        "M05"
       ],
       "missing_parents": [],
       "branch": {
@@ -916,7 +917,8 @@
         "G02",
         "G07",
         "G13",
-        "I22"
+        "I22",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -1487,7 +1489,8 @@
       "children": [
         "E04",
         "J07",
-        "D05"
+        "D05",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -1535,7 +1538,8 @@
       "children": [
         "E05",
         "E06",
-        "E08"
+        "E08",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -1781,7 +1785,8 @@
         "D05",
         "E03",
         "H08",
-        "L08"
+        "L08",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -1927,7 +1932,8 @@
         "D03",
         "H06",
         "I07",
-        "L03"
+        "L03",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -2079,7 +2085,8 @@
         "G01",
         "E03",
         "L01",
-        "L08"
+        "L08",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -2238,7 +2245,8 @@
         "G17",
         "L01",
         "L09",
-        "L15"
+        "L15",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -2485,7 +2493,8 @@
       ],
       "children": [
         "M05",
-        "E04"
+        "E04",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -3902,7 +3911,8 @@
         "H05",
         "H07",
         "H08",
-        "H09"
+        "H09",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -4172,7 +4182,8 @@
       ],
       "children": [
         "I07",
-        "L02"
+        "L02",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -4910,7 +4921,8 @@
       "children": [
         "I12",
         "I13",
-        "L07"
+        "L07",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -5284,46 +5296,65 @@
       "title": "Wallet/subscription screens",
       "description": "One WalletView, Series preferences, Term/lot provenance, project sources, validity and history.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
+        "B09",
+        "C08",
+        "C14",
         "D03",
         "D04",
         "E04",
         "E07",
         "E09",
+        "H01",
         "H05",
+        "H06",
         "I07",
         "I12",
         "I13",
         "I21",
         "J05",
-        "J07"
+        "J07",
+        "J06",
+        "D02",
+        "I11",
+        "D05",
+        "E01",
+        "C09",
+        "E06",
+        "M05"
       ],
       "children": [],
       "missing_parents": [],
       "branch": {
         "name": "codex/i19"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 211,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/211",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-05T16:24:46Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i19",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i19",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/211",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/84d854b4333fa338f667f5aeac7899736087068d",
         "marker": null
       }
     },
@@ -5730,7 +5761,8 @@
       ],
       "children": [
         "E09",
-        "J04"
+        "J04",
+        "I19"
       ],
       "missing_parents": [],
       "branch": {
@@ -7031,9 +7063,12 @@
       "parents": [
         "E05",
         "E06",
-        "E08"
+        "E08",
+        "B08"
       ],
-      "children": [],
+      "children": [
+        "I19"
+      ],
       "missing_parents": [],
       "branch": {
         "name": "codex/m05"
