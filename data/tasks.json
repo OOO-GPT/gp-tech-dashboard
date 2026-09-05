@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T22:14:22.416Z",
+  "generated_at": "2026-09-05T22:28:21.008Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 151,
-    "done": 129,
-    "review": 2,
+    "done": 130,
+    "review": 1,
     "branch": 1,
-    "ready": 0,
-    "blocked": 19
+    "ready": 1,
+    "blocked": 18
   },
   "axis_counts": {
     "admission": {
-      "complete": 129,
+      "complete": 130,
       "admitted": 3,
-      "blocked": 19
+      "blocked": 18
     },
     "execution": {
-      "done": 129,
-      "review": 2,
+      "done": 130,
+      "review": 1,
       "branch": 1,
       "parked": 0,
       "not_started": 19
@@ -5170,12 +5170,12 @@
       "title": "Search progress screen",
       "description": "Per-item cancel и coarse progress; reload читает canonical projection и не создаёт retry/resume/Step.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "G12",
         "I09",
@@ -5193,21 +5193,27 @@
       "branch": {
         "name": "codex/i16"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 216,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/216",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-05T22:27:51Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i16",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i16",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/216",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/178d6bc75a78924429017e52e649d8e069014f8c",
         "marker": null
       }
     },
@@ -6396,10 +6402,10 @@
       "title": "Extension runtime tests",
       "description": "Background, storage migrations, API client, content capture, gating, notifications.",
       "group_id": "L",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -6413,9 +6419,7 @@
         "L11",
         "M07"
       ],
-      "missing_parents": [
-        "I16"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -6453,7 +6457,6 @@
         "L11"
       ],
       "missing_parents": [
-        "I16",
         "I17",
         "I18"
       ],
@@ -6645,7 +6648,6 @@
         "M07"
       ],
       "missing_parents": [
-        "I16",
         "I17",
         "I18"
       ],
