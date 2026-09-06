@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-06T01:03:11.489Z",
+  "generated_at": "2026-09-06T05:48:09.982Z",
   "main": {
     "ref": "main"
   },
@@ -11,8 +11,8 @@
   "counts": {
     "total": 151,
     "done": 131,
-    "review": 1,
-    "branch": 4,
+    "review": 3,
+    "branch": 2,
     "ready": 0,
     "blocked": 15
   },
@@ -24,8 +24,8 @@
     },
     "execution": {
       "done": 131,
-      "review": 1,
-      "branch": 4,
+      "review": 3,
+      "branch": 2,
       "parked": 0,
       "not_started": 15
     }
@@ -5275,12 +5275,12 @@
       "title": "Token usage screen",
       "description": "Estimate, reservation, measured cost, token settlement/release и rate provenance.",
       "group_id": "I",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "H02",
         "I12",
@@ -6422,12 +6422,12 @@
       "title": "Extension runtime tests",
       "description": "Background, storage migrations, API client, content capture, gating, notifications.",
       "group_id": "L",
-      "status": "branch",
-      "status_label": "Есть ветка",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "A08",
         "I10",
@@ -6445,11 +6445,18 @@
       },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 222,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/222",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l05",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l05",
-        "pull_request": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/222",
         "commit": null,
         "marker": null
       }
