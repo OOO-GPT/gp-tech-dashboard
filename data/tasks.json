@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T23:15:20.562Z",
+  "generated_at": "2026-09-06T01:03:11.489Z",
   "main": {
     "ref": "main"
   },
@@ -11,9 +11,9 @@
   "counts": {
     "total": 151,
     "done": 131,
-    "review": 0,
-    "branch": 1,
-    "ready": 4,
+    "review": 1,
+    "branch": 4,
+    "ready": 0,
     "blocked": 15
   },
   "axis_counts": {
@@ -24,10 +24,10 @@
     },
     "execution": {
       "done": 131,
-      "review": 0,
-      "branch": 1,
+      "review": 1,
+      "branch": 4,
       "parked": 0,
-      "not_started": 19
+      "not_started": 15
     }
   },
   "groups": [
@@ -5275,12 +5275,12 @@
       "title": "Token usage screen",
       "description": "Estimate, reservation, measured cost, token settlement/release и rate provenance.",
       "group_id": "I",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "H02",
         "I12",
@@ -5295,14 +5295,23 @@
         "L10"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/i18"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 220,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/220",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i18",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i18",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/220",
         "commit": null,
         "marker": null
       }
@@ -5862,25 +5871,34 @@
       "title": "Decision/export artifacts",
       "description": "Сохранить подборку, выгрузка, justification pack, evidence snapshot для поставщика.",
       "group_id": "J",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "review",
+      "status_label": "На ревью",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "review",
+      "execution_status_label": "На ревью",
       "parents": [
         "I17"
       ],
       "children": [],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/j08"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 219,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/219",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j08",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j08",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/219",
         "commit": null,
         "marker": null
       }
@@ -6404,12 +6422,12 @@
       "title": "Extension runtime tests",
       "description": "Background, storage migrations, API client, content capture, gating, notifications.",
       "group_id": "L",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "A08",
         "I10",
@@ -6422,13 +6440,15 @@
         "M07"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/l05"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l05",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l05",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -6528,12 +6548,12 @@
       "title": "Security regression tests",
       "description": "BOLA, authz, SSRF in fetchers, XSS in UI, secret leakage, payment webhook validation.",
       "group_id": "L",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "A05",
         "A08",
@@ -6556,14 +6576,23 @@
         "L11"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/l08"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 221,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/221",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l08",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l08",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/221",
         "commit": null,
         "marker": null
       }
