@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-06T22:14:10.438Z",
+  "generated_at": "2026-09-06T22:55:48.525Z",
   "main": {
     "ref": "main"
   },
@@ -10,22 +10,22 @@
   },
   "counts": {
     "total": 151,
-    "done": 131,
-    "review": 3,
-    "branch": 2,
-    "ready": 0,
-    "blocked": 15
+    "done": 135,
+    "review": 0,
+    "branch": 1,
+    "ready": 2,
+    "blocked": 13
   },
   "axis_counts": {
     "admission": {
-      "complete": 131,
-      "admitted": 5,
-      "blocked": 15
+      "complete": 135,
+      "admitted": 3,
+      "blocked": 13
     },
     "execution": {
-      "done": 131,
-      "review": 3,
-      "branch": 2,
+      "done": 135,
+      "review": 0,
+      "branch": 1,
       "parked": 0,
       "not_started": 15
     }
@@ -5275,12 +5275,12 @@
       "title": "Token usage screen",
       "description": "Estimate, reservation, measured cost, token settlement/release и rate provenance.",
       "group_id": "I",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "H02",
         "I12",
@@ -5298,21 +5298,27 @@
       "branch": {
         "name": "codex/i18"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 220,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/220",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": true,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-06T22:55:18Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/i18",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/i18",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/220",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/c8c2ce7a0547f53ff86c0a6e7424249c6a7237bc",
         "marker": null
       }
     },
@@ -5871,12 +5877,12 @@
       "title": "Decision/export artifacts",
       "description": "Сохранить подборку, выгрузка, justification pack, evidence snapshot для поставщика.",
       "group_id": "J",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "I17"
       ],
@@ -5885,21 +5891,27 @@
       "branch": {
         "name": "codex/j08"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 219,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/219",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": true,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-06T22:55:18Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/j08",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/j08",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/219",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/6b316e1f101e419c1229d90da16ee6bab2bb32f5",
         "marker": null
       }
     },
@@ -6422,12 +6434,12 @@
       "title": "Extension runtime tests",
       "description": "Background, storage migrations, API client, content capture, gating, notifications.",
       "group_id": "L",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A08",
         "I10",
@@ -6443,21 +6455,27 @@
       "branch": {
         "name": "codex/l05"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 222,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/222",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": true,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-06T22:55:18Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l05",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l05",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/222",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/554a0467f90916d40b5e9a91b3ea3e9974aafa24",
         "marker": null
       }
     },
@@ -6466,10 +6484,10 @@
       "title": "End-to-end supplier journeys",
       "description": "Один ItemRun/SDK run → один frozen result → renderer/cache/billing без workspace leakage.",
       "group_id": "L",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -6485,9 +6503,7 @@
       "children": [
         "L11"
       ],
-      "missing_parents": [
-        "I18"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -6555,12 +6571,12 @@
       "title": "Security regression tests",
       "description": "BOLA, authz, SSRF in fetchers, XSS in UI, secret leakage, payment webhook validation.",
       "group_id": "L",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A05",
         "A08",
@@ -6586,21 +6602,27 @@
       "branch": {
         "name": "codex/l08"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 221,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/221",
-        "state": "OPEN",
+        "state": "MERGED",
         "is_draft": true,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-06T22:55:18Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l08",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l08",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/221",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/573ab3995c466110f2f2f193346f4506928117d8",
         "marker": null
       }
     },
@@ -6661,10 +6683,10 @@
       "title": "A11y/i18n tests",
       "description": "Keyboard, focus, contrast, localized validation, legal text and naming consistency.",
       "group_id": "L",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -6682,9 +6704,7 @@
         "L11",
         "M07"
       ],
-      "missing_parents": [
-        "I18"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -6728,9 +6748,7 @@
         "M10"
       ],
       "missing_parents": [
-        "L05",
         "L06",
-        "L08",
         "L10"
       ],
       "branch": null,
@@ -7202,7 +7220,6 @@
         "M10"
       ],
       "missing_parents": [
-        "L05",
         "L10"
       ],
       "branch": null,
