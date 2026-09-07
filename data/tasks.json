@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-06T22:55:48.525Z",
+  "generated_at": "2026-09-07T00:00:02.652Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 151,
     "done": 135,
     "review": 0,
-    "branch": 1,
-    "ready": 2,
+    "branch": 3,
+    "ready": 0,
     "blocked": 13
   },
   "axis_counts": {
@@ -25,9 +25,9 @@
     "execution": {
       "done": 135,
       "review": 0,
-      "branch": 1,
+      "branch": 3,
       "parked": 0,
-      "not_started": 15
+      "not_started": 13
     }
   },
   "groups": [
@@ -6484,12 +6484,12 @@
       "title": "End-to-end supplier journeys",
       "description": "Один ItemRun/SDK run → один frozen result → renderer/cache/billing без workspace leakage.",
       "group_id": "L",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "A08",
         "I14",
@@ -6504,13 +6504,15 @@
         "L11"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/l06"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l06",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l06",
         "pull_request": null,
         "commit": null,
         "marker": null
@@ -6683,12 +6685,12 @@
       "title": "A11y/i18n tests",
       "description": "Keyboard, focus, contrast, localized validation, legal text and naming consistency.",
       "group_id": "L",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "A08",
         "I12",
@@ -6705,13 +6707,15 @@
         "M07"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/l10"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l10",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l10",
         "pull_request": null,
         "commit": null,
         "marker": null
