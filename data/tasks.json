@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-07T20:24:56.205Z",
+  "generated_at": "2026-09-07T21:48:07.932Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 151,
     "done": 136,
     "review": 0,
-    "branch": 2,
-    "ready": 1,
+    "branch": 3,
+    "ready": 0,
     "blocked": 12
   },
   "axis_counts": {
@@ -25,9 +25,9 @@
     "execution": {
       "done": 136,
       "review": 0,
-      "branch": 2,
+      "branch": 3,
       "parked": 0,
-      "not_started": 13
+      "not_started": 12
     }
   },
   "groups": [
@@ -7225,12 +7225,12 @@
       "title": "Extension packaging",
       "description": "ZIP/Store package, manifest versioning, provenance, update metadata, download site.",
       "group_id": "M",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "I02",
         "L05",
@@ -7243,14 +7243,23 @@
         "M10"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/m07"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 228,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/228",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/m07",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/m07",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/228",
         "commit": null,
         "marker": null
       }
