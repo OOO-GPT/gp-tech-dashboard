@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-07T18:48:47.906Z",
+  "generated_at": "2026-09-07T20:24:56.205Z",
   "main": {
     "ref": "main"
   },
@@ -10,22 +10,22 @@
   },
   "counts": {
     "total": 151,
-    "done": 135,
+    "done": 136,
     "review": 0,
-    "branch": 3,
-    "ready": 0,
-    "blocked": 13
+    "branch": 2,
+    "ready": 1,
+    "blocked": 12
   },
   "axis_counts": {
     "admission": {
-      "complete": 135,
+      "complete": 136,
       "admitted": 3,
-      "blocked": 13
+      "blocked": 12
     },
     "execution": {
-      "done": 135,
+      "done": 136,
       "review": 0,
-      "branch": 3,
+      "branch": 2,
       "parked": 0,
       "not_started": 13
     }
@@ -6692,12 +6692,12 @@
       "title": "A11y/i18n tests",
       "description": "Keyboard, focus, contrast, localized validation, legal text and naming consistency.",
       "group_id": "L",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A08",
         "I12",
@@ -6717,21 +6717,27 @@
       "branch": {
         "name": "codex/l10"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 226,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/226",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-07T20:24:23Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l10",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l10",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/226",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/4c1167fc29fc3c278f29a01d7d11d56ad5e9ac39",
         "marker": null
       }
     },
@@ -6766,8 +6772,7 @@
         "M10"
       ],
       "missing_parents": [
-        "L06",
-        "L10"
+        "L06"
       ],
       "branch": null,
       "done_commit": null,
@@ -7220,10 +7225,10 @@
       "title": "Extension packaging",
       "description": "ZIP/Store package, manifest versioning, provenance, update metadata, download site.",
       "group_id": "M",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -7237,9 +7242,7 @@
         "M09",
         "M10"
       ],
-      "missing_parents": [
-        "L10"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
