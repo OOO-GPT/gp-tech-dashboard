@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-10T14:23:06.025Z",
+  "generated_at": "2026-09-10T15:51:12.887Z",
   "main": {
     "ref": "main"
   },
@@ -10,21 +10,21 @@
   },
   "counts": {
     "total": 151,
-    "done": 136,
-    "review": 1,
+    "done": 137,
+    "review": 0,
     "branch": 2,
-    "ready": 0,
-    "blocked": 12
+    "ready": 1,
+    "blocked": 11
   },
   "axis_counts": {
     "admission": {
-      "complete": 136,
+      "complete": 137,
       "admitted": 3,
-      "blocked": 12
+      "blocked": 11
     },
     "execution": {
-      "done": 136,
-      "review": 1,
+      "done": 137,
+      "review": 0,
       "branch": 2,
       "parked": 0,
       "not_started": 12
@@ -4377,6 +4377,7 @@
       ],
       "children": [
         "L03",
+        "L06",
         "L07",
         "L13",
         "M02",
@@ -6484,14 +6485,15 @@
       "title": "End-to-end supplier journeys",
       "description": "Один ItemRun/SDK run → один frozen result → renderer/cache/billing без workspace leakage.",
       "group_id": "L",
-      "status": "review",
-      "status_label": "На ревью",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "review",
-      "execution_status_label": "На ревью",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A08",
+        "H10",
         "I14",
         "I15",
         "I16",
@@ -6507,21 +6509,27 @@
       "branch": {
         "name": "codex/l06"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 225,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/225",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-10T15:50:34Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l06",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l06",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/225",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/95043c04973430f14d74b4c793dd4992d90d2c97",
         "marker": null
       }
     },
@@ -6746,10 +6754,10 @@
       "title": "CI quality gates",
       "description": "Lint, type/schema checks, unit/integration/e2e partitions, artifact provenance.",
       "group_id": "L",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -6771,9 +6779,7 @@
         "M02",
         "M10"
       ],
-      "missing_parents": [
-        "L06"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
