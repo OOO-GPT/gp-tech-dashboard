@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-10T17:45:16.980Z",
+  "generated_at": "2026-09-10T20:05:24.776Z",
   "main": {
     "ref": "main"
   },
@@ -12,8 +12,8 @@
     "total": 151,
     "done": 137,
     "review": 0,
-    "branch": 2,
-    "ready": 1,
+    "branch": 3,
+    "ready": 0,
     "blocked": 11
   },
   "axis_counts": {
@@ -25,9 +25,9 @@
     "execution": {
       "done": 137,
       "review": 0,
-      "branch": 2,
+      "branch": 3,
       "parked": 0,
-      "not_started": 12
+      "not_started": 11
     }
   },
   "groups": [
@@ -6754,12 +6754,12 @@
       "title": "CI quality gates",
       "description": "Lint, type/schema checks, unit/integration/e2e partitions, artifact provenance.",
       "group_id": "L",
-      "status": "ready",
-      "status_label": "Можно приступать",
+      "status": "branch",
+      "status_label": "Есть ветка",
       "admission_status": "admitted",
       "admission_status_label": "Допущена к выполнению",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "A04",
         "A06",
@@ -6780,13 +6780,15 @@
         "M10"
       ],
       "missing_parents": [],
-      "branch": null,
+      "branch": {
+        "name": "codex/l11"
+      },
       "done_commit": null,
       "acceptance": null,
       "pull_request": null,
       "urls": {
-        "compare": null,
-        "branch": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l11",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l11",
         "pull_request": null,
         "commit": null,
         "marker": null
