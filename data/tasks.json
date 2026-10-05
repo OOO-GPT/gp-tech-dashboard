@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-16T21:32:26.970Z",
+  "generated_at": "2026-10-05T08:24:10.843Z",
   "main": {
     "ref": "main"
   },
@@ -10,24 +10,24 @@
   },
   "counts": {
     "total": 151,
-    "done": 137,
+    "done": 144,
     "review": 0,
-    "branch": 3,
+    "branch": 1,
     "ready": 0,
-    "blocked": 11
+    "blocked": 6
   },
   "axis_counts": {
     "admission": {
-      "complete": 137,
-      "admitted": 3,
-      "blocked": 11
+      "complete": 144,
+      "admitted": 1,
+      "blocked": 6
     },
     "execution": {
-      "done": 137,
+      "done": 144,
       "review": 0,
-      "branch": 3,
+      "branch": 1,
       "parked": 0,
-      "not_started": 11
+      "not_started": 6
     }
   },
   "groups": [
@@ -90,17 +90,13 @@
   ],
   "current_focus": {
     "schema_version": 1,
-    "task_id": "M06",
-    "frontier_id": "M06-F1",
-    "selection_reason": "Решение разработчика: после I19 фокус M06; подтверждены admitted/branch, PR #20, missing_parents=[]. Внешние юридические и деловые блокировки сохраняются; указатель не одобряет документы, реальные платежи и не запускает новую реализацию.",
-    "admission_status": "admitted",
-    "execution_status": "branch",
-    "status": "branch",
-    "pull_request": {
-      "number": 20,
-      "url": "https://github.com/OOO-GPT/gp-tech/pull/20",
-      "is_draft": true
-    }
+    "task_id": "M09",
+    "frontier_id": "M09-F1",
+    "selection_reason": "Пользователь 2026-09-28 выбрал M09 после принятия M06/M07. Родители L13/L14/L15/M01/M07 приняты. Указатель не запускает исполнение M09, stage/prod или платные ресурсы.",
+    "admission_status": "complete",
+    "execution_status": "done",
+    "status": "done",
+    "pull_request": null
   },
   "tasks": [
     {
@@ -6754,12 +6750,12 @@
       "title": "CI quality gates",
       "description": "Lint, type/schema checks, unit/integration/e2e partitions, artifact provenance.",
       "group_id": "L",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A04",
         "A06",
@@ -6783,21 +6779,27 @@
       "branch": {
         "name": "codex/l11"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 229,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/229",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-18T20:38:49Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l11",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l11",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/229",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/883b39f469dde4dbca5f7c621c18e5139ef7c194",
         "marker": null
       }
     },
@@ -6806,12 +6808,12 @@
       "title": "Release evidence ledger",
       "description": "Что проверено, какими тестами, какие риски закрыты, какие флаги включены.",
       "group_id": "L",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A08",
         "B12",
@@ -6822,18 +6824,31 @@
         "M04",
         "M08"
       ],
-      "missing_parents": [
-        "L11"
-      ],
-      "branch": null,
-      "done_commit": null,
-      "acceptance": null,
-      "pull_request": null,
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/l12"
+      },
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
+      "pull_request": {
+        "number": 237,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/237",
+        "state": "MERGED",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": "2026-09-19T00:37:27Z"
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
-        "commit": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/l12",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/l12",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/237",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/a8ccfd0bb6177ae306a3b52cc9d184513cfb1733",
         "marker": null
       }
     },
@@ -7039,12 +7054,12 @@
       "title": "Dev compose/seeds",
       "description": "Локальная composition backend, H10 worker, DB, extension и mock data; не live stage/prod.",
       "group_id": "M",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "H10",
         "L11"
@@ -7053,18 +7068,31 @@
         "M03",
         "M04"
       ],
-      "missing_parents": [
-        "L11"
-      ],
-      "branch": null,
-      "done_commit": null,
-      "acceptance": null,
-      "pull_request": null,
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/m02"
+      },
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
+      "pull_request": {
+        "number": 238,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/238",
+        "state": "MERGED",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": "2026-09-19T00:31:17Z"
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
-        "commit": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/m02",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/m02",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/238",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/c9d8b93427da4bc342bc842a189ee4d478d46406",
         "marker": null
       }
     },
@@ -7073,12 +7101,12 @@
       "title": "Controlled pre-release env",
       "description": "Pre-release composition backend/H10 без ручных патчей и смешения dev/prod credentials; не live production.",
       "group_id": "M",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "M02"
       ],
@@ -7086,18 +7114,31 @@
         "M04",
         "M08"
       ],
-      "missing_parents": [
-        "M02"
-      ],
-      "branch": null,
-      "done_commit": null,
-      "acceptance": null,
-      "pull_request": null,
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/m03"
+      },
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
+      "pull_request": {
+        "number": 239,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/239",
+        "state": "MERGED",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": "2026-09-20T18:27:02Z"
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
-        "commit": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/m03",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/m03",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/239",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/92b6fd31a26f5555c54ed747f2e767bc7f459c3c",
         "marker": null
       }
     },
@@ -7106,12 +7147,12 @@
       "title": "Pilot/beta cohort",
       "description": "Ограниченная группа поставщиков, реальные сценарии, лимиты затрат, быстрый откат.",
       "group_id": "M",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "status": "branch",
+      "status_label": "Есть ветка",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
+      "execution_status": "branch",
+      "execution_status_label": "В работе",
       "parents": [
         "L12",
         "M01",
@@ -7125,22 +7166,24 @@
         "J10",
         "M08"
       ],
-      "missing_parents": [
-        "L12",
-        "M02",
-        "M03",
-        "M06",
-        "M07",
-        "M09"
-      ],
-      "branch": null,
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/m04"
+      },
       "done_commit": null,
       "acceptance": null,
-      "pull_request": null,
+      "pull_request": {
+        "number": 249,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/249",
+        "state": "OPEN",
+        "is_draft": true,
+        "review_decision": null,
+        "merged_at": null
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/m04",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/m04",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/249",
         "commit": null,
         "marker": null
       }
@@ -7198,12 +7241,12 @@
       "title": "Legal package",
       "description": "Оферта, политика, согласия, payment terms, support contacts, risk disclaimers.",
       "group_id": "M",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "A03",
         "J09"
@@ -7217,21 +7260,27 @@
       "branch": {
         "name": "codex/m06"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 20,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/20",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-27T23:42:24Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/m06",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/m06",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/20",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/47222bf9b35476eb9d0b27dc04f92057618594f9",
         "marker": null
       }
     },
@@ -7240,12 +7289,12 @@
       "title": "Extension packaging",
       "description": "ZIP/Store package, manifest versioning, provenance, update metadata, download site.",
       "group_id": "M",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "I02",
         "L05",
@@ -7261,21 +7310,27 @@
       "branch": {
         "name": "codex/m07"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
         "number": 228,
         "url": "https://github.com/OOO-GPT/gp-tech/pull/228",
-        "state": "OPEN",
-        "is_draft": true,
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-09-27T23:38:23Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/m07",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/m07",
         "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/228",
-        "commit": null,
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/00599761b9185f3431c5e3e0704b3129cab899a8",
         "marker": null
       }
     },
@@ -7307,12 +7362,7 @@
       ],
       "missing_parents": [
         "J10",
-        "L12",
-        "M03",
-        "M04",
-        "M06",
-        "M07",
-        "M09"
+        "M04"
       ],
       "branch": null,
       "done_commit": null,
@@ -7331,12 +7381,12 @@
       "title": "Rollback plan",
       "description": "После restore сохраняет global claim stop и владеет recovery/quarantine decision по external receipt/audit facts.",
       "group_id": "M",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
-      "execution_status": "not_started",
-      "execution_status_label": "Не начата",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "L13",
         "L14",
@@ -7350,18 +7400,31 @@
         "M10",
         "M12"
       ],
-      "missing_parents": [
-        "M07"
-      ],
-      "branch": null,
-      "done_commit": null,
-      "acceptance": null,
-      "pull_request": null,
+      "missing_parents": [],
+      "branch": {
+        "name": "codex/m09"
+      },
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
+      "pull_request": {
+        "number": 244,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/244",
+        "state": "MERGED",
+        "is_draft": false,
+        "review_decision": null,
+        "merged_at": "2026-09-28T23:34:59Z"
+      },
       "urls": {
-        "compare": null,
-        "branch": null,
-        "pull_request": null,
-        "commit": null,
+        "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/m09",
+        "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/m09",
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/244",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/5ac53f099a7d8b4eed8f4c1382e24137d6d272fd",
         "marker": null
       }
     },
@@ -7393,12 +7456,7 @@
         "M11"
       ],
       "missing_parents": [
-        "L11",
-        "L12",
-        "M06",
-        "M07",
-        "M08",
-        "M09"
+        "M08"
       ],
       "branch": null,
       "done_commit": null,
@@ -7467,7 +7525,6 @@
         "Z99"
       ],
       "missing_parents": [
-        "M09",
         "M11"
       ],
       "branch": null,
