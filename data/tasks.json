@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-09T09:38:07.979Z",
+  "generated_at": "2026-11-01T01:27:26.871Z",
   "main": {
     "ref": "main"
   },
@@ -10,22 +10,22 @@
   },
   "counts": {
     "total": 151,
-    "done": 144,
+    "done": 145,
     "review": 0,
-    "branch": 1,
-    "ready": 0,
-    "blocked": 6
+    "branch": 0,
+    "ready": 1,
+    "blocked": 5
   },
   "axis_counts": {
     "admission": {
-      "complete": 144,
+      "complete": 145,
       "admitted": 1,
-      "blocked": 6
+      "blocked": 5
     },
     "execution": {
-      "done": 144,
+      "done": 145,
       "review": 0,
-      "branch": 1,
+      "branch": 0,
       "parked": 0,
       "not_started": 6
     }
@@ -5963,10 +5963,10 @@
       "title": "Quality feedback loop",
       "description": "Оценки совпадения, жалобы на источник, false positive/negative, обучение правил.",
       "group_id": "J",
-      "status": "blocked",
-      "status_label": "Заблокирована",
-      "admission_status": "blocked",
-      "admission_status_label": "Заблокирована графом",
+      "status": "ready",
+      "status_label": "Можно приступать",
+      "admission_status": "admitted",
+      "admission_status_label": "Допущена к выполнению",
       "execution_status": "not_started",
       "execution_status_label": "Не начата",
       "parents": [
@@ -5975,9 +5975,7 @@
       "children": [
         "M08"
       ],
-      "missing_parents": [
-        "M04"
-      ],
+      "missing_parents": [],
       "branch": null,
       "done_commit": null,
       "acceptance": null,
@@ -7147,12 +7145,12 @@
       "title": "Pilot/beta cohort",
       "description": "Ограниченная группа поставщиков, реальные сценарии, лимиты затрат, быстрый откат.",
       "group_id": "M",
-      "status": "branch",
-      "status_label": "Есть ветка",
-      "admission_status": "admitted",
-      "admission_status_label": "Допущена к выполнению",
-      "execution_status": "branch",
-      "execution_status_label": "В работе",
+      "status": "done",
+      "status_label": "Готова",
+      "admission_status": "complete",
+      "admission_status_label": "Готова",
+      "execution_status": "done",
+      "execution_status_label": "Завершена",
       "parents": [
         "L12",
         "M01",
@@ -7170,21 +7168,27 @@
       "branch": {
         "name": "codex/m04"
       },
-      "done_commit": null,
-      "acceptance": null,
+      "done_commit": {
+        "historical": false
+      },
+      "acceptance": {
+        "evidence_kind": "exact_done_marker",
+        "effective_kind": "main_integration",
+        "revalidated": false
+      },
       "pull_request": {
-        "number": 249,
-        "url": "https://github.com/OOO-GPT/gp-tech/pull/249",
-        "state": "OPEN",
-        "is_draft": true,
+        "number": 268,
+        "url": "https://github.com/OOO-GPT/gp-tech/pull/268",
+        "state": "MERGED",
+        "is_draft": false,
         "review_decision": null,
-        "merged_at": null
+        "merged_at": "2026-10-18T20:45:32Z"
       },
       "urls": {
         "compare": "https://github.com/OOO-GPT/gp-tech/compare/main...codex/m04",
         "branch": "https://github.com/OOO-GPT/gp-tech/tree/codex/m04",
-        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/249",
-        "commit": null,
+        "pull_request": "https://github.com/OOO-GPT/gp-tech/pull/268",
+        "commit": "https://github.com/OOO-GPT/gp-tech/commit/3bef3fec60d597f869fa16888282cbba29f506cb",
         "marker": null
       }
     },
@@ -7361,8 +7365,7 @@
         "M10"
       ],
       "missing_parents": [
-        "J10",
-        "M04"
+        "J10"
       ],
       "branch": null,
       "done_commit": null,
